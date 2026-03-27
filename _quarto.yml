@@ -1,0 +1,51 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+  resources:
+    - assets/**
+    - classlib/classlib/quarto/**
+    - classlib/classlib/notebooks/**
+
+format:
+  html:
+    css:
+      - classlib/classlib/quarto/website/hickernell-website.css
+    include-in-header:
+      - classlib/classlib/quarto/slides/hickernell-latex-macros.js
+    link-external-newwindow: true
+
+metadata-files:
+  - classlib/classlib/quarto/website/hickernell-website.yml
+  - classlib/classlib/quarto/metadata/hickernell-texts.yml
+
+website:
+  title: "SIAM UQ 2026"
+  navbar:
+    logo: classlib/classlib/quarto/assets/images/normal-scatter.png
+    left:
+      - href: index.qmd
+        text: Home
+      - href: slides/SIAMUQ2026.html
+        text: Slides
+
+    right:
+      - text: Related
+        menu:
+          - text: Talk Repository
+            icon: github
+            href: https://github.com/fjhickernell/SIAMUQ26
+          - text: QMCPy
+            href: https://qmcpy.org
+
+  page-footer:
+    left: "© 2026 Fred J. Hickernell · Illinois Institute of Technology"
+
+course_repo: "https://github.com/fjhickernell/SIAMUQ26"
+course_repo_label: "SIAMUQ26 on GitHub"
+
+execute:
+  warning: false
+  message: false
+

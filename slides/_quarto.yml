@@ -1,0 +1,15 @@
+project:
+  type: default
+  output-dir: _site
+  render:
+    - "*.qmd"
+  resources:
+    - ../assets/**
+    - ../classlib/classlib/quarto/assets/images/campus/IllinoisTech_MiesCampus_slide.jpg
+    - ../classlib/**/*
+
+execute:
+  kernel: qmcpy
+  warning: false
+  message: false
+

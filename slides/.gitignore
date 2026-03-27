@@ -1,0 +1,13 @@
+/.quarto/
+**/*.quarto_ipynb
+
+# Quarto watcher logs
+.quarto-watch-logs/
+
+# Quarto build artifacts
+slides/_site/
+slides/_freeze/
+slides/.quarto/
+
+# Reveal temporary files
+slides/*_files/

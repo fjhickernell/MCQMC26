@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Quarto
+.quarto/
+.quarto-watch-logs/
+_site/
+_freeze/
+**/*.quarto_ipynb
+
+# Quarto rendered asset directories
+*_files/
+site_libs/
+
+# Nested slides project
+slides/_site/
+slides/_freeze/
+slides/.quarto/
+
+# Logs
+*.log
+
+
+/.quarto/
+
+.gha-venv/

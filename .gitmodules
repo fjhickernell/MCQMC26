@@ -1,0 +1,3 @@
+[submodule "classlib"]
+	path = classlib
+	url = https://github.com/fjhickernell/HickernellClassLib.git

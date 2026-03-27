@@ -1,0 +1,23 @@
+```{python}
+#| echo: false
+
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+import scipy as sp
+import scipy.stats as stats
+import classlib as cl
+import classlib.nbviz as nb
+import qmcpy as qp
+
+rng = np.random.default_rng(20251222)
+
+nb.init(use_tex=True)
+colors = nb.TOL_BRIGHT
+
+d = 13
+d_horiz = np.array([1])
+d_vert = np.arange(2,3)
+axis_pad = 0.05
+ms = 50
+```
