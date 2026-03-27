@@ -20,8 +20,12 @@ slides/_site/
 slides/_freeze/
 slides/.quarto/
 
-# Logs
+# Logs and latex
 *.log
+*.aux
+*.bbl
+*.blg
+*.gz
 
 
 /.quarto/
