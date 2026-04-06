@@ -2,7 +2,7 @@ metadata-files:
   - ../classlib/classlib/quarto/slides/research/research-slides.yml
   - ../classlib/classlib/quarto/metadata/hickernell-papers.yml
 
-course_website: "https://fjhickernell.github.io/SIAMUQ26/"
+course_website: "https://fjhickernell.github.io/MCQMC26/"
 
 format:
   revealjs: {}

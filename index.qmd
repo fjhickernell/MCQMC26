@@ -10,25 +10,24 @@ Illinois Institute of Technology
 
 ## Plenary Talk
 
-#### Title
+### To be announced
 
+### Abstract
 
-
-
-#### Abstract
-
+Abstract to be added after submission.
 
 [Slides](slides/MCQMC2026_Plenary.html)
 
-
 ## Special Session Talk
 
-### Good Lattice and Kronecker Sequences for Arbitrary Sample Size
+### Good Lattice and Kronecker Sequences for Arbitrary Sample Sizes
 
-Low discrepancy sequences used for quasi-Monte Carlo computations are often optimized for a sequence of sample sizes, such as powers of a prime base.  This is particularly true for lattices and digital sequences.  While the preferred sample sizes are best,  the user might not be able to fully control the node set because of budget constraints or missing data.  We explore how well one can do for arbitrary sample sizes, in particular for lattices and Kronecker sequences.  We derive a weighted sum of squared expected discrepancies over all sample sizes as our figure of merit.  We use component-by-component constructions to obtain new low discrepancy sequences.
+### Abstract
 
+Low discrepancy sequences used for quasi-Monte Carlo computations are often optimized for a sequence of sample sizes, such as powers of a prime base. This is particularly true for lattices and digital sequences. While the preferred sample sizes are best, the user might not be able to fully control the node set because of budget constraints or missing data. We explore how well one can do for arbitrary sample sizes, in particular for lattices and Kronecker sequences. We derive a weighted sum of squared expected discrepancies over all sample sizes as our figure of merit. We use component-by-component constructions to obtain new low discrepancy sequences.
 
-#### [Slides](slides/MCQMC2026_Plenary.html)
+[Slides](slides/MCQMC2026_SpecialSession.html)
+
 
 
 ### Conference

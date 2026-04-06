@@ -1,0 +1,30 @@
+---
+title: "Title (TBD)"
+author: "Fred J. Hickernell"
+subtitle: |
+  Illinois Institute of Technology, hickernell@illinoistech.edu
+
+  Joint work with ??? <span class="pkg">qmcpy</span> development team
+
+  Supported in part by NSF-DMS-2316011 &nbsp; &nbsp;  ·  &nbsp; &nbsp; Thanks to the organizers
+
+  Monte Carlo and Quasi-Monte Carlo Methods 2026 (MCQMC26), Edinburgh
+
+  🔗 Slides: fjhickernell.github.io/MCQMC26/slides/MCQMC26.html
+
+date: 2026-06-08
+date-format: "MMMM D, YYYY"
+
+metadata-files:
+  - ../classlib/classlib/quarto/slides/research/research-slides.yml
+
+execute:
+  echo: false
+
+format:
+  revealjs:
+    code-overflow: wrap
+---
+
+# First line
+
