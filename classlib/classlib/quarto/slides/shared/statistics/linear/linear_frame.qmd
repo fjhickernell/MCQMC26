@@ -1,0 +1,47 @@
+# Linear Models
+
+Now we move the situation where we have a
+
+- [Response/Output/Dependent Variable]{.alert} $Y$
+
+- [Explained/Predicted]{.alert} by a vector of [Predictors/Explanatory Variables/Inputs/Independent Variables]{.alert} $\vx$, where the $x_j$ may be functions of other variables or each other
+
+Types of linear models
+
+- [Ordinary least squares (OLS)](#lsqregress) $Y = \vx^\top \vbeta + \varepsilon$ with $\Ex(\varepsilon) = 0$ and $\cov(\varepsilon) = \sigma^2 \mI$
+
+  - [Solution, geometry, unbiasedness](#lsqregress)
+
+  - [Inference for model parameters and predictions](#ols_inference)
+
+  - [Diagnostics](#ols_diagnostics)
+
+  - [Model selection](#ols_selection)
+
+
+- [One-way analysis of variance (ANOVA)](#oneway_anova) $Y_{ij} = \mu_i + \varepsilon_{ij}$ with $\Ex(\varepsilon_{ij}) = 0$ and $\cov(\varepsilon_{ij}) = \sigma^2 \mI$
+
+- [Logistic regression]{.alert} and other generalized linear models
+
+- [Gaussian process regression]{.alert}
+
+## Comparison of inference for linear models and population parameters
+
+| | Linear models | Population parameters |
+|--|--------|--------|
+| Model | $Y = \vx^\top \vbeta + \varepsilon$, &nbsp; $\Ex(\varepsilon) = 0$, $\var(\varepsilon) = \sigma^2$ <br> $\Ex(Y) = \vx^\top \vbeta =: \mu(\vx)$ | $Y \sim \Bern(p)$, $Y \sim \Exp(\lambda)$, $Y \sim \Norm(\mu,\sigma^2)$, ...  |
+| Parameters  | $\vbeta \in \reals^d$ | $\mu$, $\sigma^2$, $p$, $\lambda$ |
+| Fixed| $\vx$ |
+| Random | $Y$, $\varepsilon$ | $Y$ |
+| Data | $(\vx_1,Y_1),\dots,(\vx_n,Y_n)$ | $Y_1,\dots,Y_n$ |
+| Model with data | $Y_i = \vx_i^\top \vbeta + \varepsilon_i$ <br> $\underbrace{\vY}_{n \times 1} = \underbrace{\mX}_{n \times d}\, \underbrace{\vbeta}_{d \times 1} + \underbrace{\vveps}_{n \times 1}$ | $Y_i \sim \Bern(p)$, $Y_i \sim \Exp(\lambda)$, $Y_i \sim \Norm(\mu,\sigma^2)$, ...  |
+| Not observable | $\varepsilon_1,\dots,\varepsilon_n$ |  |
+
+--- 
+
+| | Linear models | Population parameters |
+|--|--------|--------|
+| Model | $Y = \vx^\top \vbeta + \varepsilon$, &nbsp; $\Ex(\varepsilon) = 0$, $\var(\varepsilon) = \sigma^2$ <br> $\Ex(Y) = \vx^\top \vbeta =: \mu(\vx)$ | $Y \sim \Bern(p)$, $Y \sim \Exp(\lambda)$, $Y \sim \Norm(\mu,\sigma^2)$, ...  |
+| Model with data | $Y_i = \vx_i^\top \vbeta + \varepsilon_i$ <br> $\underbrace{\vY}_{n \times 1} = \underbrace{\mX}_{n \times d}\, \underbrace{\vbeta}_{d \times 1} + \underbrace{\vveps}_{n \times 1}$ | $Y_i \sim \Bern(p)$, $Y_i \sim \Exp(\lambda)$, $Y_i \sim \Norm(\mu,\sigma^2)$, ...  |
+| Point estimators | $\hbeta = (\mX^\top \mX)^{-1} \mX^\top \vY$, $\hvY = \mX \hbeta$ | $\barY$, $S^2$, $\hlambda_{\MLE}$, $\hp_{\MLE}$, ... |
+| Confidence/ prediction regions for | $\vbeta$, $\mu(\vx)$, $Y \mid \vx$ | $\mu$, $\sigma^2$, $p$, $\lambda$, $Y$ |
