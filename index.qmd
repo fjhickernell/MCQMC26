@@ -1,18 +1,19 @@
 ---
-title: "MCQMC 2026"
+title: "17th International Conference on Monte Carlo and Quasi-Monte Carlo Methods in Scientific Computing (MCQMC 2026)"
 metadata-files:
   - classlib/classlib/quarto/website/hickernell-website.yml
 title-block-banner: false
 ---
 
-Fred J. Hickernell  
-Illinois Institute of Technology
+### Edinburgh, UK, June 8–12, 2026
+
+### Fred J. Hickernell
+Illinois Institute of Technology <br>
+[hickernell@illinoistech.edu](mailto:hickernell@illinoistech.edu)
 
 ## Plenary Talk
 
 ### To be announced
-
-### Abstract
 
 Abstract to be added after submission.
 
@@ -22,22 +23,20 @@ Abstract to be added after submission.
 
 ### Good Lattice and Kronecker Sequences for Arbitrary Sample Sizes
 
-### Abstract
-
 Low discrepancy sequences used for quasi-Monte Carlo computations are often optimized for a sequence of sample sizes, such as powers of a prime base. This is particularly true for lattices and digital sequences. While the preferred sample sizes are best, the user might not be able to fully control the node set because of budget constraints or missing data. We explore how well one can do for arbitrary sample sizes, in particular for lattices and Kronecker sequences. We derive a weighted sum of squared expected discrepancies over all sample sizes as our figure of merit. We use component-by-component constructions to obtain new low discrepancy sequences.
 
 [Slides](slides/MCQMC2026_SpecialSession.html)
 
 
 
-### Conference
+## Conference
 
-- [MCQMC 2026](https://mcqmc2026.org/)
+- [MCQMC 2026 website](https://mcqmc2026.org/)
 - [June, 2026 Special Session in program](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=86001)
 
 
 
-### Repository
+## Repository
 
 - [MCQMC26 on GitHub](https://github.com/fjhickernell/MCQMC26)
 - [QMCPy](https://qmcpy.org)
