@@ -1,23 +1,30 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "MCQMC 2026",
-    "section": "",
-    "text": "Fred J. Hickernell\nIllinois Institute of Technology"
-  },
-  {
     "objectID": "index.html#plenary-talk",
     "href": "index.html#plenary-talk",
-    "title": "MCQMC 2026",
+    "title": "17th International Conference on Monte Carlo and Quasi-Monte Carlo Methods in Scientific Computing (MCQMC 2026)",
     "section": "Plenary Talk",
-    "text": "Plenary Talk\n\nTo be announced\n\n\nAbstract\nAbstract to be added after submission.\nSlides"
+    "text": "Plenary Talk\n\nTo be announced\nAbstract to be added after submission.\nSlides"
   },
   {
     "objectID": "index.html#special-session-talk",
     "href": "index.html#special-session-talk",
-    "title": "MCQMC 2026",
+    "title": "17th International Conference on Monte Carlo and Quasi-Monte Carlo Methods in Scientific Computing (MCQMC 2026)",
     "section": "Special Session Talk",
-    "text": "Special Session Talk\n\nGood Lattice and Kronecker Sequences for Arbitrary Sample Sizes\n\n\nAbstract\nLow discrepancy sequences used for quasi-Monte Carlo computations are often optimized for a sequence of sample sizes, such as powers of a prime base. This is particularly true for lattices and digital sequences. While the preferred sample sizes are best, the user might not be able to fully control the node set because of budget constraints or missing data. We explore how well one can do for arbitrary sample sizes, in particular for lattices and Kronecker sequences. We derive a weighted sum of squared expected discrepancies over all sample sizes as our figure of merit. We use component-by-component constructions to obtain new low discrepancy sequences.\nSlides\n\n\nConference\n\nMCQMC 2026\nJune, 2026 Special Session in program\n\n\n\nRepository\n\nMCQMC26 on GitHub\nQMCPy"
+    "text": "Special Session Talk\n\nGood Lattice and Kronecker Sequences for Arbitrary Sample Sizes\nLow discrepancy sequences used for quasi-Monte Carlo computations are often optimized for a sequence of sample sizes, such as powers of a prime base. This is particularly true for lattices and digital sequences. While the preferred sample sizes are best, the user might not be able to fully control the node set because of budget constraints or missing data. We explore how well one can do for arbitrary sample sizes, in particular for lattices and Kronecker sequences. We derive a weighted sum of squared expected discrepancies over all sample sizes as our figure of merit. We use component-by-component constructions to obtain new low discrepancy sequences.\nSlides"
+  },
+  {
+    "objectID": "index.html#conference",
+    "href": "index.html#conference",
+    "title": "17th International Conference on Monte Carlo and Quasi-Monte Carlo Methods in Scientific Computing (MCQMC 2026)",
+    "section": "Conference",
+    "text": "Conference\n\nMCQMC 2026 website\nJune, 2026 Special Session in program"
+  },
+  {
+    "objectID": "index.html#repository",
+    "href": "index.html#repository",
+    "title": "17th International Conference on Monte Carlo and Quasi-Monte Carlo Methods in Scientific Computing (MCQMC 2026)",
+    "section": "Repository",
+    "text": "Repository\n\nMCQMC26 on GitHub\nQMCPy"
   }
 ]
