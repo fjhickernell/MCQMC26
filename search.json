@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "pages/qmc-software.html",
+    "href": "pages/qmc-software.html",
+    "title": "QMC Software Packages",
+    "section": "",
+    "text": "This page lists software packages related to quasi-Monte Carlo methods.\nPlease send updates or additions with the package name, URL, programming language, status, and preferred contact to Fred Hickernell.\n\n\n\nName\nLanguage\nStatus\nContact\n\n\n\n\nLatNet Builder\nC++ / Python\nActive\n[‘Pierre L’Ecuyer’]\n\n\nMATLAB QMC Toolbox\nMATLAB\n\n[]\n\n\nQMCPy\nPython\nActive\n[‘Sou-Cheng Choi’, ‘Fred Hickernell’, ‘Aleksei Sorokin’]"
+  },
+  {
     "objectID": "index.html#plenary-talk",
     "href": "index.html#plenary-talk",
     "title": "17th International Conference on Monte Carlo and Quasi-Monte Carlo Methods in Scientific Computing (MCQMC 2026)",
