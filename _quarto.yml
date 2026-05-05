@@ -3,6 +3,7 @@ project:
   output-dir: _site
   render:
     - index.qmd
+    - pages/qmc-software.qmd
   resources:
     - assets/**
     - classlib/classlib/quarto/**
@@ -31,6 +32,8 @@ website:
         text: Plenary talk slides
       - href: slides/MCQMC2026_SpecialSession.html
         text: Special session talk slides
+      - href: pages/qmc-software.html
+        text: QMC Software
 
 
     right:

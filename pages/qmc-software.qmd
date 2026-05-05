@@ -1,0 +1,39 @@
+---
+title: "QMC Software Packages"
+---
+
+This page lists software packages related to quasi-Monte Carlo methods.
+
+Please send updates or additions with the package name, URL, programming language, status, and preferred contact to [Fred Hickernell](mailto:hickernell@illinoistech.edu).
+
+
+```{python}
+#| echo: false
+#| output: asis
+
+import yaml
+from pathlib import Path
+
+data_path = Path("../data/qmc-software.yml")
+
+with data_path.open() as f:
+    data = yaml.safe_load(f)
+
+# Sort alphabetically by name (case-insensitive)
+data = sorted(data, key=lambda x: (x.get("name") or "").lower())
+
+print("| Name | Language | Status | Contact |")
+print("|---|---|---|---|")
+
+for row in data:
+    name = row.get("name", "")
+    url = row.get("url", "")
+    language = row.get("language", "")
+    status = row.get("status", "")
+    contact = row.get("contact", "")
+
+    if url:
+        name = f"[{name}]({url})"
+
+    print(f"| {name} | {language} | {status} | {contact} |")
+```

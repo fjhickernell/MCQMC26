@@ -1,0 +1,27 @@
+- name: QMCPy
+  url: https://qmcpy.org
+  description: >
+    Multi-purpose library featuring various low discrepancy sequences
+    and data-driven error estimation.
+  language: Python
+  status: Active
+  contact:
+    - Sou-Cheng Choi
+    - Fred Hickernell
+    - Aleksei Sorokin
+
+- name: LatNet Builder
+  url: https://github.com/umontreal-simul/latnetbuilder
+  description: >
+    Library for constructing low-discrepancy lattice rules and digital nets.
+  language: C++ / Python
+  status: Active
+  contact:
+    - Pierre L’Ecuyer
+
+- name: MATLAB QMC Toolbox
+  url: ""
+  description: ""
+  language: MATLAB
+  status: ""
+  contact: []
