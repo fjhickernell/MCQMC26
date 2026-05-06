@@ -4,7 +4,7 @@
     "href": "pages/qmc-software.html",
     "title": "QMC Software Packages",
     "section": "",
-    "text": "This page lists software packages related to quasi-Monte Carlo methods.\nPlease send updates or additions with the package name, URL, programming language, status, and preferred contact to Fred Hickernell.\n\n\n\nName\nLanguage\nStatus\nContact\n\n\n\n\nLatNet Builder\nC++ / Python\nActive\n[‘Pierre L’Ecuyer’]\n\n\nMATLAB QMC Toolbox\nMATLAB\n\n[]\n\n\nQMCPy\nPython\nActive\n[‘Sou-Cheng Choi’, ‘Fred Hickernell’, ‘Aleksei Sorokin’]"
+    "text": "This page lists software packages related to quasi-Monte Carlo methods.\nPlease send updates or additions with the package name, URL, programming language, status, and preferred contact to Fred Hickernell.\n\n\n\n\nName\n\n\nLanguage\n\n\nStatus\n\n\nContact\n\n\n\n\n\n\nLatNet BuilderLibrary for constructing low-discrepancy lattice rules and digital nets. \n\n\nC++ / Python\n\n\nActive\n\n\nPierre L’Ecuyer\n\n\n\n\nMATLAB QMC Toolbox\n\n\nMATLAB\n\n\n\n\n\n\n\n\nQMCPyMulti-purpose library featuring various low discrepancy sequences and data-driven error estimation. \n\n\nPython\n\n\nActive, collaboration welcome\n\n\nSou-Cheng ChoiFred HickernellAleksei Sorokin"
   },
   {
     "objectID": "index.html#plenary-talk",
