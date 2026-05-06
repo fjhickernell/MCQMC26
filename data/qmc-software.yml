@@ -4,10 +4,11 @@
     Multi-purpose library featuring various low discrepancy sequences
     and data-driven error estimation.
   language: Python
-  status: Active
+  status: Active, collaboration welcome
   contact:
     - Sou-Cheng Choi
-    - Fred Hickernell
+    - name: Fred Hickernell
+      url: https://github.com/fjhickernell
     - Aleksei Sorokin
 
 - name: LatNet Builder
