@@ -28,9 +28,9 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: slides/MCQMC2026_Plenary.html
+      - href: slides/Plenary_MCQMC2026.html
         text: Plenary talk slides
-      - href: slides/MCQMC2026_SpecialSession.html
+      - href: slides/SpecialSession_MCQMC2026.html
         text: Special session talk slides
       - href: pages/qmc-software.html
         text: QMC Software
