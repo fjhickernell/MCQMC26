@@ -26,5 +26,31 @@ format:
     code-overflow: wrap
 ---
 
-# First line
+
+# Thanks to many collaborators
+
+```{python}
+#| echo: false
+#| output: asis
+
+import yaml
+from pathlib import Path
+people = yaml.safe_load(Path("../data/collaborators.yml").read_text())
+ncols = 5
+img_width = "135px"
+print(f'<div class="collab-grid" style="grid-template-columns: repeat({ncols}, 1fr);">')
+for person in people:
+    slug = person["slug"]
+    caption = person["caption"]
+    img = f"../assets/img/headshots/processed/{slug}.jpg"
+    print(f'''
+<div class="collab-card">
+  <img src="{img}" alt="{caption}" style="width:{img_width};">
+  <div class="collab-caption">{caption}</div>
+</div>
+''')
+
+print("</div>")
+```
+
 
