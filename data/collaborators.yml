@@ -2,11 +2,17 @@
 - slug: choi-sou-cheng
   caption: Sou-Cheng Choi
 
+- slug: dave-karm
+  caption: Dave Karm
+
 - slug: ding-yuhan
   caption: Yuhan Ding
 
 - slug: herman-joshua
   caption: Joshua Herman
+
+- slug: jagadeeswaran-ravinathel
+  caption: R. Jagadeeswaran
 
 - slug: jain-aadit
   caption: Aadit Jain
@@ -18,12 +24,21 @@
 - slug: mak-simon
   caption: Simon Mak
 
+- slug: matiukha-larysa
+  caption: Larysa Matiukha
+
 - slug: owen-art
   caption: Art Owen
+
+- slug: pride-anderson
+  caption: Anderson Pride
 
 - slug: robbe-pieterjan
   caption: Pieterjan Robbe
   crop_y: 0.6
+
+- slug: sharp-brandon
+  caption: Brandon Sharp
 
 - slug: sorokin-aleksei
   caption: Aleksei Sorokin
@@ -34,7 +49,7 @@
 
 - slug: vemuri-laasya-priya
   caption: Laasya Priya Vemuri
-  
+
 - slug: xiong-yifei
   caption: Yifei Xiong
   
