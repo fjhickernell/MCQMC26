@@ -10,8 +10,9 @@
 
 - slug: herman-joshua
   caption: Joshua Herman
+  crop_y: 0.7 
 
-- slug: jagadeeswaran-ravinathel
+- slug: jagadeeswaran-rathinavel
   caption: R. Jagadeeswaran
 
 - slug: jain-aadit
@@ -39,6 +40,7 @@
 
 - slug: sharp-brandon
   caption: Brandon Sharp
+  crop_y: 0.6
 
 - slug: sorokin-aleksei
   caption: Aleksei Sorokin

@@ -1,10 +1,10 @@
 ---
-title: "Title (TBD)"
+title: "Where Quasi-Monte Carlo Theory and Practice Meet"
 author: "Fred J. Hickernell"
 subtitle: |
   Illinois Institute of Technology, hickernell@illinoistech.edu
 
-  Joint work with ??? <span class="pkg">qmcpy</span> development team
+  Joint work with several collaborators and the <span class="pkg">qmcpy</span> development team
 
   Supported in part by NSF-DMS-2316011 &nbsp; &nbsp;  ·  &nbsp; &nbsp; Thanks to the organizers
 
@@ -36,7 +36,7 @@ format:
 import yaml
 from pathlib import Path
 people = yaml.safe_load(Path("../data/collaborators.yml").read_text())
-ncols = 5
+ncols = 6
 img_width = "135px"
 print(f'<div class="collab-grid" style="grid-template-columns: repeat({ncols}, 1fr);">')
 for person in people:
@@ -53,4 +53,13 @@ for person in people:
 print("</div>")
 ```
 
+# Theory and Practice Are Both Important
+
+# Low Discrepancy Sequence Constructions
+
+# Data-Driven Error Bounds
+
+# Software Development and Dissemination
+
+# Future Directions
 
