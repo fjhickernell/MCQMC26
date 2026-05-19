@@ -46,7 +46,7 @@ website:
             href: https://qmcpy.org
 
   page-footer:
-    left: "© 2026 Fred J. Hickernell · Illinois Institute of Technology"
+    left: "© 2026 Fred J. Hickernell · Illinois Institute of Technology · assisted by ChatGPT"
 
 course_repo: "https://github.com/fjhickernell/MCQMC26"
 course_repo_label: "MCQMC26 on GitHub"

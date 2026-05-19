@@ -24,6 +24,9 @@ execute:
 format:
   revealjs:
     code-overflow: wrap
+    footer: |
+      Fred J. Hickernell · Illinois Institute of Technology · assisted by ChatGPT
+
 ---
 
 
@@ -67,15 +70,21 @@ print("</div>")
 
 exec(open("../classlib/classlib/quarto/includes/qmc_software_table.py").read())
 
-render_qmc_software_table(
-    data_path="../data/qmc-software.yml",
-    mode="slides",
-)
+render_qmc_software_table("../data/qmc-software.yml", mode="slides", start=0, stop=9) 
+```
+
+---
+
+```{python}
+#| echo: false
+#| output: asis
+
+exec(open("../classlib/classlib/quarto/includes/qmc_software_table.py").read())
+
+render_qmc_software_table("../data/qmc-software.yml", mode="slides", start=9) 
 ```
 
 
 # Future Directions
-
-
 
 

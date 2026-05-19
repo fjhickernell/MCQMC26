@@ -126,6 +126,35 @@
   description: >
     Nested uniform scrambling of Sobol' sequences and pointer to randomized Halton sequences
   language: R
-  status: "Mature"
+  status: Mature
   contact: 
     - Art Owen
+
+- name: Halton
+  url: https://github.com/llxu2017/halton
+  description: >
+    Random-start randomly permuted Halton sequences
+  language: C++
+  status: Mature
+
+- name: 
+    - label: Lattice 
+      url: https://web.maths.unsw.edu.au/~fkuo/lattice/index.html
+    - label: Sobol' 
+      url: https://web.maths.unsw.edu.au/~fkuo/sobol/index.html
+  description: >
+    Generating vectors for Sobol' sequences and lattice rules
+  language: plain text
+  status: Mature
+  contact:
+    - Frances Kuo
+    - Stephen Joe
+
+- name: Magic Point Shop
+  url: https://people.cs.kuleuven.be/~dirk.nuyens/qmc-generators/
+  description: >
+    QMC point generators and generating vectors for digial sequences and lattice sequences
+  language: C++, MATLAB, Python, plain text
+  status: Mature
+  contact:
+    - name: Dirk Nuyens
