@@ -1,17 +1,13 @@
 - name: qmcpy
   url: https://qmcpy.org
-
   related:
     - name: QMCToolsCL
       url: https://github.com/QMCSoftware/QMCToolsCL
-
   description: >
     Multi-purpose library featuring various low discrepancy sequences
     and data-driven error estimation
-
   language: Python
   status: Active, Collaboration welcome
-
   contact:
     - Sou-Cheng Choi
     - name: Fred Hickernell
@@ -27,12 +23,14 @@
   contact:
     - Pierre L’Ecuyer
 
-- name: MATLAB QMC Toolbox
-  url: ""
-  description: ""
+- name: MATLAB Statistics & Machine Learning Toolbox
+  url: https://www.mathworks.com/help/stats/generating-quasi-random-numbers.html
+  description: "Produces quasi-random samples in the unit hypercube, including Sobol and Halton sequences"
   language: MATLAB
-  status: ""
-  contact: []
+  status: Mature
+  contact:
+    - name: Liam Walsh
+      url: mailto:lwalsh@mathworks.com
 
 - name: NVIDIA cuRAND
   url: https://docs.nvidia.com/cuda/curand/index.html
@@ -82,16 +80,19 @@
   language: R
   status: "Active"
   contact: 
-    - R package maintainers 
+    - name: Marious Hofert
+      url: mailto:mhofert@hku.hk
+    - Christane Lemieux 
 
 - name: QuasiMonteCarlo.jl
-  url:  
+  url:  https://docs.sciml.ai/QuasiMonteCarlo/stable/
   description: >
     Julia package for generating low-discrepancy sequences and performing quasi-Monte Carlo integration, designed for high-performance scientific computing 
   language: Julia
   status: "Active"
   contact: 
-    - Julia package maintainers
+    - name: Chris Rackauckas
+      url: https://julialang.org/slack/
 
 - name: BRODA
   url: https://www.broda.co.uk
@@ -103,12 +104,28 @@
     - name: Sergei Kucherenko
       url: mailto:info@broda.co.uk
 
-
 - name: NAG Quasi-Random Number Generators
   url: https://support.nag.com/numeric/nl/nagdoc_latest/clhtml/g05/g05intro.html
   description: >
     NAG's implementation of quasi-random number generators for use in Monte Carlo simulations
   language: Fortran, C, C++
   status: "Mature"
+  contact: []
+
+- name: LDData
+  url: https://github.com/QMCSoftware/LDData
+  description: >
+    Database of low discrepancy generators
+  language: plain text
+  status: "Active, Collaboration welcome"
   contact: 
-    - NAG maintainers
+    - Aleksei Sorokin
+
+- name: Owen's Scrambled Points
+  url: https://artowen.su.domains/code/
+  description: >
+    Nested uniform scrambling of Sobol' sequences and pointer to randomized Halton sequences
+  language: R
+  status: "Mature"
+  contact: 
+    - Art Owen
