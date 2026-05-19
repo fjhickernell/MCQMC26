@@ -1,10 +1,17 @@
-- name: QMCPy
+- name: qmcpy
   url: https://qmcpy.org
+
+  related:
+    - name: QMCToolsCL
+      url: https://github.com/QMCSoftware/QMCToolsCL
+
   description: >
     Multi-purpose library featuring various low discrepancy sequences
-    and data-driven error estimation.
+    and data-driven error estimation
+
   language: Python
-  status: Active, collaboration welcome
+  status: Active, Collaboration welcome
+
   contact:
     - Sou-Cheng Choi
     - name: Fred Hickernell
@@ -14,9 +21,9 @@
 - name: LatNet Builder
   url: https://github.com/umontreal-simul/latnetbuilder
   description: >
-    Library for constructing low-discrepancy lattice rules and digital nets.
+    Library for constructing low-discrepancy lattice rules and digital nets
   language: C++ / Python
-  status: Active
+  status: Active, Collaboration welcome
   contact:
     - Pierre L’Ecuyer
 
@@ -26,3 +33,82 @@
   language: MATLAB
   status: ""
   contact: []
+
+- name: NVIDIA cuRAND
+  url: https://docs.nvidia.com/cuda/curand/index.html
+  description: >
+    NVIDIA's library for generating random and quasi-random numbers on GPUs
+  language: C++ / CUDA
+  status: "Mature"
+  contact: []
+
+- name: Boost Random Number Library
+  url: https://www.boost.org/doc/libs/latest/doc/html/boost_random/reference.html#boost_random.reference.concepts.quasi_random_number_generator
+  description: >
+    Part of the Boost C++ Libraries, offering a wide range of random number generators, including some low-discrepancy sequences
+  language: C++
+  status: "Mature"
+  contact: []
+
+- name: PyTorch Sobol Engine
+  url: https://pytorch.org/docs/stable/generated/torch.quasirandom.SobolEngine.html
+  description: >
+    PyTorch's implementation of the Sobol sequence for generating low-discrepancy samples in machine learning applications  
+  language: Python
+  status: "Active"
+  contact: []
+
+- name: Dakota
+  url: https://snl-dakota.github.io/docs/6.19.0/users/usingdakota/reference/method-sampling-sample_type-low_discrepancy.html
+  description: >
+    Software toolkit for optimization and uncertainty quantification, including support for lattices and digital nets
+  status: "Mature"
+  contact: 
+    - Pieterjan Robbe
+
+- name: scipy.stats.qmc
+  url: https://docs.scipy.org/doc/scipy/reference/stats.qmc.html
+  description: >
+    Part of the SciPy library, providing low-discrepancy sequence generators and sampling methods for scientific computing in Python
+  language: Python
+  status: "Active"
+  contact: 
+    - Pamphile Roy
+
+- name: qrng
+  url: https://cran.r-project.org/web/packages/qrng/index.html
+  description: >
+    R package for generating low-discrepancy sequences, including Sobol and Halton sequences, for statistical computing and data analysis
+  language: R
+  status: "Active"
+  contact: 
+    - R package maintainers 
+
+- name: QuasiMonteCarlo.jl
+  url:  
+  description: >
+    Julia package for generating low-discrepancy sequences and performing quasi-Monte Carlo integration, designed for high-performance scientific computing 
+  language: Julia
+  status: "Active"
+  contact: 
+    - Julia package maintainers
+
+- name: BRODA
+  url: https://www.broda.co.uk
+  description: >
+    Commercial software offering a range of quasi-Monte Carlo methods for financial modeling and risk analysis
+  language: C++ / Fortran
+  status: "Mature"
+  contact: 
+    - name: Sergei Kucherenko
+      url: mailto:info@broda.co.uk
+
+
+- name: NAG Quasi-Random Number Generators
+  url: https://support.nag.com/numeric/nl/nagdoc_latest/clhtml/g05/g05intro.html
+  description: >
+    NAG's implementation of quasi-random number generators for use in Monte Carlo simulations
+  language: Fortran, C, C++
+  status: "Mature"
+  contact: 
+    - NAG maintainers

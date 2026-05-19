@@ -7,85 +7,16 @@ This page lists software packages related to quasi-Monte Carlo methods.
 Please send updates or additions with the package name, URL, programming language, status, and preferred contact to [Fred Hickernell](mailto:hickernell@illinoistech.edu).
 
 
-
 ```{python}
 #| echo: false
 #| output: asis
 
-import html
-import yaml
-from pathlib import Path
+exec(open("../classlib/classlib/quarto/includes/qmc_software_table.py").read())
 
-data_path = Path("../data/qmc-software.yml")
-
-with data_path.open() as f:
-    data = yaml.safe_load(f)
-
-# Sort alphabetically by name (case-insensitive)
-data = sorted(data, key=lambda x: (x.get("name") or "").lower())
-
-print("""
-<table>
-<thead>
-<tr>
-  <th>Name</th>
-  <th>Language</th>
-  <th>Status</th>
-  <th>Contact</th>
-</tr>
-</thead>
-<tbody>
-""")
-
-for row in data:
-    name = html.escape(row.get("name", ""))
-    url = row.get("url", "")
-    language = html.escape(row.get("language", ""))
-    status = html.escape(row.get("status", ""))
-    desc = html.escape(row.get("description", ""))
-
-    # --- Name with link ---
-    if url:
-        name_html = f'<a href="{html.escape(url)}">{name}</a>'
-    else:
-        name_html = name
-
-    # --- Description under name ---
-    if desc:
-        name_html = f'{name_html}<br><span class="software-desc">{desc}</span>'
-
-    # --- Contacts (list, links, mailto support) ---
-    contacts = row.get("contact", [])
-    contact_items = []
-
-    for c in contacts:
-        if isinstance(c, dict):
-            cname = html.escape(c.get("name", ""))
-            curl = c.get("url", "")
-            if curl:
-                if curl.startswith("mailto:"):
-                    contact_items.append(f'<a href="{html.escape(curl)}">✉ {cname}</a>')
-                else:
-                    contact_items.append(f'<a href="{html.escape(curl)}">{cname}</a>')
-            else:
-                contact_items.append(cname)
-        else:
-            contact_items.append(html.escape(str(c)))
-
-    contact_str = "<br>".join(contact_items)
-
-    print(f"""
-<tr>
-  <td>{name_html}</td>
-  <td>{language}</td>
-  <td>{status}</td>
-  <td>{contact_str}</td>
-</tr>
-""")
-
-print("""
-</tbody>
-</table>
-""")
+render_qmc_software_table(
+    data_path="../data/qmc-software.yml",
+    mode="web",
+)
 ```
+
 
