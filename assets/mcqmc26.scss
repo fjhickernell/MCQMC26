@@ -1,0 +1,34 @@
+.tree-slide {
+  position: relative;
+  width: 100%;
+}
+
+.tree-img {
+  width: 100%;
+  display: block;
+}
+
+.tree-label {
+  position: absolute;
+  font-weight: 700;
+  color: #123d1f;
+  text-shadow: 0 0 10px white, 0 0 14px white;
+}
+
+.tree-label.foundations {
+  left: 39%;
+  top: 83%;
+  font-size: 1.25em;
+}
+
+.tree-label.theory {
+  left: 45%;
+  top: 48%;
+  font-size: 1.25em;
+}
+
+.tree-label.practice {
+  left: 18%;
+  top: 19%;
+  font-size: 1.35em;
+}

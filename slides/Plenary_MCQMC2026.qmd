@@ -24,6 +24,9 @@ execute:
 format:
   revealjs:
     code-overflow: wrap
+    include-in-header:
+      text: |
+        \usepackage{tikz}
     footer: |
       Fred J. Hickernell · Illinois Institute of Technology · assisted by ChatGPT
 
@@ -55,6 +58,19 @@ for person in people:
 
 print("</div>")
 ```
+---
+
+# Quasi-Monte Carlo (QMC) Has Flourished Over Several Decades
+
+## Quasi-Monte Carlo Has Flourished Over Several Decades
+
+::: {.tree-slide}
+![](../assets/img/qmc-tree.png){.tree-img}
+
+<div class="tree-label foundations">Foundations</div>
+<div class="tree-label theory">Theory</div>
+<div class="tree-label practice">Practice</div>
+:::
 
 # Theory and Practice Are Both Important
 

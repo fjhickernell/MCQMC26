@@ -5,5 +5,8 @@ metadata-files:
 course_website: "https://fjhickernell.github.io/MCQMC26/"
 
 format:
-  revealjs: {}
+  revealjs:
+    theme:
+      - default
+      - assets/mcqmc26.scss
 
