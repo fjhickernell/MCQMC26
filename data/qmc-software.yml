@@ -158,3 +158,12 @@
   status: Mature
   contact:
     - name: Dirk Nuyens
+
+- name: Stochastic Simulation in Java (SSJ)
+  url: https://github.com/umontreal-simul/ssj
+  description: >
+    Java library for stochastic simulation, including low-discrepancy sequence generators and sampling methods
+  language: Java
+  status: "Active"
+  contact:
+    - name: Pierre L’Ecuyer

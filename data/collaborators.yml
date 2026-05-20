@@ -19,6 +19,10 @@
   caption: Aadit Jain
   crop_x: 0.2
 
+- slug: kang-jiangrui
+  caption: Jiangrui Kang
+  crop_y: 1.0
+
 - slug: kirk-nathan
   caption: Nathan Kirk
 
