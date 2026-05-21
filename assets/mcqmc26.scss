@@ -1,0 +1,97 @@
+.state-stack {
+  position: relative;
+  min-height: 520px;
+}
+
+.state-panel {
+  position: absolute;
+  inset: 0;
+}
+
+.state-stack:has(.fragment.visible) .state-0 {
+  display: none;
+}
+
+
+.tree-slide {
+  position: relative;
+  width: 100%;
+  font-size: 1vw;
+}
+
+.tree-slide .tree-img {
+  width: 100%;
+  display: block;
+}
+
+.tree-slide .tree-label {
+  position: absolute;
+  font-weight: 700;
+  color: #0c2b14;
+  line-height: 1;
+  text-shadow:
+    0 0 8px white,
+    0 0 16px white,
+    0 0 28px white;
+}
+
+.tree-slide .foundations {
+  left: 39%;
+  top: 78%;
+  font-size: 3em;
+}
+
+.tree-slide .theory {
+  left: 45%;
+  top: 48%;
+  font-size: 3em;
+}
+
+.tree-slide .practice {
+  left: 18%;
+  top: 19%;
+  font-size: 3em;
+}
+
+.tree-root-label {
+  position: absolute;
+  font-weight: 700;
+  color: #3d2a1c;
+
+  text-shadow:
+    0 0 6px white,
+    0 0 12px white,
+    0 0 18px white;
+
+  font-size: 2em;
+}
+
+.algebra {
+  left: 8%;
+  top: 79%;
+}
+
+.analysis {
+  left: 28%;
+  top: 90%;
+}
+
+.cs {
+  left: 57%;
+  top: 90%;
+  text-align: center;
+}
+
+.statistics {
+  left: 78%;
+  top: 79%;
+}
+
+.tree-only-root {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 70%;
+  background: rgba(255,255,255,1);
+}
