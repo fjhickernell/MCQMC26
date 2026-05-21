@@ -24,53 +24,262 @@ execute:
 format:
   revealjs:
     code-overflow: wrap
-    include-in-header:
-      text: |
-        \usepackage{tikz}
     footer: |
       Fred J. Hickernell · Illinois Institute of Technology · assisted by ChatGPT
 
 ---
 
 
-# Thanks to many collaborators
+# Quasi-Monte Carlo (QMC) Has Grown Over Several Decades
 
-```{python}
-#| echo: false
-#| output: asis
+::: {.columns}
 
-import yaml
-from pathlib import Path
-people = yaml.safe_load(Path("../data/collaborators.yml").read_text())
-ncols = 6
-img_width = "135px"
-print(f'<div class="collab-grid" style="grid-template-columns: repeat({ncols}, 1fr);">')
-for person in people:
-    slug = person["slug"]
-    caption = person["caption"]
-    img = f"../assets/img/headshots/processed/{slug}.jpg"
-    print(f'''
-<div class="collab-card">
-  <img src="{img}" alt="{caption}" style="width:{img_width};">
-  <div class="collab-caption">{caption}</div>
-</div>
-''')
+::: {.column width="35%"}
 
-print("</div>")
-```
----
+* [Foundation]{.alert} enables theory
+&nbsp;
+* [Theory]{.alert} justifies and explains practice
+&nbsp;
+* [Practice]{.alert}
+  - Motivates and tests theory 
+  - Solves real problems
 
-# Quasi-Monte Carlo (QMC) Has Flourished Over Several Decades
+:::
 
-## Quasi-Monte Carlo Has Flourished Over Several Decades
+::: {.column width="65%"}
+
+::: {.tree-slide style="--tree-width: 100%; --tree-font: 1em;"}
+![](../assets/img/qmc-tree.png){.tree-img}
+<div class="tree-label foundations">Foundation</div>
+<div class="tree-label theory">Theory</div>
+<div class="tree-label practice">Practice</div>
+
+:::
+
+:::
+
+:::
+
+## No QMC with foundation only
+
+::: {.columns}
+
+::: {.column width="35%"}
+
+* [Foundation]{.alert} enables theory
+
+  - Rooted in multiple disciplines 
+
+:::
+
+::: {.column width="65%"}
 
 ::: {.tree-slide}
 ![](../assets/img/qmc-tree.png){.tree-img}
+<div class="tree-only-root"></div>
+<div class="tree-label foundations">Foundation</div>
+<div class="tree-root-label algebra">Algebra</div>
+<div class="tree-root-label analysis">Analysis</div>
+<div class="tree-root-label cs">Computer<br>Science</div>
+<div class="tree-root-label statistics">Statistics</div>
 
-<div class="tree-label foundations">Foundations</div>
+:::
+
+:::
+
+:::
+
+# Quasi-Monte Carlo (QMC) Has Grown Over Several Decades
+
+::: {.columns}
+
+::: {.column width="35%"}
+
+* [Foundation]{.alert} enables theory
+&nbsp;
+* [Theory]{.alert} justifies and explains practice
+&nbsp;
+* [Practice]{.alert}
+  - Motivates and tests theory 
+  - Solves real problems
+
+
+::: {.fragment .current-visible}
+
+* [Foundation]{.alert} enables theory
+
+:::
+
+::: {.fragment .current-visible data-fragment-index="2"}
+
+Content for state 3
+
+:::
+
+::: {.fragment .current-visible data-fragment-index="3"}
+
+Content for state 4
+
+:::
+
+:::
+
+::: {.column width="65%"}
+
+::: {.tree-slide style="--tree-width: 100%; --tree-font: 1em;"}
+![](../assets/img/qmc-tree.png){.tree-img}
+<div class="tree-label foundations">Foundation</div>
 <div class="tree-label theory">Theory</div>
 <div class="tree-label practice">Practice</div>
+
 :::
+
+::: {.fragment .current-visible data-fragment-index="1"}
+
+::: {.tree-slide}
+![](../assets/img/qmc-tree.png){.tree-img}
+<div class="tree-only-root"></div>
+<div class="tree-label foundations">Foundation</div>
+
+:::
+
+:::
+
+:::
+
+:::
+
+
+
+# Quasi-Monte Carlo (QMC) Has Grown Over Several Decades
+
+::: {.columns}
+
+::: {.column width="35%"}
+
+* [Foundation]{.alert} enables theory
+&nbsp;
+* [Theory]{.alert} justifies and explains practice
+&nbsp;
+* [Practice]{.alert}
+  - Motivates and tests theory 
+  - Solves real problems
+
+
+::: {.fragment .current-visible}
+
+* [Foundation]{.alert} enables theory
+
+:::
+
+::: {.fragment .current-visible data-fragment-index="2"}
+
+Content for state 3
+
+:::
+
+::: {.fragment .current-visible data-fragment-index="3"}
+
+Content for state 4
+
+:::
+
+:::
+
+::: {.column width="65%"}
+
+::: {.tree-slide style="--tree-width: 100%; --tree-font: 1em;"}
+![](../assets/img/qmc-tree.png){.tree-img}
+<div class="tree-label foundations">Foundation</div>
+<div class="tree-label theory">Theory</div>
+<div class="tree-label practice">Practice</div>
+
+:::
+
+::: {.fragment .current-visible data-fragment-index="1"}
+
+::: {.tree-slide}
+![](../assets/img/qmc-tree.png){.tree-img}
+<div class="tree-only-root"></div>
+<div class="tree-label foundations">Foundation</div>
+
+:::
+
+:::
+
+:::
+
+:::
+
+
+
+# Quasi-Monte Carlo (QMC) Has Grown Over Several Decades
+
+::: {.columns}
+
+::: {.column width="35%"}
+
+* [Foundation]{.alert} enables theory
+&nbsp;
+* [Theory]{.alert} justifies and explains practice
+&nbsp;
+* [Practice]{.alert}
+  - Motivates and tests theory 
+  - Solves real problems
+
+:::
+
+::: {.column width="65%"}
+
+::: {.tree-slide style="--tree-width: 100%; --tree-font: 1em;"}
+![](../assets/img/qmc-tree.png){.tree-img}
+<div class="tree-label foundations">Foundation</div>
+<div class="tree-label theory">Theory</div>
+<div class="tree-label practice">Practice</div>
+
+:::
+
+:::
+
+:::
+
+
+## No QMC with Foundation Only
+
+::: {.columns}
+
+::: {.column width="35%"}
+
+* [Foundation]{.alert} enables theory
+
+:::
+
+
+::: {.column width="65%"}
+
+::: {.tree-slide}
+![](../assets/img/qmc-tree.png){.tree-img}
+<div class="tree-only-root"></div>
+<div class="tree-label foundations">Foundation</div>
+
+:::
+
+:::
+
+---
+
+::: {.tree-slide}
+
+![](../assets/img/qmc-tree.png){.tree-img}
+
+<div class="tree-only-root"></div>
+
+<div class="tree-label foundations">Foundation</div>
+
+:::
+
+
+
 
 # Theory and Practice Are Both Important
 
@@ -100,7 +309,36 @@ exec(open("../classlib/classlib/quarto/includes/qmc_software_table.py").read())
 render_qmc_software_table("../data/qmc-software.yml", mode="slides", start=9) 
 ```
 
+# Collaboration and Community
+
+## Thanks to many collaborators
+
+```{python}
+#| echo: false
+#| output: asis
+
+import yaml
+from pathlib import Path
+people = yaml.safe_load(Path("../data/collaborators.yml").read_text())
+ncols = 6
+img_width = "135px"
+print(f'<div class="collab-grid" style="grid-template-columns: repeat({ncols}, 1fr);">')
+for person in people:
+    slug = person["slug"]
+    caption = person["caption"]
+    img = f"../assets/img/headshots/processed/{slug}.jpg"
+    print(f'''
+<div class="collab-card">
+  <img src="{img}" alt="{caption}" style="width:{img_width};">
+  <div class="collab-caption">{caption}</div>
+</div>
+''')
+
+print("</div>")
+```
+---
 
 # Future Directions
+
 
 
