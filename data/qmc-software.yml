@@ -80,9 +80,9 @@
   language: R
   status: "Active"
   contact: 
-    - name: Marious Hofert
+    - name: Marius Hofert
       url: mailto:mhofert@hku.hk
-    - Christane Lemieux 
+    - Christiane Lemieux 
 
 - name: QuasiMonteCarlo.jl
   url:  https://docs.sciml.ai/QuasiMonteCarlo/stable/
