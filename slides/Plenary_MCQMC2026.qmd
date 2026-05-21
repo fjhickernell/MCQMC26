@@ -78,16 +78,18 @@ format:
 ![](../assets/img/qmc-tree.png){.tree-img}
 <div class="tree-only-root"></div>
 <div class="tree-label foundations">Foundation</div>
-<div class="tree-root-label algebra">Algebra</div>
-<div class="tree-root-label analysis">Analysis</div>
-<div class="tree-root-label cs">Computer<br>Science</div>
-<div class="tree-root-label statistics">Statistics</div>
+<div class="tree-example-label algebra">Algebra</div>
+<div class="tree-example-label analysis">Analysis</div>
+<div class="tree-example-label cs">Computer<br>Science</div>
+<div class="tree-example-label statistics">Statistics</div>
+
+:::
+
 
 :::
 
 :::
 
-:::
 
 # Quasi-Monte Carlo (QMC) Has Grown Over Several Decades
 
