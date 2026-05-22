@@ -36,19 +36,27 @@ format:
 
 ::: {.column width="35%"}
 
-* [Foundation]{.alert} enables theory
-&nbsp;
-* [Theory]{.alert} justifies and explains practice
-&nbsp;
 * [Practice]{.alert}
-  - Motivates and tests theory 
+  - Motivates and illustrates theory 
   - Solves real problems
+
+&nbsp;
+
+* [Theory]{.alert} justifies and explains practice
+
+&nbsp;
+
+
+&nbsp;
+
+
+* [Foundation]{.alert} enables theory
 
 :::
 
-::: {.column width="65%"}
+::: {.column .tree-col width="65%"}
 
-::: {.tree-slide style="--tree-width: 100%; --tree-font: 1em;"}
+::: {.tree-slide style="--tree-width: 100%; --tree-font-scale: 0.75;"}
 ![](../assets/img/qmc-tree.png){.tree-img}
 <div class="tree-label foundations">Foundation</div>
 <div class="tree-label theory">Theory</div>
@@ -60,19 +68,33 @@ format:
 
 :::
 
-## No QMC with foundation only
+## No QMC with roots only
 
 ::: {.columns}
 
 ::: {.column width="35%"}
 
+&nbsp;
+
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
 * [Foundation]{.alert} enables theory
 
   - Rooted in multiple disciplines 
+  - Rare for a single person to have expertise in all of them
 
 :::
 
-::: {.column width="65%"}
+::: {.column .tree-col width="65%"}
 
 ::: {.tree-slide}
 ![](../assets/img/qmc-tree.png){.tree-img}
@@ -81,69 +103,55 @@ format:
 <div class="tree-example-label algebra">Algebra</div>
 <div class="tree-example-label analysis">Analysis</div>
 <div class="tree-example-label cs">Computer<br>Science</div>
+<div class="tree-example-label domain">Domain<br>Knowledge</div>
 <div class="tree-example-label statistics">Statistics</div>
 
 :::
 
-
 :::
 
 :::
 
 
-# Quasi-Monte Carlo (QMC) Has Grown Over Several Decades
+## A strong trunk supports the canopy
 
 ::: {.columns}
 
 ::: {.column width="35%"}
 
-* [Foundation]{.alert} enables theory
 &nbsp;
-* [Theory]{.alert} justifies and explains practice
+
 &nbsp;
-* [Practice]{.alert}
-  - Motivates and tests theory 
-  - Solves real problems
+
+&nbsp;
 
 
-::: {.fragment .current-visible}
+&nbsp;
 
-* [Foundation]{.alert} enables theory
+* [Theory]{.alert} 
 
-:::
+  - Draws on the foundation
+  
+  - Explains what may and may not work
 
-::: {.fragment .current-visible data-fragment-index="2"}
-
-Content for state 3
-
-:::
-
-::: {.fragment .current-visible data-fragment-index="3"}
-
-Content for state 4
+  - Grows in response to suprises in practice
 
 :::
 
-:::
+::: {.column .tree-col width="65%"}
 
-::: {.column width="65%"}
-
-::: {.tree-slide style="--tree-width: 100%; --tree-font: 1em;"}
+::: {.tree-slide style="--tree-width: 100%; --tree-font-scale: 0.75;"}
 ![](../assets/img/qmc-tree.png){.tree-img}
-<div class="tree-label foundations">Foundation</div>
+<div class="tree-mask-canopy"></div>
 <div class="tree-label theory">Theory</div>
-<div class="tree-label practice">Practice</div>
-
-:::
-
-::: {.fragment .current-visible data-fragment-index="1"}
-
-::: {.tree-slide}
-![](../assets/img/qmc-tree.png){.tree-img}
-<div class="tree-only-root"></div>
-<div class="tree-label foundations">Foundation</div>
-
-:::
+<div class="tree-example-label sequence">Sequence<br>Construction</div>
+<div class="tree-example-label error">Error<br>Bounds</div>
+<div class="tree-example-label discrepancy">Discrepancy</div>
+<div class="tree-example-label change-measure">Variation<br>Reduction</div>
+<div class="tree-example-label ibc">Information-Based<br>Complexity</div>
+<div class="tree-example-label multi">Multilevel</div>
+<div class="tree-example-label dimension">Effective<br>Dimension</div>
+<div class="tree-example-label prob">Probabilistic<br>Numerics</div>
 
 :::
 
@@ -152,60 +160,33 @@ Content for state 4
 :::
 
 
-
-# Quasi-Monte Carlo (QMC) Has Grown Over Several Decades
+## Canopy is the most visible
 
 ::: {.columns}
 
 ::: {.column width="35%"}
 
-* [Foundation]{.alert} enables theory
-&nbsp;
-* [Theory]{.alert} justifies and explains practice
-&nbsp;
 * [Practice]{.alert}
-  - Motivates and tests theory 
-  - Solves real problems
-
-
-::: {.fragment .current-visible}
-
-* [Foundation]{.alert} enables theory
+  - Solving problems with societal impact
+  - Infrastructure for practitioners
+  - Requires theory for justification
+  - May not seem to align with theory at first
 
 :::
 
-::: {.fragment .current-visible data-fragment-index="2"}
+::: {.column .tree-col width="65%"}
 
-Content for state 3
-
-:::
-
-::: {.fragment .current-visible data-fragment-index="3"}
-
-Content for state 4
-
-:::
-
-:::
-
-::: {.column width="65%"}
-
-::: {.tree-slide style="--tree-width: 100%; --tree-font: 1em;"}
+::: {.tree-slide style="--tree-width: 100%; --tree-font-scale: 0.75;"}
 ![](../assets/img/qmc-tree.png){.tree-img}
-<div class="tree-label foundations">Foundation</div>
-<div class="tree-label theory">Theory</div>
 <div class="tree-label practice">Practice</div>
+<div class="tree-example-label uq">Uncertainty<br>Quantification</div>
+<div class="tree-example-label qf">Quantitative<br>Finance</div>
+<div class="tree-example-label software">Software</div>
+<div class="tree-example-label community">Collaboration<br>& Community</div>
+<div class="tree-example-label cg">Computer<br>Graphics</div>
+<div class="tree-example-label data-driven">Data-Driven<br>Error Bounds</div>
 
-:::
 
-::: {.fragment .current-visible data-fragment-index="1"}
-
-::: {.tree-slide}
-![](../assets/img/qmc-tree.png){.tree-img}
-<div class="tree-only-root"></div>
-<div class="tree-label foundations">Foundation</div>
-
-:::
 
 :::
 
@@ -215,77 +196,32 @@ Content for state 4
 
 
 
-# Quasi-Monte Carlo (QMC) Has Grown Over Several Decades
 
-::: {.columns}
-
-::: {.column width="35%"}
-
-* [Foundation]{.alert} enables theory
-&nbsp;
-* [Theory]{.alert} justifies and explains practice
-&nbsp;
-* [Practice]{.alert}
-  - Motivates and tests theory 
-  - Solves real problems
-
-:::
-
-::: {.column width="65%"}
-
-::: {.tree-slide style="--tree-width: 100%; --tree-font: 1em;"}
-![](../assets/img/qmc-tree.png){.tree-img}
-<div class="tree-label foundations">Foundation</div>
-<div class="tree-label theory">Theory</div>
-<div class="tree-label practice">Practice</div>
-
-:::
-
-:::
-
-:::
-
-
-## No QMC with Foundation Only
-
-::: {.columns}
-
-::: {.column width="35%"}
-
-* [Foundation]{.alert} enables theory
-
-:::
-
-
-::: {.column width="65%"}
-
-::: {.tree-slide}
-![](../assets/img/qmc-tree.png){.tree-img}
-<div class="tree-only-root"></div>
-<div class="tree-label foundations">Foundation</div>
-
-:::
-
-:::
-
----
-
-::: {.tree-slide}
-
-![](../assets/img/qmc-tree.png){.tree-img}
-
-<div class="tree-only-root"></div>
-
-<div class="tree-label foundations">Foundation</div>
-
-:::
-
-
-
-
-# Theory and Practice Are Both Important
 
 # Low Discrepancy Sequence Constructions
+
+::: {.columns}
+
+::: {.column width="65%"}
+
+TBD
+
+:::
+
+::: {.column .tree-col width="35%"}
+
+::: {.tree-slide style="--tree-width: 100%;"}
+![](../assets/img/qmc-tree.png){.tree-img}
+<div class="tree-example-label sequence">Sequence<br>Construction</div>
+<div class="tree-example-label discrepancy">Discrepancy</div>
+<div class="tree-example-label missing">Missing<br>Data</div>
+
+:::
+
+:::
+
+:::
+
 
 # Data-Driven Error Bounds
 
@@ -341,6 +277,56 @@ print("</div>")
 ---
 
 # Future Directions
+
+::: {.columns}
+
+::: {.column width="35%"}
+
+* [Practice]{.alert}
+  - Solving problems with societal impact
+  - Infrastructure for practitioners
+  - Requires theory for justification
+  - May not seem to align with theory at first
+
+:::
+
+::: {.column .tree-col width="65%"}
+
+::: {.tree-slide style="--tree-width: 100%; --tree-font-scale: 0.75;"}
+![](../assets/img/qmc-tree.png){.tree-img}
+<div class="tree-label practice">Practice</div>
+<div class="tree-label theory">Theory</div>
+<div class="tree-label foundations">Foundation</div>
+<div class="tree-example-label uq">Uncertainty<br>Quantification</div>
+<div class="tree-example-label qf">Quantitative<br>Finance</div>
+<div class="tree-example-label software">Software</div>
+<div class="tree-example-label community">Collaboration<br>& Community</div>
+<div class="tree-example-label cg">Computer<br>Graphics</div>
+<div class="tree-example-label data-driven">Data-Driven<br>Error Bounds</div>
+<div class="tree-example-label sequence">Sequence<br>Construction</div>
+<div class="tree-example-label error">Error<br>Bounds</div>
+<div class="tree-example-label discrepancy">Discrepancy</div>
+<div class="tree-example-label change-measure">Variation<br>Reduction</div>
+<div class="tree-example-label ibc">Information-Based<br>Complexity</div>
+<div class="tree-example-label prob">Probabilistic<br>Numerics</div>
+<div class="tree-example-label multi">Multilevel</div>
+<div class="tree-example-label dimension">Effective<br>Dimension</div>
+<div class="tree-example-label algebra">Algebra</div>
+<div class="tree-example-label analysis">Analysis</div>
+<div class="tree-example-label cs">Computer<br>Science</div>
+<div class="tree-example-label domain">Domain<br>Knowledge</div>
+<div class="tree-example-label statistics">Statistics</div>
+<div class="tree-example-label missing">Missing<br>Data</div>
+<div class="tree-example-label hpc">High-Performance<br>Computing</div>
+
+
+
+:::
+
+:::
+
+:::
+
 
 
 
