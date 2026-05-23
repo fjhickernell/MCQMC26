@@ -11,10 +11,12 @@ Please send updates or additions with the package name, URL, programming languag
 #| echo: false
 #| output: asis
 
-exec(open("../classlib/classlib/quarto/includes/qmc_software_table.py").read())
+import runpy
 
-render_qmc_software_table(
-    data_path="../data/qmc-software.yml",
+helper = runpy.run_path("../qmcsoftware/scripts/qmc_software_table.py")
+
+helper["render_qmc_software_table"](
+    data_path="../qmcsoftware/data/qmc-software.yml",
     mode="web",
 )
 ```

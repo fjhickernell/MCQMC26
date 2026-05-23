@@ -231,9 +231,16 @@ TBD
 #| echo: false
 #| output: asis
 
-exec(open("../classlib/classlib/quarto/includes/qmc_software_table.py").read())
+import runpy
 
-render_qmc_software_table("../data/qmc-software.yml", mode="slides", start=0, stop=9) 
+helper = runpy.run_path("../qmcsoftware/scripts/qmc_software_table.py")
+
+helper["render_qmc_software_table"](
+    "../qmcsoftware/data/qmc-software.yml",
+    mode="slides",
+    start=0,
+    stop=10,
+)
 ```
 
 ---
@@ -241,10 +248,19 @@ render_qmc_software_table("../data/qmc-software.yml", mode="slides", start=0, st
 ```{python}
 #| echo: false
 #| output: asis
+import runpy
 
-exec(open("../classlib/classlib/quarto/includes/qmc_software_table.py").read())
+import runpy
 
-render_qmc_software_table("../data/qmc-software.yml", mode="slides", start=9) 
+helper = runpy.run_path("../qmcsoftware/scripts/qmc_software_table.py")
+
+helper["render_qmc_software_table"](
+    "../qmcsoftware/data/qmc-software.yml",
+    mode="slides",
+    start=10,
+    stop=20,
+)
+
 ```
 
 # Collaboration and Community
