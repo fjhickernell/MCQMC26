@@ -1,17 +1,3 @@
-.state-stack {
-  position: relative;
-  min-height: 520px;
-}
-
-.state-panel {
-  position: absolute;
-  inset: 0;
-}
-
-.state-stack:has(.fragment.visible) .state-0 {
-  display: none;
-}
-
 .tree-col {
   container-type: inline-size;
 }
