@@ -194,19 +194,22 @@ helper["render_qmc_tree"](
 
 ::: {.column .tree-col width="65%"}
 
-::: {.tree-slide style="--tree-width: 100%; --tree-font-scale: 0.75;"}
-![](../assets/img/qmc-tree.png){.tree-img}
-<div class="tree-label practice">Practice</div>
-<div class="tree-example-label uq">Uncertainty<br>Quantification</div>
-<div class="tree-example-label qf">Quantitative<br>Finance</div>
-<div class="tree-example-label software">Software</div>
-<div class="tree-example-label community">Collaboration<br>& Community</div>
-<div class="tree-example-label cg">Computer<br>Graphics</div>
-<div class="tree-example-label data-driven">Data-Driven<br>Error Bounds</div>
+```{python}
+#| echo: false
+#| output: asis
 
+import runpy
 
+helper = runpy.run_path(
+    "../classlib/classlib/quarto/assets/images/qmc-tree/render_qmc_tree.py"
+)
 
-:::
+helper["render_qmc_tree"](
+    groups=["practice"],
+    group_labels=["practice"],
+    tree_font_scale=0.75,
+)
+```
 
 :::
 
@@ -226,20 +229,28 @@ TBD
 
 :::
 
+
 ::: {.column .tree-col width="35%"}
 
-::: {.tree-slide style="--tree-width: 100%;"}
-![](../assets/img/qmc-tree.png){.tree-img}
-<div class="tree-example-label sequence">Sequence<br>Construction</div>
-<div class="tree-example-label discrepancy">Discrepancy</div>
-<div class="tree-example-label missing">Missing<br>Data</div>
+```{python}
+#| echo: false
+#| output: asis
+
+import runpy
+
+helper = runpy.run_path(
+    "../classlib/classlib/quarto/assets/images/qmc-tree/render_qmc_tree.py"
+)
+
+helper["render_qmc_tree"](
+    labels=["sequence", "discrepancy", "missing"],
+)
+```
+
 
 :::
 
 :::
-
-:::
-
 
 # Data-Driven Error Bounds
 
