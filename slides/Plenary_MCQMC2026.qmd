@@ -35,27 +35,43 @@ format:
 ::: {.columns}
 
 ::: {.column width="35%"}
+\begin{multline*}
+\overbrace{\Ex[f(\vX)] = \int_{[0,1]^d} f(\vx) \, \dif \vx}^{\text{population mean}} \\
+\approx \underbrace{\frac 1n \sum_{i=0}^{n-1} f(\vx_i)}_{\text{sample mean}}
+\end{multline*}
+
+$\vX \sim \Unif([0,1]^d)$
+
+
+:::
+
+:::
+
+
+
+## Quasi-Monte Carlo (QMC) Has Grown Over Several Decades
+
+::: {.columns}
+
+::: {.column width="35%"}
+\begin{multline*}
+\overbrace{\Ex[f(\vX)] = \int_{[0,1]^d} f(\vx) \, \dif \vx}^{\text{population mean}} \\
+\approx \underbrace{\frac 1n \sum_{i=0}^{n-1} f(\vx_i)}_{\text{sample mean}}
+\end{multline*}
 
 * [Practice]{.alert}
   - Motivates and illustrates theory 
   - Solves real problems
 
-&nbsp;
-
 * [Theory]{.alert} justifies and explains practice
-
-&nbsp;
-
-
-&nbsp;
 
 
 * [Foundation]{.alert} enables theory
 
+
 :::
 
 ::: {.column .tree-col width="65%"}
-
 
 ```{python}
 #| echo: false
@@ -76,6 +92,23 @@ helper["render_qmc_tree"](
 :::
 
 :::
+
+::: {.columns}
+
+::: {.column width="35%"}
+\begin{multline*}
+\overbrace{\Ex[f(\vX)] = \int_{[0,1]^d} f(\vx) \, \dif \vx}^{\text{population mean}} \\
+\approx \underbrace{\frac 1n \sum_{i=0}^{n-1} f(\vx_i)}_{\text{sample mean}}
+\end{multline*}
+
+$\vX \sim \Unif([0,1]^d)$
+
+
+:::
+
+:::
+
+
 
 
 ## No QMC with roots only
