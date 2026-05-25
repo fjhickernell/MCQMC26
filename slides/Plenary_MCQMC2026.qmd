@@ -36,11 +36,17 @@ format:
 
 ::: {.column width="35%"}
 \begin{multline*}
-\overbrace{\Ex[f(\vX)] = \int_{[0,1]^d} f(\vx) \, \dif \vx}^{\text{population mean}} \\
-\approx \underbrace{\frac 1n \sum_{i=0}^{n-1} f(\vx_i)}_{\text{sample mean}}
+\overbrace{\Ex[f(\vX)] = \int_{[0,1]^d} f(\vx) \, \dif \vx}^{\alerttext{population mean}} \\
+\approx \underbrace{\frac 1n \sum_{i=0}^{n-1} f(\vx_i)}_{\alerttext{sample mean}}
 \end{multline*}
 
 $\vX \sim \Unif([0,1]^d)$
+
+Want 
+
+- Estimate/bound on error, $\displaystyle\biggl \lvert \int_{[0,1]^d} f(\vx) \, \dif \vx - \frac 1n \sum_{i=0}^{n-1} f(\vx_i) \biggr \rvert$
+
+- At reasonalble cost, $\Order \bigl( n \$(f) \bigr) + ?$
 
 
 :::
@@ -55,8 +61,8 @@ $\vX \sim \Unif([0,1]^d)$
 
 ::: {.column width="35%"}
 \begin{multline*}
-\overbrace{\Ex[f(\vX)] = \int_{[0,1]^d} f(\vx) \, \dif \vx}^{\text{population mean}} \\
-\approx \underbrace{\frac 1n \sum_{i=0}^{n-1} f(\vx_i)}_{\text{sample mean}}
+\overbrace{\Ex[f(\vX)] = \int_{[0,1]^d} f(\vx) \, \dif \vx}^{\alerttext{population mean}} \\
+\approx \underbrace{\frac 1n \sum_{i=0}^{n-1} f(\vx_i)}_{\alerttext{sample mean}}
 \end{multline*}
 
 * [Practice]{.alert}
@@ -93,21 +99,6 @@ helper["render_qmc_tree"](
 
 :::
 
-::: {.columns}
-
-::: {.column width="35%"}
-\begin{multline*}
-\overbrace{\Ex[f(\vX)] = \int_{[0,1]^d} f(\vx) \, \dif \vx}^{\text{population mean}} \\
-\approx \underbrace{\frac 1n \sum_{i=0}^{n-1} f(\vx_i)}_{\text{sample mean}}
-\end{multline*}
-
-$\vX \sim \Unif([0,1]^d)$
-
-
-:::
-
-:::
-
 
 
 
@@ -117,12 +108,10 @@ $\vX \sim \Unif([0,1]^d)$
 
 ::: {.column width="35%"}
 
-&nbsp;
-
-
-&nbsp;
-
-&nbsp;
+\begin{multline*}
+\overbrace{\Ex[f(\vX)] = \int_{[0,1]^d} f(\vx) \, \dif \vx}^{\alerttext{population mean}} \\
+\approx \underbrace{\frac 1n \sum_{i=0}^{n-1} f(\vx_i)}_{\alerttext{sample mean}}
+\end{multline*}
 
 &nbsp;
 
@@ -167,11 +156,10 @@ helper["render_qmc_tree"](
 
 ::: {.column width="35%"}
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
+\begin{multline*}
+\overbrace{\Ex[f(\vX)] = \int_{[0,1]^d} f(\vx) \, \dif \vx}^{\alerttext{population mean}} \\
+\approx \underbrace{\frac 1n \sum_{i=0}^{n-1} f(\vx_i)}_{\alerttext{sample mean}}
+\end{multline*}
 
 
 &nbsp;
