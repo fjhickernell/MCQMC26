@@ -56,17 +56,27 @@ format:
 
 ::: {.column .tree-col width="65%"}
 
-::: {.tree-slide style="--tree-width: 100%; --tree-font-scale: 0.75;"}
-![](../assets/img/qmc-tree.png){.tree-img}
-<div class="tree-label foundations">Foundation</div>
-<div class="tree-label theory">Theory</div>
-<div class="tree-label practice">Practice</div>
+
+```{python}
+#| echo: false
+#| output: asis
+
+import runpy
+
+helper = runpy.run_path(
+    "../classlib/classlib/quarto/assets/images/qmc-tree/render_qmc_tree.py"
+)
+
+helper["render_qmc_tree"](
+    show_group_labels=True,
+    tree_font_scale=0.75,
+)
+```
 
 :::
 
 :::
 
-:::
 
 ## No QMC with roots only
 
@@ -96,22 +106,27 @@ format:
 
 ::: {.column .tree-col width="65%"}
 
-::: {.tree-slide}
-![](../assets/img/qmc-tree.png){.tree-img}
-<div class="tree-only-root"></div>
-<div class="tree-label foundations">Foundation</div>
-<div class="tree-example-label algebra">Algebra</div>
-<div class="tree-example-label analysis">Analysis</div>
-<div class="tree-example-label cs">Computer<br>Science</div>
-<div class="tree-example-label domain">Domain<br>Knowledge</div>
-<div class="tree-example-label statistics">Statistics</div>
+```{python}
+#| echo: false
+#| output: asis
+
+import runpy
+
+helper = runpy.run_path(
+    "../classlib/classlib/quarto/assets/images/qmc-tree/render_qmc_tree.py"
+)
+
+helper["render_qmc_tree"](
+    groups=["foundation"],
+    group_labels=["foundation"],
+    mask="root",
+    tree_font_scale=0.75,
+)
+```
 
 :::
 
 :::
-
-:::
-
 
 ## A strong trunk supports the canopy
 
@@ -140,20 +155,23 @@ format:
 
 ::: {.column .tree-col width="65%"}
 
-::: {.tree-slide style="--tree-width: 100%; --tree-font-scale: 0.75;"}
-![](../assets/img/qmc-tree.png){.tree-img}
-<div class="tree-mask-canopy"></div>
-<div class="tree-label theory">Theory</div>
-<div class="tree-example-label sequence">Sequence<br>Construction</div>
-<div class="tree-example-label error">Error<br>Bounds</div>
-<div class="tree-example-label discrepancy">Discrepancy</div>
-<div class="tree-example-label change-measure">Variation<br>Reduction</div>
-<div class="tree-example-label ibc">Information-Based<br>Complexity</div>
-<div class="tree-example-label multi">Multilevel</div>
-<div class="tree-example-label dimension">Effective<br>Dimension</div>
-<div class="tree-example-label prob">Probabilistic<br>Numerics</div>
+```{python}
+#| echo: false
+#| output: asis
 
-:::
+import runpy
+
+helper = runpy.run_path(
+    "../classlib/classlib/quarto/assets/images/qmc-tree/render_qmc_tree.py"
+)
+
+helper["render_qmc_tree"](
+    groups=["theory"],
+    group_labels=["theory"],
+    mask="canopy",
+    tree_font_scale=0.75,
+)
+```
 
 :::
 
@@ -313,36 +331,22 @@ print("</div>")
 
 ::: {.column .tree-col width="65%"}
 
-::: {.tree-slide style="--tree-width: 100%; --tree-font-scale: 0.75;"}
-![](../assets/img/qmc-tree.png){.tree-img}
-<div class="tree-label practice">Practice</div>
-<div class="tree-label theory">Theory</div>
-<div class="tree-label foundations">Foundation</div>
-<div class="tree-example-label uq">Uncertainty<br>Quantification</div>
-<div class="tree-example-label qf">Quantitative<br>Finance</div>
-<div class="tree-example-label software">Software</div>
-<div class="tree-example-label community">Collaboration<br>& Community</div>
-<div class="tree-example-label cg">Computer<br>Graphics</div>
-<div class="tree-example-label data-driven">Data-Driven<br>Error Bounds</div>
-<div class="tree-example-label sequence">Sequence<br>Construction</div>
-<div class="tree-example-label error">Error<br>Bounds</div>
-<div class="tree-example-label discrepancy">Discrepancy</div>
-<div class="tree-example-label change-measure">Variation<br>Reduction</div>
-<div class="tree-example-label ibc">Information-Based<br>Complexity</div>
-<div class="tree-example-label prob">Probabilistic<br>Numerics</div>
-<div class="tree-example-label multi">Multilevel</div>
-<div class="tree-example-label dimension">Effective<br>Dimension</div>
-<div class="tree-example-label algebra">Algebra</div>
-<div class="tree-example-label analysis">Analysis</div>
-<div class="tree-example-label cs">Computer<br>Science</div>
-<div class="tree-example-label domain">Domain<br>Knowledge</div>
-<div class="tree-example-label statistics">Statistics</div>
-<div class="tree-example-label missing">Missing<br>Data</div>
-<div class="tree-example-label hpc">High-Performance<br>Computing</div>
+```{python}
+#| echo: false
+#| output: asis
 
+import runpy
 
+helper = runpy.run_path(
+    "../classlib/classlib/quarto/assets/images/qmc-tree/render_qmc_tree.py"
+)
 
-:::
+helper["render_qmc_tree"](
+    groups=["foundation", "theory", "practice"],
+    group_labels=["foundation", "theory", "practice"],
+    tree_font_scale=0.75,
+)
+```
 
 :::
 
