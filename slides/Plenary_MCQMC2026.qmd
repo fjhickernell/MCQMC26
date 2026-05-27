@@ -40,9 +40,9 @@ format:
 
 Want 
 
-- [Estimate/bound]{.alert} on error: $\displaystyle\biggl \lvert \int_{[0,1]^d} f(\vx) \, \dif \vx - \frac 1n \sum_{i=0}^{n-1} f(\vx_i) \biggr \rvert$
+- Deterministic or probabilistic [estimate/bound]{.alert} on error: $\displaystyle\Biggl \lvert \int_{[0,1]^d} f(\vx) \, \dif \vx - \frac 1n \sum_{i=0}^{n-1} f(\vx_i) \Biggr \rvert$
 
-- [Reasonable cost]{.alert}: $\Order \bigl( n \, \$(f) + n^p \bigr)$ 
+- [Economical computational cost]{.alert}: $\Order \bigl( n \, \$(f) + n^p \bigr)$ 
   - $\$(f)$ is cost of evaluating $f$ once
   - $\Order(n^p)$ is the cost of the error estimate/bound
 
