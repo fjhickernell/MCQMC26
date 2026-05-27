@@ -227,9 +227,6 @@ helper["render_qmc_tree"](
 :::
 
 
-
-
-
 # Low Discrepancy Sequence Constructions
 
 ::: {.columns}
@@ -241,13 +238,17 @@ helper["render_qmc_tree"](
 \\ \le \underbracket{\Dsc\bigl(\{\vx_i\}_{i=0}^{n-1}\bigr)}_{\Order(\alert{n^{-1+\delta}}) \text{ or \class{alert}{better}}} \, \lVert f \rVert_{\cf} \ \href{https://arxiv.org/abs/2502.03644}{\text{HKS26}}
 \end{multline*}
 
+::: {.fragment}
+
 Careful choices of $\vx_0, \vx_1, \ldots$ lead to low discrepancy, $\Dsc\bigl(\{\vx_i\}_{i=0}^{n-1}\bigr)$:
 
-- [Digital nets and sequences]{.alert} [{{< meta papers.dicpil_2010_digital_nets_sequences.cite >}}]({{< meta papers.dicpil_2010_digital_nets_sequences.publisher_url >}})
-- [Lattice rules]{.alert} [{{< meta papers.dickripil_2022_lattice_rules_book.cite >}}]({{< meta papers.dickripil_2022_lattice_rules_book.doi_url >}})
+- [Digital sequences]{.alert} [{{< meta papers.dicpil_2010_digital_nets_sequences.cite >}}]({{< meta papers.dicpil_2010_digital_nets_sequences.publisher_url >}})
+- [Lattice sequences]{.alert} [{{< meta papers.dickripil_2022_lattice_rules_book.cite >}}]({{< meta papers.dickripil_2022_lattice_rules_book.doi_url >}})
 - [Halton]{.alert} [{{< meta papers.halton_1960_sequences.cite >}}]({{< meta papers.halton_1960_sequences.publisher_url >}})
 - [Kronecker sequences]{.alert} [{{< meta papers.richtmyer_1951_sequences.cite >}}]({{< meta papers.richtmyer_1951_sequences.publisher_url >}})
 - [Optimization and neural network based]{.alert} [{{< meta papers.fangmawin_2002_centered_l2.cite >}}]({{< meta papers.fangmawin_2002_centered_l2.publisher_url >}}), [{{< meta papers.ruskirbrolemrus_2024_mpmc.cite >}}]({{< meta papers.ruskirbrolemrus_2024_mpmc.doi_url >}}) 
+
+:::
 
 :::
 
@@ -265,15 +266,30 @@ helper = runpy.run_path(
 )
 
 helper["render_qmc_tree"](
-    labels=["sequence", "discrepancy", "missing"],
+    labels=["sequence", "discrepancy", "missing","random"],
     tree_font_scale=1.5,
 )
 ```
 
+::: {.fragment}
+- Number theory or component-by-component (CBC) constructions [{{< meta papers.cookuonuy_2006_constructing_embedded.cite >}}]({{< meta papers.cookuonuy_2006_constructing_embedded.publisher_url >}})
+
+- Digital and lattice sequences have preferred $n = 1, b, b^2, \ldots$
+
+- Randomization removes bias and points on the boundary
 
 :::
 
 :::
+
+:::
+
+## Missing data by design or by accident
+
+
+## Sequences that are good for all $n$
+
+
 
 # Data-Driven Error Bounds
 
