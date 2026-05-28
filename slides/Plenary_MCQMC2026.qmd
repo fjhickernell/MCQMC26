@@ -314,7 +314,7 @@ Persuade the software developers to
 
 - Not omit points 
 
-- Randomize to get them off the boundary
+- Randomize to get points off the boundary
 
 :::
 
