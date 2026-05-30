@@ -5,6 +5,7 @@ project:
     - "*.qmd"
   resources:
     - ../assets/**
+    - ../notebooks/MCQMC26_figures
     - ../classlib/classlib/quarto/assets/images/campus/IllinoisTech_MiesCampus_slide.jpg
     - ../classlib/**/*
 

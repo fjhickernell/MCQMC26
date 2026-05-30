@@ -228,52 +228,74 @@ helper["render_qmc_tree"](
 
 # Illustrative Bayesian Uncertainty Quantification Example
 
+::: {.columns}
+
+::: {.column width="60%"}
+
 - [Noisy]{.alert} data
   - $y_m = g(\xi_m) + \epsilon_m$, $m = 1, \ldots, M$,
     $\epsilon_1, \ldots, \epsilon_M \IIDsim \Norm(0,\sigma^2)$
   
-  - $g : [0,1] \to \reals$ [unknown]{.alert}, modeled by Gaussian process
+  - $g : [0,1] \to \reals$ [unknown]{.alert} <br> modeled by Gaussian process
+
+  - $\vg=(g(t_1),\dots,g(t_d)) \implies \vg \mid \vy \sim \Norm(\vmu_d,\mSigma_d)$
 
 - Quantity of interest [(QOI)]{.alert}
-  $\displaystyle \Ex\bigl[H(J(g)-a)\mid \vy \bigr]$
+  $\displaystyle \Ex\Bigl[ \bigl(J(g)\bigr)^2 \mid \vy \Bigr]$
 
-  - [Local loss]{.alert} $L : \reals \to [0,\infty)$
+- [Spatial risk/penalty]{.alert} <br> $\displaystyle J(g)= \int_0^1\int_0^1 \max\bigl(g(t)-\tau,0 \bigr)^2 \,\dif t$ <br> $\tau =$ threshold
 
-  - [Spatial risk/penalty]{.alert} $J(g)= \int_0^1 L(g(t)) \, \dif t$
+:::
 
-  - [Outer penalty]{.alert} $H : [0,\infty) \to [0,\infty)$
+::: {.column width="40%"}
+
+![](../notebooks/MCQMC26_figures/posterior_gp_example.png){width=100%}
+
+:::
+
+:::
+
 
 
 ## Illustrative Bayesian Uncertainty Quantification Example
 
+::: {.columns}
+
+::: {.column width="60%"}
+
 - [Noisy]{.alert} data
   - $y_m = g(\xi_m) + \epsilon_m$, $m = 1, \ldots, M$,
-    $\epsilon_1, \ldots, \epsilon_M \IIDsim \Norm(0,\sigma^2)$
   
-  - $g : [0,1] \to \reals$ [unknown]{.alert}, modeled by Gaussian process
+  - $g : [0,1] \to \reals$ [unknown]{.alert}
+
+  - $\vg=(g(t_1),\dots,g(t_d)) \implies \vg \mid \vy \sim \Norm(\vmu_d,\mSigma_d)$
 
 - Quantity of interest [(QOI)]{.alert}
-  $\displaystyle \Ex\bigl[H(J(g)-a)\mid \vy \bigr]$
+  $\displaystyle \Ex\Bigl[ \bigl(J(g)\bigr)^2 \mid \vy \Bigr]$
 
-  - [Local loss]{.alert} $L : \reals \to [0,\infty)$
-
-  - [Spatial risk/penalty]{.alert} $$J(g)= \int_0^1 L(g(t)) \, \dif t \approx J_d(\vg)
+- [Spatial risk/penalty]{.alert} 
+  \begin{multline*}
+  J(g)= \int_0^1 \max\bigl(g(t)-\tau,0 \bigr)^2  \, \dif t 
+ \\
+  \approx J_d(\vg)
   :=
-  \sum_{j=1}^d w_j L(g(t_j)),
-  \quad
-  \vg=(g(t_1),\dots,g(t_d))
+  \sum_{j=1}^d w_j \max\bigl(g(t_j)-\tau,0 \bigr)^2
+  \end{multline*}
+:::
+
+::: {.column width="40%"}
+
+![](../notebooks/MCQMC26_figures/posterior_gp_example.png){width=100%}
+
+:::
+
+:::
+
+::: {style="margin-top:-2em;"}
   $$
-
-  - [Outer penalty]{.alert} $H : [0,\infty) \to [0,\infty)$
-
-- [Posterior]{.alert} distribution
-  $\displaystyle \vg \mid \vy \sim \Norm(\vmu_d,\mSigma_d)$
-
-  $$
-  \Ex\bigl[H(J(g)-a)\mid \vy \bigr]
+  \alerttextsf{QOI}
   \approx
-  \int_{\reals^d}
-  H(J_d(\vg)-a)
+  \int_{\reals^d} \bigl(J_d(\vg)\bigr)^2
   \phi_d(\vg;\vmu_d,\mSigma_d)
   \,\dif \vg
   \overset{\alerttextsf{transform}}=
@@ -281,6 +303,7 @@ helper["render_qmc_tree"](
   \approx
   \frac1n\sum_{i=1}^n f(\vx_i)
   $$
+:::
 
 
 
