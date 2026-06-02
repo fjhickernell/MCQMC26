@@ -249,7 +249,7 @@ helper["render_qmc_tree"](
 
 ::: {.column width="40%"}
 
-![](../notebooks/MCQMC26_figures/posterior_gp_example.png){width=100%}
+![](../notebooks/artifacts/figures/posterior_gp_example.png){width=100%}
 
 :::
 
@@ -285,7 +285,7 @@ helper["render_qmc_tree"](
 
 ::: {.column width="40%"}
 
-![](../notebooks/MCQMC26_figures/posterior_gp_example.png){width=100%}
+![](../notebooks/artifacts/figures/posterior_gp_example.png){width=100%}
 
 :::
 
@@ -305,6 +305,23 @@ helper["render_qmc_tree"](
   $$
 :::
 
+## Performance for IID and Sobol' Sequences
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+![](../notebooks/artifacts/figures/running_estimates_pca_iid_sobol.png){width=100%}
+
+:::
+
+::: {.column width="50%"}
+
+![](../notebooks/artifacts/figures/running_estimates_pca_iid_sobol.png){width=100%}
+
+:::
+
+:::
 
 
 # Low Discrepancy Sequence Constructions
