@@ -31,3 +31,5 @@ slides/.quarto/
 /.quarto/
 
 .gha-venv/
+
+.ipynb_checkpoints/
