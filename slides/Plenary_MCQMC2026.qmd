@@ -273,7 +273,6 @@ helper["render_qmc_tree"](
 :::
 
 
-
 ## Illustrative Bayesian Uncertainty Quantification Example
 
 ::: {.columns}
@@ -483,12 +482,16 @@ helper["render_qmc_tree"](
 
 # Software Development and Dissemination
 
-<!-- comment out for now, but will add back in later
+A number of software packages have been developed to make QMC methods more accessible to practitioners:
+
+- Implementations of various low discrepancy sequences
+- Error estimation 
+- Interfaces to applications and related algorithms
 
 ```{python}
 #| echo: false
 #| output: asis
-#| eval: false
+
 
 import runpy
 
@@ -498,7 +501,7 @@ helper["render_qmc_software_table"](
     "../qmcsoftware/data/qmc-software.yml",
     mode="slides",
     start=0,
-    stop=10,
+    stop=8,
 )
 ```
 
@@ -507,8 +510,6 @@ helper["render_qmc_software_table"](
 ```{python}
 #| echo: false
 #| output: asis
-#| eval: false
-import runpy
 
 import runpy
 
@@ -517,12 +518,32 @@ helper = runpy.run_path("../qmcsoftware/scripts/qmc_software_table.py")
 helper["render_qmc_software_table"](
     "../qmcsoftware/data/qmc-software.yml",
     mode="slides",
-    start=10,
-    stop=20,
+    start=8,
+    stop=21,
 )
 
 ```
--->
+
+---
+
+```{python}
+#| echo: false
+#| output: asis
+
+import runpy
+
+helper = runpy.run_path("../qmcsoftware/scripts/qmc_software_table.py")
+
+helper["render_qmc_software_table"](
+    "../qmcsoftware/data/qmc-software.yml",
+    mode="slides",
+    start=21,
+    stop=34,
+)
+
+```
+
+
 
 # Collaboration and Community
 
