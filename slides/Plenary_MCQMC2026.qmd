@@ -247,9 +247,26 @@ helper["render_qmc_tree"](
 
 :::
 
-::: {.column width="40%"}
+::: {.column .tree-col width="40%"}
 
 ![](../notebooks/artifacts/figures/posterior_gp_example.png){width=100%}
+
+```{python}
+#| echo: false
+#| output: asis
+
+import runpy
+
+helper = runpy.run_path(
+    "../classlib/classlib/quarto/assets/images/qmc-tree/render_qmc_tree.py"
+)
+
+helper["render_qmc_tree"](
+    labels=["sequence", "discrepancy", "uq", "infer", "random"],
+    tree_font_scale=1.5,
+    tree_width="75%",
+)
+```
 
 :::
 
@@ -315,9 +332,11 @@ helper["render_qmc_tree"](
 
 :::
 
-::: {.column width="50%"}
+::: {.column .tree-col width="50%"}
 
 ![](../notebooks/artifacts/figures/running_sd_vs_n_pca_iid_sobol.png){width=100%}
+
+
 
 :::
 
