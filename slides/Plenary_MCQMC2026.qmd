@@ -317,9 +317,15 @@ helper["render_qmc_tree"](
 
 ::: {.column width="50%"}
 
-![](../notebooks/artifacts/figures/running_estimates_pca_iid_sobol.png){width=100%}
+![](../notebooks/artifacts/figures/running_sd_vs_n_pca_iid_sobol.png){width=100%}
 
 :::
+
+:::
+
+::: {style="display:flex; flex-direction:column; align-items:center; margin-top:-0.5em;"}
+
+{{< include ../notebooks/artifacts/tables/summary_pca_iid_sobol.md >}}
 
 :::
 
