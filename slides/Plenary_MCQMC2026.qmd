@@ -336,17 +336,19 @@ helper["render_qmc_tree"](
 ![](../notebooks/artifacts/figures/running_sd_vs_n_pca_iid_sobol.png){width=100%}
 
 
-
 :::
 
 :::
 
 ::: {style="display:flex; flex-direction:column; align-items:center; margin-top:-0.5em;"}
 
+::: {style="display:inline-block; width:60%;"}
+
 {{< include ../notebooks/artifacts/tables/summary_pca_iid_sobol.md >}}
 
 :::
 
+:::
 
 # Low Discrepancy Sequence Constructions
 
@@ -543,11 +545,34 @@ helper["render_qmc_software_table"](
 
 ```
 
+## The why and what of QMC software?
+
+### Why do we need it?
+
+- [Demonstrate]{.alert} that the theory explains performance on problems that matter
+- Make QMC methods more [accessible]{.alert} to practitioners
+- [Discover]{.alert} new applications and need for new theory
+- Preserve [memory]{.alert} of what can be done
+
+::: {.fragment}
+
+### What makes good QMC software?
+
+- Correct
+
+- Efficient
+
+- User-friendly, including documentation and examples
+
+- Adheres to software engineering best practices
+
+- Owned by a community of users and developers
+
+:::
 
 
-# Collaboration and Community
 
-## Thanks to many collaborators
+## Thanks to my many collaborators
 
 ```{python}
 #| echo: false
@@ -627,7 +652,7 @@ from classlib.quarto.references.render_references import render_reference_slides
 render_reference_slides(
     deck_path="Plenary_MCQMC2026.qmd",
     refs_path="../classlib/classlib/quarto/metadata/hickernell-papers.yml",
-    max_lines=36,
+    max_lines=30,
     wrap_width=92,
 )
 ```
