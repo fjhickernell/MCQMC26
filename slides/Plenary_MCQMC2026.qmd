@@ -568,6 +568,8 @@ helper["render_qmc_software_table"](
 
 - Owned by a community of users and developers
 
+- Assisted by artificial intelligence
+
 :::
 
 
