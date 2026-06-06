@@ -7,6 +7,7 @@
 
 - slug: ding-yuhan
   caption: Yuhan Ding
+  crop_y: 0.0
 
 - slug: herman-joshua
   caption: Joshua Herman
@@ -22,6 +23,14 @@
 - slug: kang-jiangrui
   caption: Jiangrui Kang
   crop_y: 1.0
+
+- slug: keller-alex
+  caption: Alex Keller
+
+- slug: kritzer-peter
+  caption: Peter Kritzer
+  crop_x: -0.5
+  crop_y: 0.0
 
 - slug: kirk-nathan
   caption: Nathan Kirk
