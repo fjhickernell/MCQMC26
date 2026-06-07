@@ -525,7 +525,7 @@ helper_software["render_qmc_software_table"](
 
 ## The why and what of QMC software?
 
-### Why do we need it?
+### We need to
 
 - [Demonstrate]{.alert} that the theory explains performance on problems that matter
 - Make QMC methods more [accessible]{.alert} to practitioners
@@ -534,7 +534,7 @@ helper_software["render_qmc_software_table"](
 
 ::: {.fragment}
 
-### What makes good QMC software?
+### The ideal QMC software ecosystem:
 
 - [Correct]{.alert}
 
@@ -542,11 +542,15 @@ helper_software["render_qmc_software_table"](
 
 - [User-friendly]{.alert}, including [documentation]{.alert} and examples
 
-- Adheres to best [software engineering]{.alert}  practices, including tests and version control
+- [Error estimation]{.alert} and [diagnostics]{.alert}
+
+- [Test-bed]{.alert} of problems for bencmarking and demonstration
+
+- [Interfaces]{.alert} to applications and related algorithms
+
+- Adheres to best [software engineering]{.alert}  practices, including unit/doctests and version control
 
 - Owned by a [community]{.alert} of users and developers
-
-- Assisted by [artificial intelligence (AI)]{.alert}
 
 :::
 
