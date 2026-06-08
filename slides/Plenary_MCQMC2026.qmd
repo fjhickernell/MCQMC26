@@ -44,7 +44,9 @@ resources:
 \end{equation*}
 
 
-Want 
+Desire
+
+- [Approximation]{.alert}: $\displaystyle \frac 1n \sum_{i=0}^{n-1} f(\vx_i)$
 
 - Deterministic or probabilistic [estimate/bound]{.alert} on error: $\displaystyle\Biggl \lvert \int_{[0,1]^d} f(\vx) \, \dif \vx - \frac 1n \sum_{i=0}^{n-1} f(\vx_i) \Biggr \rvert$
 
@@ -332,6 +334,10 @@ helper["render_qmc_tree"](
 :::
 
 :::
+
+# Impressive, But Not Impressive Enough
+
+
 
 # Low Discrepancy Sequence Constructions
 
