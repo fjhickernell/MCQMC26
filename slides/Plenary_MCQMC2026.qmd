@@ -1,5 +1,5 @@
 ---
-title: "Where Quasi-Monte Carlo Theory and Practice Meet"
+title: "Where Quasi-Monte Carlo <br>Theory and Practice Meet"
 author: "Fred J. Hickernell"
 subtitle: |
   Illinois Institute of Technology, hickernell@illinoistech.edu
@@ -10,9 +10,12 @@ subtitle: |
 
   Monte Carlo and Quasi-Monte Carlo Methods 2026 (MCQMC26), Edinburgh
 
-  🔗 Slides: fjhickernell.github.io/MCQMC26/slides/MCQMC26.html
+  🔗 Slides: fjhickernell.github.io/HickernellAcademicLib/talks.html
 
-date: 2026-06-08
+  <br>
+  <img src="../classlib/website/fjh-academic-qr.png" style="width:250px;">
+
+date: 2026-06-11
 date-format: "MMMM D, YYYY"
 
 metadata-files:
@@ -27,6 +30,9 @@ format:
     footer: |
       Fred J. Hickernell · Illinois Institute of Technology · assisted by ChatGPT
 
+resources:
+  - ../classlib/website/fjh-academic-qr.png
+  
 ---
 
 
@@ -38,7 +44,9 @@ format:
 \end{equation*}
 
 
-Want 
+Desire
+
+- [Approximation]{.alert}: $\displaystyle \frac 1n \sum_{i=0}^{n-1} f(\vx_i)$
 
 - Deterministic or probabilistic [estimate/bound]{.alert} on error: $\displaystyle\Biggl \lvert \int_{[0,1]^d} f(\vx) \, \dif \vx - \frac 1n \sum_{i=0}^{n-1} f(\vx_i) \Biggr \rvert$
 
@@ -326,6 +334,10 @@ helper["render_qmc_tree"](
 :::
 
 :::
+
+# Impressive, But Not Impressive Enough
+
+
 
 # Low Discrepancy Sequence Constructions
 
