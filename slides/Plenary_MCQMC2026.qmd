@@ -480,9 +480,9 @@ Look at $\displaystyle\int_{[0,1]^d} \frac{\lVert \vx \rVert^2}{d} \, \frac{\exp
 
 ---
 
-### Can importance sampling help?
+### Can importance sampling help? 
 
-- After importance sampling, no longer additive
+- After importance sampling, integrand no longer additive
 
 
 # Low Discrepancy Sequence Constructions
