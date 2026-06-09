@@ -382,19 +382,25 @@ helper["render_qmc_tree"](
 
 :::
 
-## What is being ignored?
+## Considerations
 
-- This example is simple, but not overly simple
+### This example 
 
-- The cost of function values is small compared to many realistic applications
+- Simple, but not overly simple
 
-- The sample size may be unreasonably large
+- Cost of function values is small compared to many realistic applications
 
-- This example is meant to be illustrative, not definitive
+- Sample size may be unreasonably large
 
-- We do not discuss
-  - How to choose the covariance kernel (Matèrn $3/2$ in this case) of the hyperparameters
-  - The effect of choosing different $t_1, \ldots, t_d$ or quadrature weights (trapezpoidal rule)
+- Meant to be illustrative, not definitive
+
+### Important matters that we do not discuss
+
+- How to choose the [covariance kernel]{.alert} (Matèrn $3/2$ in this case) of the hyperparameters
+
+- The effect of choosing different $t_1, \ldots, t_d$ or quadrature weights (trapezpoidal rule)
+
+- Potential speedup from [multilevel]{.alert} methods
 
 
 # QMC is impressive, but shouldn't it be more impressive?
