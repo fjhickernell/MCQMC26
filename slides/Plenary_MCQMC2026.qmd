@@ -57,7 +57,7 @@ Desire
 
 
 
-## QMC Has Grown Over Several Decades
+## QMC has grown over several decades
 
 ::: {.columns}
 
@@ -217,7 +217,7 @@ helper["render_qmc_tree"](
 
 :::
 
-# Illustrative Bayesian Uncertainty Quantification Example
+# Illustrative Bayesian uncertainty quantification example
 
 ::: {.columns}
 
@@ -258,7 +258,7 @@ helper["render_qmc_tree"](
 :::
 
 
-## Illustrative Bayesian Uncertainty Quantification Example
+## Illustrative Bayesian uncertainty quantification example
 
 ::: {.columns}
 
@@ -306,17 +306,17 @@ helper["render_qmc_tree"](
   $$
 :::
 
-## Performance for IID and Sobol' Sequences
+## Performance for IID and Sobol' sequences
 
 ::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="50%" style="text-align:center;"}
 
 ![](../notebooks/artifacts/figures/running_estimates_pca_iid_sobol.png){width=100%}
 
 :::
 
-::: {.column .tree-col width="50%"}
+::: {.column width="50%" style="text-align:center;"}
 
 ![](../notebooks/artifacts/figures/running_sd_vs_n_pca_iid_sobol.png){width=100%}
 
@@ -335,8 +335,154 @@ helper["render_qmc_tree"](
 
 :::
 
-# Impressive, But Not Impressive Enough
+## Why did we use PCA and not Cholesky?
 
+::: {.columns}
+
+::: {.column width="75%"}
+
+More than one way to transform <br>an integral with respect to the multivariate Gaussian distribution into <br>an integral with respect to the standard uniform distribution
+
+:::
+
+::: {.column .tree-col width="25%"}
+
+```{python}
+#| echo: false
+#| output: asis
+
+helper["render_qmc_tree"](
+    labels=["sequence", "discrepancy", "uq", "infer", "change-measure", "random"],
+    tree_font_scale=1.5,
+)
+```
+
+::: 
+
+:::
+
+::: {style="margin-top:-1em;"}
+
+:::
+
+::: {.columns}
+
+::: {.column width="50%" style="text-align:center;"}
+
+![](../notebooks/artifacts/figures/running_sd_vs_n_pca_iid_sobol.png){width=100%}
+
+:::
+
+::: {.column width="50%" style="text-align:center;"}
+
+![](../notebooks/artifacts/figures/running_sd_vs_n_chol_iid_sobol.png){width=100%}
+
+
+:::
+
+:::
+
+## What is being ignored?
+
+- This example is simple, but not overly simple
+
+- The cost of function values is small compared to many realistic applications
+
+- The sample size may be unreasonably large
+
+- This example is meant to be illustrative, not definitive
+
+- We do not discuss
+  - How to choose the covariance kernel (Matèrn $3/2$ in this case) of the hyperparameters
+  - The effect of choosing different $t_1, \ldots, t_d$ or quadrature weights (trapezpoidal rule)
+
+
+# QMC is impressive, but shouldn't it be more impressive?
+
+::: {.columns}
+
+::: {.column width="65%"}
+
+- Our $f$ is rather smooth
+
+- Shouldn't scrambled Sobol'  give $\Order(n^{-3/2+\delta})$ convergence [{{< meta papers.owen_1997_scrambled_net_variance.cite >}}]({{< meta papers.owen_1997_scrambled_net_variance.doi_url >}})?
+
+- We see $\Order(n^{-1+\delta})$ convergence
+
+  - Our integrand [seems]{.alert} smooth
+
+  - Dimension is [not small]{.alert}
+
+
+::: {.fragment data-fragment-index="1"}
+Look at $\displaystyle\int_{[0,1]^d} 3 \lVert \vx \rVert^2/d \; \dif \vx=1$ ([additive integrand]{.alert})
+:::
+
+:::
+
+::: {.column .tree-col width="35%"}
+
+```{python}
+#| echo: false
+#| output: asis
+
+helper["render_qmc_tree"](
+    labels=["sequence", "error", "change-measure", "uq", "infer", "random"],
+    tree_font_scale=1.5,
+)
+```
+:::
+
+:::
+
+::: {.fragment data-fragment-index="1" style="margin-top:-1em;"}
+
+::: {.columns}
+
+::: {.column width="50%" style="text-align:center;"}
+
+![](../notebooks/artifacts/figures/simple_sd_uniform_poly_d1.png){width=70%}
+
+:::
+
+::: {.column width="50%" style="text-align:center;"}
+
+![](../notebooks/artifacts/figures/simple_sd_uniform_poly_d64.png){width=70%}
+
+:::
+
+:::
+
+:::
+
+---
+
+Look at $\displaystyle\int_{[0,1]^d} \frac{\lVert \vx \rVert^2}{d} \, \frac{\exp(-\lVert \vx \rVert^2/2)}{(2 \pi)^{d/2}} \, \dif \vx=1$ ([additive integrand]{.alert})
+
+::: {.columns}
+
+::: {.column width="50%" style="text-align:center;"}
+
+![](../notebooks/artifacts/figures/simple_sd_Gaussian_sd1_d1.png){width=100%}
+
+:::
+
+::: {.column width="50%" style="text-align:center;"}
+
+![](../notebooks/artifacts/figures/simple_sd_Gaussian_sd1_d4.png){width=100%}
+
+:::
+
+:::
+
+- Change of measure might affect smoothness
+
+
+---
+
+### Can importance sampling help?
+
+- After importance sampling, no longer additive
 
 
 # Low Discrepancy Sequence Constructions
