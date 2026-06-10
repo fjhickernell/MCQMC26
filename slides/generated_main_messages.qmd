@@ -1,0 +1,4 @@
+- Need to be aware of [all]{.alert} parts of the tree
+- [Transformation]{.alert} from your distribution to standard uniform affects performance
+- Importance sampling can help, but not a panacea and may not recover the desired convergence rate
+- All low discrepancy sequences outperformed IID sampling, but no univerisal winner

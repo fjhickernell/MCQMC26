@@ -1033,7 +1033,12 @@ AI used well
   
 :::
 
-# Future Directions
+# Main messages
+
+{{< include generated_main_messages.qmd >}}
+
+
+# Future directions
 
 ::: {.columns}
 
