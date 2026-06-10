@@ -3,6 +3,8 @@ project:
   output-dir: _site
   render:
     - "*.qmd"
+  pre-render:
+    - python ../scripts/collect_main_messages.py
   resources:
     - ../assets/**
     - ../notebooks/MCQMC26_figures
@@ -13,4 +15,3 @@ execute:
   kernel: qmcpy
   warning: false
   message: false
-
