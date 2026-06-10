@@ -201,7 +201,7 @@ helper["render_qmc_tree"](
 
 ::: {.fragment .main-message}
 
-Need to be aware of [all]{.alert} parts of the tree
+Be aware of [all]{.alert} parts of the QMC tree
 
 :::
 
@@ -544,7 +544,7 @@ Look at $\displaystyle\int_{[0,1]^d} \frac{\lVert \vx \rVert^2}{d} \, \frac{\exp
 
 :::{.main-message}
 
-Importance sampling can help, but not a panacea and may not recover the desired convergence rate
+[Importance sampling]{.alert} may help, but may not recover the ideal convergence rate
 
 :::
 
@@ -707,7 +707,7 @@ Computational cost
 
 - $\Order(d N \log(N))$ for [lattice]{.alert}
 
-- $\Order(d N M)$ for [Kronecker]{.alert} <br>where $M$ size of the candidate set
+- $\Order(d N M)$ for [Kronecker]{.alert} <br>where $M$ size of the candidate set (do we need a better one?)
 
 :::
 
@@ -743,7 +743,7 @@ Computational cost
 
 ::: {.main-message}
 
-All low discrepancy sequences outperformed IID sampling, but no univerisal winner
+No universally best low discrepancy sequence
 
 :::
 
@@ -783,9 +783,49 @@ All low discrepancy sequences outperformed IID sampling, but no univerisal winne
 
 :::
 
+::: {.main-message}
 
+QMC with [missing samples]{.alert} still outperforms IID, but convergence rate may be affected
+
+:::
 
 # Data-driven error bounds
+
+
+\begin{equation*}
+\left\lvert \int_{[0,1]^d} f(\vx) \, \dif \vx - \frac{1}{n} \sum_{i=0}^{n-1} f(\vx_i) \right\rvert
+\le \underbracket{\Dsc\bigl(\{\vx_i\}_{i=0}^{n-1}\bigr)}_{\substack{\alerttextsf{Discrepancy} \\ \Order(\alert{n^{-1+\delta}}) \textsf{ or } \alerttextsf{better}}} \, \lVert f \rVert_{\cf}
+\end{equation*}
+is not a practical [error bounds]{.alert} because 
+
+- $\lVert f \rVert_{\cf}$ not known
+
+- $\Dsc\bigl(\{\vx_i\}_{i=0}^{n-1}\bigr)$ depends on $\cf$ and may cost $\Order(dn^2)$ to compute
+
+::: {.fragment style="margin-top:-1em;"}
+
+<h3>Data-driven error bounds for QMC—_all make assumptions_</h3>
+
+- $R$ [random replications]{.alert} with a Student's $t$, Berry-Esseen, bootstrap, \ldots confidence interval 
+
+    [$\qquad \Order(R n)$ cost, $R$ vs. $n$ tradeoff, assume $R$ is big enough]{style="font-size:0.9em;"}
+
+- Bayesian [credible interval]{.alert} assuming $f \sim \GP(0,K)$
+
+    [$\qquad \Order(n^3)$ cost—but sometimes $\Order \bigl(n \log(n) \bigr)$, assume $K$]{style="font-size:0.9em;"}
+
+- Tracking Fourier coefficients of $f$ for lattice and digital net sampling
+
+    [$\qquad \Order \bigl(n \log(n) \bigr)$ cost, assume reasonable decay of true Fourier coefficients]{style="font-size:0.9em;"} 
+
+:::
+
+## Random replications may have high kurtosis
+
+
+![](../notebooks/artifacts/figures/running_sd_vs_n_pca_iid_sobol_lattice_halton_kronecker.png){width=100%}
+
+
 
 # Software Development and Dissemination
 
@@ -1035,24 +1075,17 @@ AI used well
 
 # Main messages
 
-{{< include generated_main_messages.qmd >}}
-
-
-# Future directions
-
 ::: {.columns}
 
-::: {.column width="35%"}
+::: {.column width="50%"}
 
-* [Practice]{.alert}
-  - Solving problems with societal impact
-  - Infrastructure for practitioners
-  - Requires theory for justification
-  - May not seem to align with theory at first
+{{< include generated_main_messages.qmd >}}
 
-:::
+::: 
 
-::: {.column .tree-col width="65%"}
+::: {.column .tree-col width="50%"}
+
+::: {style="position: relative; top: -3.5em; z-index:9999;"}
 
 ```{python}
 #| echo: false
@@ -1064,6 +1097,39 @@ helper["render_qmc_tree"](
     group_labels=["foundation", "theory", "practice"],
 )
 ```
+
+:::
+
+:::
+
+:::
+
+
+
+# Future directions
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+:::
+
+::: {.column .tree-col width="50%"}
+
+::: {style="position: relative; top: -3.5em; z-index:9999;"}
+
+```{python}
+#| echo: false
+#| output: asis
+
+
+helper["render_qmc_tree"](
+    groups=["foundation", "theory", "practice"],
+    group_labels=["foundation", "theory", "practice"],
+)
+```
+
+:::
 
 :::
 

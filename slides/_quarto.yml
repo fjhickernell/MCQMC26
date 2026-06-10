@@ -3,8 +3,11 @@ project:
   output-dir: _site
   render:
     - "*.qmd"
+
   pre-render:
+    - python ../scripts/refresh_slide_artifacts.py
     - python ../scripts/collect_main_messages.py
+
   resources:
     - ../assets/**
     - ../notebooks/MCQMC26_figures
