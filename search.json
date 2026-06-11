@@ -11,7 +11,7 @@
     "href": "index.html#plenary-talk",
     "title": "17th International Conference on Monte Carlo and Quasi-Monte Carlo Methods in Scientific Computing (MCQMC 2026)",
     "section": "Plenary Talk",
-    "text": "Plenary Talk\n\nTo be announced\nAbstract to be added after submission.\nSlides"
+    "text": "Plenary Talk\n\nWhere Quasi-Monte Carlo Theory and Practice Meet\nQuasi-Monte Carlo (QMC) methods are underpinned by deep mathematical theory and have demonstrated high-impact computational performance. A wide range of low-discrepancy sequences and QMC algorithms have been developed and implemented in modern software libraries.\nDespite this progress, key challenges remain: selecting effective sequences for real problems, formulating computations to fully exploit QMC structure, and developing reliable, data-driven error assessment.\nThis talk examines these challenges through the lens of both theory and practice, offering perspectives on how the two can be more tightly integrated and where future advances may emerge.\nSlides"
   },
   {
     "objectID": "index.html#special-session-talk",
