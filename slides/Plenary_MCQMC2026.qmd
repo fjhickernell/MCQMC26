@@ -349,7 +349,7 @@ helper["render_qmc_tree"](
 
 ::: {.column width="65%"}
 
-[Multiple]{.alert} transformations map a multivariate Gaussian integral to a standard uniform integral
+[Multiple]{.alert} transformations map a multivariate Gaussian integral <br>to a standard uniform integral
 
 ::: {.fragment .main-message}
 
@@ -411,13 +411,13 @@ helper["render_qmc_tree"](
 
 - Meant to be illustrative, not definitive
 
-### Important matters that we do not discuss
+### Important matters outside the scope of this talk
 
 - How to choose the [covariance kernel]{.alert} (Matérn $3/2$ in this example) and its hyperparameters
 
 - The effect of choosing different $t_1, \ldots, t_d$ or quadrature weights (trapezoidal rule)
 
-- Potential speedup from [multilevel]{.alert} methods (outside scope)
+- Potential speedup from [multilevel]{.alert} methods
 
 
 # QMC is impressive, why not more so? 
@@ -426,7 +426,7 @@ helper["render_qmc_tree"](
 
 ::: {.column width="65%"}
 
-- Why not $\Order(n^{-3/2+\delta})$ convergence [{{< meta papers.owen_1997_scrambled_net_variance.cite >}}]({{< meta papers.owen_1997_scrambled_net_variance.doi_url >}}) rather than  $\Order(n^{-1+\delta})$ convergence?
+- Why not $\Order(n^{-3/2+\delta})$ convergence [{{< meta papers.owen_1997_scrambled_net_variance.cite >}}]({{< meta papers.owen_1997_scrambled_net_variance.doi_url >}}) <br>rather than  $\Order(n^{-1+\delta})$ convergence?
 
   - Our integrand [appears]{.alert} smooth
 
@@ -743,7 +743,7 @@ Computational cost
 
 ::: {.main-message}
 
-No universally best low discrepancy sequence, but let's keep looking
+No universally best low discrepancy sequence, but let's [keep looking]{.alert}
 
 :::
 
@@ -954,6 +954,18 @@ helper_software["render_qmc_software_table"](
 
 - Owned by a [community]{.alert} of users and developers
 
+
+---
+
+::: {style="font-size:1.25em; line-height:1.8;"}
+
+**Theory:** &nbsp; Note → Article → Review article → Monograph
+
+**Code:** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Example → Feature → Library → Ecosystem
+
+:::
+
+&nbsp;
 
 &nbsp;
 

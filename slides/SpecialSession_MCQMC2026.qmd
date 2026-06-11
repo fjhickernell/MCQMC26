@@ -400,7 +400,7 @@ CBC by [{{< meta papers.cookuonuy_2006_constructing_embedded.cite >}}]({{< meta 
 
 ::: {.column width=50%}
 
- [{{< meta papers.richtmyer_1951_sequences.cite >}}]({{< meta papers.richtmyer_1951_sequences.project_url >}}) & [{{< meta papers.dicgodlarpilsuz_2025_quasi-uniformity.cite >}}]({{< meta papers.dicgodlarpilsuz_2025_quasi-uniformity.doi_url >}}) vs ours $\bigl [ \Order \bigl ( d_{\max} N M \bigr)$ cost$\bigr]$
+ [{{< meta papers.richtmyer_1951_sequences.cite >}}]({{< meta papers.richtmyer_1951_sequences.project_url >}}) & [{{< meta papers.dicgodlarpilsuz_2025_quasi-uniformity.cite >}}]({{< meta papers.dicgodlarpilsuz_2025_quasi-uniformity.arxiv_url >}}) vs ours $\bigl [ \Order \bigl ( d_{\max} N M \bigr)$ cost$\bigr]$
 
 ![](../notebooks/artifacts/figures/special_d64_kronecker_discrepancy.png){width=100%}
 
