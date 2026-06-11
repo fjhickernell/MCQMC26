@@ -223,7 +223,7 @@ helper["render_qmc_tree"](
 
 :::
 
-# Illustrative Bayesian uncertainty quantification example
+# Illustrative uncertainty quantification (UQ) example
 
 ::: {.columns}
 
@@ -240,7 +240,7 @@ helper["render_qmc_tree"](
 - Quantity of interest [(QOI)]{.alert}
   $\displaystyle \Ex\Bigl[ \bigl(J(g)\bigr)^2 \mid \vy \Bigr]$
 
-- [Spatial risk/penalty]{.alert} <br> $\displaystyle J(g)= \int_0^1\int_0^1 \max\bigl(g(t)-\tau,0 \bigr)^2 \,\dif t$ <br> $\tau =$ threshold
+- [Spatial risk/penalty]{.alert} <br> $\displaystyle J(g)= \int_0^1 \max\bigl(g(t)-\tau,0 \bigr)^2 \,\dif t$ <br> $\tau =$ threshold
 
 :::
 
@@ -264,7 +264,7 @@ helper["render_qmc_tree"](
 :::
 
 
-## Illustrative Bayesian uncertainty quantification example
+## Illustrative UQ example
 
 ::: {.columns}
 
@@ -300,17 +300,18 @@ helper["render_qmc_tree"](
 
 ::: {style="margin-top:-2em;"}
   $$
-  \alerttextsf{QOI}
-  \approx
+  \alerttextsf{QOI} \,
+  \alert{\approx}
   \int_{\reals^d} \bigl(J_d(\vg)\bigr)^2
   \phi_d(\vg;\vmu_d,\mSigma_d)
   \,\dif \vg
   \overset{\alerttextsf{transform}}=
   \int_{[0,1]^d} f(\vx)\,\dif \vx
-  \approx
+  \, \alert{\approx} \,
   \frac1n\sum_{i=1}^n f(\vx_i)
   $$
 :::
+
 
 ## Performance for IID and Sobol' sequences
 
@@ -341,13 +342,14 @@ helper["render_qmc_tree"](
 
 :::
 
+
 ## Why did we use PCA and not Cholesky?
 
 ::: {.columns}
 
 ::: {.column width="65%"}
 
-[Multiple]{.alert} transformations map a Gaussian integral to a standard uniform integral
+[Multiple]{.alert} transformations map a multivariate Gaussian integral to a standard uniform integral
 
 ::: {.fragment .main-message}
 
@@ -359,7 +361,7 @@ helper["render_qmc_tree"](
 
 ::: {.column .tree-col width="35%"}
 
-::: {style="position: relative; top: -3.5em; z-index:9999;"}
+::: {style="position: relative; top: -4.2em; z-index:9999;"}
 ```{python}
 #| echo: false
 #| output: asis
@@ -403,7 +405,7 @@ helper["render_qmc_tree"](
 
 - Simple, but not overly simple
 
-- Cost of function values rather small compared to many realistic applications
+- Function evaluations are relatively cheap compared to many realistic applications
 
 - Sample size rather large
 
@@ -411,11 +413,11 @@ helper["render_qmc_tree"](
 
 ### Important matters that we do not discuss
 
-- How to choose the [covariance kernel]{.alert} (Matèrn $3/2$ in this case) of the hyperparameters
+- How to choose the [covariance kernel]{.alert} (Matérn $3/2$ in this example) and its hyperparameters
 
-- The effect of choosing different $t_1, \ldots, t_d$ or quadrature weights (trapezpoidal rule)
+- The effect of choosing different $t_1, \ldots, t_d$ or quadrature weights (trapezoidal rule)
 
-- Potential speedup from [multilevel]{.alert} methods
+- Potential speedup from [multilevel]{.alert} methods (outside scope)
 
 
 # QMC is impressive, why not more so? 
@@ -424,11 +426,9 @@ helper["render_qmc_tree"](
 
 ::: {.column width="65%"}
 
-- Our $f$ is rather smooth
-
 - Why not $\Order(n^{-3/2+\delta})$ convergence [{{< meta papers.owen_1997_scrambled_net_variance.cite >}}]({{< meta papers.owen_1997_scrambled_net_variance.doi_url >}}) rather than  $\Order(n^{-1+\delta})$ convergence?
 
-  - Our integrand [seems]{.alert} smooth
+  - Our integrand [appears]{.alert} smooth
 
   - Dimension is [not small]{.alert}
 
@@ -441,7 +441,7 @@ Look at $\displaystyle\int_{[0,1]^d} 3 \lVert \vx \rVert^2/d \; \dif \vx=1$ ([ad
 
 ::: {.column .tree-col width="35%"}
 
-::: {style="position: relative; top: -3.5em; z-index:9999;"}
+::: {style="position: relative; top: -4.2em; z-index:9999;"}
 
 ```{python}
 #| echo: false
@@ -458,19 +458,19 @@ helper["render_qmc_tree"](
 
 :::
 
-::: {.fragment data-fragment-index="1" style="margin-top:-1em;"}
+::: {.fragment data-fragment-index="1" style="margin-top:-2em;"}
 
 ::: {.columns}
 
 ::: {.column width="50%" style="text-align:center;"}
 
-![](../notebooks/artifacts/figures/simple_sd_uniform_poly_d1.png){width=75%}
+![](../notebooks/artifacts/figures/simple_sd_uniform_poly_d1.png){width=85%}
 
 :::
 
 ::: {.column width="50%" style="text-align:center;"}
 
-![](../notebooks/artifacts/figures/simple_sd_uniform_poly_d64.png){width=75%}
+![](../notebooks/artifacts/figures/simple_sd_uniform_poly_d64.png){width=85%}
 
 :::
 
@@ -486,13 +486,13 @@ Look at $\displaystyle\int_{[0,1]^d} \frac{\lVert \vx \rVert^2}{d} \, \frac{\exp
 
 ::: {.column width="50%" style="text-align:center;"}
 
-![](../notebooks/artifacts/figures/simple_sd_Gaussian_sd1_d1.png){width=100%}
+![](../notebooks/artifacts/figures/simple_sd_vanilla_Gaussian_Gaussian_sd1_d1.png){width=100%}
 
 :::
 
 ::: {.column width="50%" style="text-align:center;"}
 
-![](../notebooks/artifacts/figures/simple_sd_Gaussian_sd1_d4.png){width=100%}
+![](../notebooks/artifacts/figures/simple_sd_vanilla_Gaussian_Gaussian_sd1_d4.png){width=100%}
 
 :::
 
@@ -512,13 +512,13 @@ Look at $\displaystyle\int_{[0,1]^d} \frac{\lVert \vx \rVert^2}{d} \, \frac{\exp
 
 ::: {.column width="50%" style="text-align:center;"}
 
-![](../notebooks/artifacts/figures/simple_sd_Gaussian_sd1_d1.png){width=100%}
+![](../notebooks/artifacts/figures/simple_sd_vanilla_Gaussian_Gaussian_sd1_d1.png){width=100%}
 
 :::
 
 ::: {.column width="50%" style="text-align:center;"}
 
-![](../notebooks/artifacts/figures/simple_sd_logistic_sd2_d1.png){width=100%}
+![](../notebooks/artifacts/figures/simple_sd_best_is_target_Gaussian_logistic_sd2_d1.png){width=100%}
 
 :::
 
@@ -530,13 +530,13 @@ Look at $\displaystyle\int_{[0,1]^d} \frac{\lVert \vx \rVert^2}{d} \, \frac{\exp
 
 ::: {.column width="50%" style="text-align:center;"}
 
-![](../notebooks/artifacts/figures/simple_sd_Gaussian_sd1_d4.png){width=100%}
+![](../notebooks/artifacts/figures/simple_sd_vanilla_Gaussian_Gaussian_sd1_d4.png){width=100%}
 
 :::
 
 ::: {.column width="50%" style="text-align:center;"}
 
-![](../notebooks/artifacts/figures/simple_sd_Gaussian_sd1p5_d4.png){width=100%}
+![](../notebooks/artifacts/figures/simple_sd_best_is_target_Gaussian_logistic_sd2_d4.png){width=100%}
 
 :::
 
@@ -577,7 +577,7 @@ Careful choices of $\vx_0, \vx_1, \ldots$ lead to low discrepancy:
 
 ::: {.column .tree-col width="35%"}
 
-::: {style="position: relative; top: -3.5em; z-index:9999;"}
+::: {style="position: relative; top: -4.2em; z-index:9999;"}
 
 ```{python}
 #| echo: false
@@ -607,7 +607,7 @@ helper["render_qmc_tree"](
 
 :::
 
-## Missing samples by design or by accident
+## Missing samples by (poor) design or by accident
 
 ::: {.columns}
 
@@ -641,7 +641,7 @@ Persuade the software developers to
 
 ::: {.column .tree-col width="35%"}
 
-::: {style="position: relative; top: -3.5em; z-index:9999;"}
+::: {style="position: relative; top: -3.8em; z-index:9999;"}
 
 ```{python}
 #| echo: false
@@ -691,9 +691,9 @@ helper["render_qmc_tree"](
 
 ---
 
-### CBC to construct lattice and Konecker sequences that are good for all $n$
+### CBC to construct lattice and Kronecker sequences that are good for all $n$
 \begin{gather*}
-\operatorname{WSSD}(N) = \sum_{i=1}^{N} n \, \Ex_{\vDelta}\bigl[\Dsc^2\bigl(\{\vx_i + \vDelta \bmod \vone\}_{i=0}^{n-1}\bigr) \bigr] \\
+\operatorname{WSESD}(N) = \sum_{i=1}^{N} n \, \Ex_{\vDelta}\bigl[\Dsc^2\bigl(\{\vx_i + \vDelta \bmod \vone\}_{i=0}^{n-1}\bigr) \bigr] \\
 \text{Choose } \cf \text{ so that } \Ex_{\vDelta}\bigl[\Dsc^2\bigl(\{\vx_i + \vDelta \bmod \vone\}_{i=0}^{n-1}\bigr)\bigr] \text{ costs } \Order(dN) \text{ operations}
 \end{gather*}
 
@@ -703,18 +703,18 @@ helper["render_qmc_tree"](
 
 ::: {.column width="40%"}
 
-Computational cost
+Computational cost 
 
 - $\Order(d N \log(N))$ for [lattice]{.alert}
 
-- $\Order(d N M)$ for [Kronecker]{.alert} <br>where $M$ size of the candidate set (do we need a better one?)
+- $\Order(d N M)$ for [Kronecker]{.alert} <br>where $M$ size of the candidate set
 
 :::
 
 ::: {.column .tree-col width="60%"}
 
 :::{style="text-align:center;"}
-![](../notebooks/artifacts/figures/lattice_periodic_discrepancy_comparison.png){width=90%} 
+![](../notebooks/artifacts/figures/special_d64_kuo_new_lattice_new_kronecker_discrepancy.png){width=80%} 
 :::
 
 :::
@@ -743,7 +743,7 @@ Computational cost
 
 ::: {.main-message}
 
-No universally best low discrepancy sequence
+No universally best low discrepancy sequence, but let's keep looking
 
 :::
 
@@ -791,24 +791,28 @@ QMC with [missing samples]{.alert} still outperforms IID, but convergence rate m
 
 # Data-driven error bounds
 
-
 \begin{equation*}
 \left\lvert \int_{[0,1]^d} f(\vx) \, \dif \vx - \frac{1}{n} \sum_{i=0}^{n-1} f(\vx_i) \right\rvert
 \le \underbracket{\Dsc\bigl(\{\vx_i\}_{i=0}^{n-1}\bigr)}_{\substack{\alerttextsf{Discrepancy} \\ \Order(\alert{n^{-1+\delta}}) \textsf{ or } \alerttextsf{better}}} \, \lVert f \rVert_{\cf}
 \end{equation*}
-is not a practical [error bounds]{.alert} because 
+
+::: {style="margin-top:-1em;"}
+
+:::
+
+is not a practical [error bound]{.alert} because 
 
 - $\lVert f \rVert_{\cf}$ not known
 
-- $\Dsc\bigl(\{\vx_i\}_{i=0}^{n-1}\bigr)$ depends on $\cf$ and may cost $\Order(dn^2)$ to compute
+- $\Dsc\bigl(\{\vx_i\}_{i=0}^{n-1}\bigr)$ depends on $\cf$ and may cost $\Order(dn^2)$ or more to compute
 
 ::: {.fragment style="margin-top:-1em;"}
 
-<h3>Data-driven error bounds for QMC—_all make assumptions_</h3>
+<h3>Data-driven error bounds for QMC—_all make assumptions_ [{{< meta papers.owen_2026_errorQMC.cite >}}]({{< meta papers.owen_2026_errorQMC.publisher_url >}})</h3>
 
-- $R$ [random replications]{.alert} with a Student's $t$, Berry-Esseen, bootstrap, \ldots confidence interval 
+- $R$ [random replications]{.alert} with a Student's $t$, Berry-Esseen, bootstrap, $\ldots$ confidence interval
 
-    [$\qquad \Order(R n)$ cost, $R$ vs. $n$ tradeoff, assume $R$ is big enough]{style="font-size:0.9em;"}
+    [$\qquad \Order(R n)$ cost, $R$ vs. $n$ tradeoff, assume $R$ is big enough, [Aadit Jain's talk this morning]{.alert}]{style="font-size:0.9em;"}
 
 - Bayesian [credible interval]{.alert} assuming $f \sim \GP(0,K)$
 
@@ -822,10 +826,28 @@ is not a practical [error bounds]{.alert} because
 
 ## Random replications may have high kurtosis
 
+### For $\displaystyle\int_{[0,1]^d} 3 \lVert \vx \rVert^2/d \; \dif \vx=1$ ([additive integrand]{.alert})
 
-![](../notebooks/artifacts/figures/running_sd_vs_n_pca_iid_sobol_lattice_halton_kronecker.png){width=100%}
+- High $\kurt(\hmu_n)$ makes estimating variance unreliable [{{< meta papers.panowen_2023_super-polynomial_accuracy.cite >}}]({{< meta papers.panowen_2023_super-polynomial_accuracy.doi_url >}})
+
+![](../notebooks/artifacts/figures/hist_final_means_uniform_poly_d1_iid_sobol_log_density.png){width=80%}
+
+---
+
+### For the UQ example
+
+- $\kurt(\hmu_n)$ seems less when the integrand is less smooth
+
+![](../notebooks/artifacts/figures/hist_final_means_uq_pca_iid_sobol_log_density.png){width=80%}
 
 
+---
+
+:::{.main-message}
+
+We need [data-driven error bounds]{.alert} for QMC, and we need to understand their assumptions 
+
+:::
 
 # Software Development and Dissemination
 
@@ -903,7 +925,7 @@ helper_software["render_qmc_software_table"](
 
 ```
 
-## The why and what of QMC software?
+## The why of QMC software?
 
 ### We need to
 
@@ -912,9 +934,9 @@ helper_software["render_qmc_software_table"](
 - [Discover]{.alert} new applications and need for new theory
 - Preserve [memory]{.alert} of what can be done
 
-::: {.fragment}
+## The what of QMC software?
 
-### The ideal QMC software ecosystem:
+### The ideal QMC software ecosystem
 
 - [Correct]{.alert}
 
@@ -931,6 +953,13 @@ helper_software["render_qmc_software_table"](
 - Adheres to best [software engineering]{.alert}  practices, including unit/doctests and version control
 
 - Owned by a [community]{.alert} of users and developers
+
+
+&nbsp;
+
+:::{.main-message}
+
+[Software]{.alert} is a worthy endeavor, not an afterthought, and best done by a [community]{.alert} of collaborators
 
 :::
 
@@ -1045,17 +1074,18 @@ render_collaborators(
 ```
 ## One other tireless collaborator
 
-Has assisited me in preparing this talk an in my research in general, especially within the last year or so 
+Assisted in preparing this talk and in my research in general, especially within the last year or so 
 
-::: {style="position:absolute; bottom:20px; left:505px; font-size:2.5em; z-index:9999;"}
-[⬇]{.alert}
-:::
+- Writing, reviewing, debugging, and refactoring code
 
-::: {.fragment}
+- Suggesting better verbiage and presentation
 
-AI used well
+- Accelerating research productivity
 
-- Accelerates good sofware development, including
+
+## AI used well
+
+- Accelerates good software development, including
   - Code generation from prompts or research papers
 
     _Alex Keller: "Let me show you how to use AI to generate a QMC package in Python in minutes."_
@@ -1070,8 +1100,37 @@ AI used well
   - Documentation
   - Unit tests and doctests
   - Explanation
+
+  - Turning articles into code
+
+## AI used well (cont'd)
+
+- Accelerates theory development
+
+  - Finding, summarizing, and explaining relevant literature
+
+  - Verifying proofs and suggesting improvements
+
+  - Polishing presentation
+
+- Requires human oversight to
+
+  - Ensure correctness
+
+  - Architect the requirements 
   
+  - Steer development
+
+  - Ensure quality material for AI to ingest
+
+  &nbsp;
+
+::: {.main-message}
+
+[AI]{.alert} is a powerful collaborator, when paired with excellent human expertise and judgment
+
 :::
+
 
 # Main messages
 
@@ -1085,7 +1144,7 @@ AI used well
 
 ::: {.column .tree-col width="50%"}
 
-::: {style="position: relative; top: -3.5em; z-index:9999;"}
+::: {style="position: relative; top: -4.2em; z-index:9999;"}
 
 ```{python}
 #| echo: false
@@ -1106,17 +1165,26 @@ helper["render_qmc_tree"](
 
 
 
-# Future directions
+# Growing the QMC tree by remedying gaps between theory and practice 
 
 ::: {.columns}
 
 ::: {.column width="50%"}
 
+Includes
+
+- Identifying and understanding the gaps
+
+- [Automating]{.alert} the choice of algorithms for the problem at hand
+
+- [Documenting]{.alert} theory, methodology, software, and use cases so that they are discoverable
+
+- [Leverage]{.alert} community and AI to accelerate discovery
+  
 :::
 
 ::: {.column .tree-col width="50%"}
 
-::: {style="position: relative; top: -3.5em; z-index:9999;"}
 
 ```{python}
 #| echo: false
@@ -1129,7 +1197,6 @@ helper["render_qmc_tree"](
 )
 ```
 
-:::
 
 :::
 

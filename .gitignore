@@ -1,17 +1,28 @@
+# ============================================================
 # macOS
+# ============================================================
+
 .DS_Store
 
+
+# ============================================================
 # Jupyter
+# ============================================================
+
 .ipynb_checkpoints/
 
+
+# ============================================================
 # Quarto
+# ============================================================
+
 .quarto/
 .quarto-watch-logs/
 _site/
 _freeze/
 **/*.quarto_ipynb
 
-# Quarto rendered asset directories
+# Rendered asset directories
 *_files/
 site_libs/
 
@@ -20,16 +31,30 @@ slides/_site/
 slides/_freeze/
 slides/.quarto/
 
-# Logs and latex
-*.log
+
+# ============================================================
+# LaTeX / bibliography build artifacts
+# ============================================================
+
 *.aux
 *.bbl
 *.blg
 *.gz
+*.log
 
 
-/.quarto/
+# ============================================================
+# Local virtual environments
+# ============================================================
 
 .gha-venv/
 
-.ipynb_checkpoints/
+
+# ============================================================
+# Generated intermediate results (do not commit)
+# ============================================================
+
+notebooks/cache/
+
+# Large generated benchmark data
+notebooks/artifacts/benchmarks/

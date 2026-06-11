@@ -1,4 +1,8 @@
-- Need to be aware of [all]{.alert} parts of the tree
+- Be aware of [all]{.alert} parts of the QMC tree
 - [Transformation]{.alert} from your distribution to standard uniform affects performance
-- Importance sampling can help, but not a panacea and may not recover the desired convergence rate
-- All low discrepancy sequences outperformed IID sampling, but no univerisal winner
+- [Importance sampling]{.alert} may help, but may not recover the ideal convergence rate
+- No universally best low discrepancy sequence, but let's keep looking
+- QMC with [missing samples]{.alert} still outperforms IID, but convergence rate may be affected
+- We need [data-driven error bounds]{.alert} for QMC, and we need to understand their assumptions
+- [Software]{.alert} is a worthy endeavor, not an afterthought, and best done by a [community]{.alert} of collaborators
+- [AI]{.alert} is a powerful collaborator, when paired with excellent human expertise and judgment

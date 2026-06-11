@@ -13,9 +13,13 @@ Illinois Institute of Technology <br>
 
 ## Plenary Talk
 
-### To be announced
+### Where Quasi-Monte Carlo <br>Theory and Practice Meet
 
-Abstract to be added after submission.
+Quasi-Monte Carlo (QMC) methods are underpinned by deep mathematical theory and have demonstrated high-impact computational performance. A wide range of low-discrepancy sequences and QMC algorithms have been developed and implemented in modern software libraries.
+
+Despite this progress, key challenges remain: selecting effective sequences for real problems, formulating computations to fully exploit QMC structure, and developing reliable, data-driven error assessment.
+
+This talk examines these challenges through the lens of both theory and practice, offering perspectives on how the two can be more tightly integrated and where future advances may emerge.
 
 [Slides](slides/MCQMC2026_Plenary.html)
 
