@@ -21,7 +21,7 @@ Despite this progress, key challenges remain: selecting effective sequences for 
 
 This talk examines these challenges through the lens of both theory and practice, offering perspectives on how the two can be more tightly integrated and where future advances may emerge.
 
-[Slides](slides/MCQMC2026_Plenary.html)
+[Slides](slides/Plenary_MCQMC2026.html)
 
 ## Special Session Talk
 
@@ -29,7 +29,7 @@ This talk examines these challenges through the lens of both theory and practice
 
 Low discrepancy sequences used for quasi-Monte Carlo computations are often optimized for a sequence of sample sizes, such as powers of a prime base. This is particularly true for lattices and digital sequences. While the preferred sample sizes are best, the user might not be able to fully control the node set because of budget constraints or missing data. We explore how well one can do for arbitrary sample sizes, in particular for lattices and Kronecker sequences. We derive a weighted sum of squared expected discrepancies over all sample sizes as our figure of merit. We use component-by-component constructions to obtain new low discrepancy sequences.
 
-[Slides](slides/MCQMC2026_SpecialSession.html)
+[Slides](slides/SpecialSession_MCQMC2026.html)
 
 
 
