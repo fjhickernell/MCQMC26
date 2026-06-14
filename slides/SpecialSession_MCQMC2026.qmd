@@ -1,5 +1,5 @@
 ---
-title: "Good Lattice and Kronecker Sequences for Arbitrary Sample Size"
+title: "Good Lattice and Kronecker Sequences for <br>Arbitrary Sample Size"
 author: "Fred J. Hickernell"
 subtitle: |
   Illinois Institute of Technology, hickernell@illinoistech.edu

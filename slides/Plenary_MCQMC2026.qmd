@@ -480,7 +480,7 @@ helper["render_qmc_tree"](
 
 ---
 
-Look at $\displaystyle\int_{[0,1]^d} \frac{\lVert \vx \rVert^2}{d} \, \frac{\exp(-\lVert \vx \rVert^2/2)}{(2 \pi)^{d/2}} \, \dif \vx=1$ ([additive integrand]{.alert})
+Look at $\displaystyle\int_{\reals^d} \frac{\lVert \vx \rVert^2}{d} \, \frac{\exp(-\lVert \vx \rVert^2/2)}{(2 \pi)^{d/2}} \, \dif \vx=1$ ([additive integrand wrt Gaussian]{.alert})
 
 ::: {.columns}
 
