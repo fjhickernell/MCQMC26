@@ -35,8 +35,7 @@ Low discrepancy sequences used for quasi-Monte Carlo computations are often opti
 
 ## Conference
 
-- [MCQMC 2026 website](https://mcqmc2026.org/)
-- [June, 2026 Special Session in program](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=86001)
+- [MCQMC 2026 website](https://maths.ed.ac.uk/events/mcqmc-2026)
 
 
 
