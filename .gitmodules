@@ -6,3 +6,6 @@
 	path = classlib
 	url = git@github.com:fjhickernell/HickernellAcademicLib.git
 	branch = main
+[submodule "manuscripts/aadit-jain-paper"]
+	path = manuscripts/aadit-jain-paper
+	url = https://git@git.overleaf.com/681ea7258735d0ac2f62f89f
