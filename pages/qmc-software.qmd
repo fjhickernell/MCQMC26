@@ -13,14 +13,13 @@ Please send updates or additions with the package name, URL, programming languag
 
 import runpy
 
-helper = runpy.run_path("../qmcsoftware/scripts/qmc_software_table.py")
+helper = runpy.run_path("../qmcpy/scripts/qmc_software_table.py")
 
 helper["render_qmc_software_table"](
-    data_path="../qmcsoftware/data/qmc-software.yml",
+    data_path="../qmcpy/data/qmc-software.yml",
     mode="web",
 )
 ```
-
 
 
 

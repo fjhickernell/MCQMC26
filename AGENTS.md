@@ -34,7 +34,7 @@ same scientific sources.
 - Treat `conference/` as source/reference material from the conference and the
   earlier LaTeX slide workflow; do not silently replace current Quarto sources
   with those files.
-- `classlib` and `qmcsoftware` are Git submodules. Do not edit or advance their
+- `classlib` and `qmcpy` are Git submodules. Do not edit or advance their
   pinned commits incidentally. When an intentional change is required, validate,
   commit, and publish the submodule first, then update the parent pointer.
 
