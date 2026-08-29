@@ -15,15 +15,20 @@ jobs:
       RETICULATE_USE_MANAGED_VENV: "false"
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
-          submodules: recursive
+          submodules: false
           fetch-depth: 0
           clean: true
 
+      - name: Checkout website submodules
+        run: |
+          git -c url."https://github.com/".insteadOf="git@github.com:" \
+            submodule update --init --recursive classlib qmcpy
+
       - uses: quarto-dev/quarto-actions/setup@v2
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip

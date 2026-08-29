@@ -27,6 +27,12 @@ execute:
 format:
   revealjs:
     code-overflow: wrap
+    theme:
+      - simple
+      - ../classlib/classlib/quarto/slides/hickernell-slides.scss
+      - ../classlib/classlib/quarto/slides/research/research-slides.scss
+      - ../classlib/classlib/quarto/components/trees/tree-base.scss
+      - ../classlib/classlib/quarto/components/trees/qmc/tree.scss
     footer: |
       Fred J. Hickernell · Illinois Institute of Technology · assisted by ChatGPT
 
@@ -85,15 +91,43 @@ Desire
 #| echo: false
 #| output: asis
 
+from pathlib import Path
 import runpy
+import sys
 
-helper = runpy.run_path(
-    "../classlib/classlib/quarto/assets/images/qmc-tree/render_qmc_tree.py"
-)
 
-helper["render_qmc_tree"](
-    show_group_labels=True,
-)
+for repository_root in (Path.cwd(), *Path.cwd().parents):
+    tree_components = (
+        repository_root
+        / "classlib"
+        / "classlib"
+        / "quarto"
+        / "components"
+    )
+    if (tree_components / "trees" / "__init__.py").is_file():
+        tree_components = tree_components.resolve()
+        break
+else:
+    raise FileNotFoundError("Cannot find the classlib tree components")
+
+sys.path.insert(0, str(tree_components))
+
+from trees import render_tree
+
+
+def render_qmc_tree(**options):
+    print(
+        render_tree(
+            "qmc",
+            asset_base_url=(
+                "../classlib/classlib/quarto/components/trees"
+            ),
+            **options,
+        )
+    )
+
+
+render_qmc_tree(show_group_headings=True)
 ```
 
 :::
@@ -134,9 +168,9 @@ helper["render_qmc_tree"](
 #| output: asis
 
 
-helper["render_qmc_tree"](
+render_qmc_tree(
     groups=["foundation"],
-    group_labels=["foundation"],
+    group_headings=["foundation"],
     mask="root",
 )
 ```
@@ -175,9 +209,9 @@ helper["render_qmc_tree"](
 #| echo: false
 #| output: asis
 
-helper["render_qmc_tree"](
+render_qmc_tree(
     groups=["theory"],
-    group_labels=["theory"],
+    group_headings=["theory"],
     mask="canopy",
 )
 ```
@@ -213,9 +247,9 @@ Be aware of [all]{.alert} parts of the QMC tree
 #| echo: false
 #| output: asis
 
-helper["render_qmc_tree"](
+render_qmc_tree(
     groups=["practice"],
-    group_labels=["practice"],
+    group_headings=["practice"],
 )
 ```
 
@@ -252,10 +286,10 @@ helper["render_qmc_tree"](
 #| echo: false
 #| output: asis
 
-helper["render_qmc_tree"](
+render_qmc_tree(
     labels=["sequence", "discrepancy", "uq", "infer", "random"],
-    tree_font_scale=1.5,
-    tree_width="75%",
+    font_scale=1.5,
+    width="75%",
 )
 ```
 
@@ -366,9 +400,9 @@ helper["render_qmc_tree"](
 #| echo: false
 #| output: asis
 
-helper["render_qmc_tree"](
+render_qmc_tree(
     labels=["sequence", "discrepancy", "uq", "infer", "change-measure", "random"],
-    tree_font_scale=1.3,
+    font_scale=1.3,
 )
 ```
 
@@ -447,9 +481,9 @@ Look at $\displaystyle\int_{[0,1]^d} 3 \lVert \vx \rVert^2/d \; \dif \vx=1$ ([ad
 #| echo: false
 #| output: asis
 
-helper["render_qmc_tree"](
+render_qmc_tree(
     labels=["sequence", "error", "change-measure", "uq", "infer", "random"],
-    tree_font_scale=1.3,
+    font_scale=1.3,
 )
 ```
 :::
@@ -583,9 +617,9 @@ Careful choices of $\vx_0, \vx_1, \ldots$ lead to low discrepancy:
 #| echo: false
 #| output: asis
 
-helper["render_qmc_tree"](
+render_qmc_tree(
     labels=["sequence", "discrepancy", "missing", "random"],
-    tree_font_scale=1.5,
+    font_scale=1.5,
 )
 ```
 
@@ -647,9 +681,9 @@ Persuade the software developers to
 #| echo: false
 #| output: asis
 
-helper["render_qmc_tree"](
+render_qmc_tree(
     labels=["sequence", "discrepancy", "missing", "random", "software"],
-    tree_font_scale=1.5,
+    font_scale=1.5,
 )
 ```
 :::{.fragment}
@@ -869,9 +903,9 @@ A number of software packages have been developed to make QMC methods more acces
 #| echo: false
 #| output: asis
 
-helper["render_qmc_tree"](
+render_qmc_tree(
     labels=["community", "ai", "software"],
-    tree_font_scale=1.5,
+    font_scale=1.5,
 )
 ```
 :::
@@ -1163,9 +1197,9 @@ Assisted in preparing this talk and in my research in general, especially within
 #| output: asis
 
 
-helper["render_qmc_tree"](
+render_qmc_tree(
     groups=["foundation", "theory", "practice"],
-    group_labels=["foundation", "theory", "practice"],
+    group_headings=["foundation", "theory", "practice"],
 )
 ```
 
@@ -1203,9 +1237,9 @@ Includes
 #| output: asis
 
 
-helper["render_qmc_tree"](
+render_qmc_tree(
     groups=["foundation", "theory", "practice"],
-    group_labels=["foundation", "theory", "practice"],
+    group_headings=["foundation", "theory", "practice"],
 )
 ```
 
