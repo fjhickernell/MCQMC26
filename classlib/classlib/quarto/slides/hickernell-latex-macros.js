@@ -1,4 +1,9 @@
 <script>
+  // Shared semantic notation for MathJax in Quarto RevealJS slides.
+  // A string defines a zero-argument macro; [replacement, n] defines one
+  // with n arguments. Backslashes are escaped for JavaScript strings.
+  // The companion hickernell-latex-macros.tex is not yet synchronized with
+  // this registry; equivalent definitions should eventually share one source.
   window.MathJax = {
     startup: {
       typeset: false,
@@ -51,12 +56,16 @@
     tex: {
       macros: {
 
+        // Presentation helpers
         mathlink: ["\\href{#1}{\\text{\\color{##0f8b8d}{#2}}}", 2],
         yamlref: ["{\\text{#1}}", 1],
         frag: ["{\\class{fragment}{#2}}", 2],
         alert: ["{\\class{alert}{#1}}", 1],
         alerttext: ["{\\class{alert}{\\text{#1}}}", 1],
         alerttextsf: ["{\\class{alert}{\\textsf{#1}}}",1],
+        mat: ["{\\mathsf{#1}}", 1],
+        tens: ["{\\mathcal{#1}}", 1],
+        vct: ["{\\boldsymbol{#1}}", 1],
         notimplies: "\\ \\mathrel{\\not\\!\\!\\!\\Longrightarrow}",
         convas: ["\\xrightarrow{\\mathsf{a.s.}}", 0],
         convp:  ["\\xrightarrow{\\Prob}", 0],
@@ -70,13 +79,15 @@
         pto:  ["\\xrightarrow{\\Prob}", 0],
         dto:  ["\\xrightarrow{\\mathsf{d}}", 0],
 
+        // Common mathematical operators
         success: "{\\operatorname{succ}}",
         sinc:    "{\\operatorname{sinc}}",
         sech:    "{\\operatorname{sech}}",
         csch:    "{\\operatorname{csch}}",
 
+        // Probability and expectation; exercise notation uses exstar below
         Prob: "{\\mathbb{P}}",
-        Ex:   "{\\mathbb{E}}",
+        Ex:   "{\\mathbb{E}}", // expectation, not exercise
 
 
         dist:  "{\\operatorname{dist}}",
@@ -117,6 +128,7 @@
         MSB:  "{\\operatorname{MSB}}",
         MSW:  "{\\operatorname{MSW}}",
 
+        // Probability distributions
         Bern:  "{\\operatorname{Bern}}",
         Bin:   "{\\operatorname{Bin}}",
         Unif:  "{\\operatorname{Unif}}",
@@ -184,7 +196,6 @@
         vh:  "{\\boldsymbol{h}}",
         vi:  "{\\boldsymbol{i}}",
         vj:  "{\\boldsymbol{j}}",
-        vJ:  "{\\boldsymbol{J}}",
         vk:  "{\\boldsymbol{k}}",
         vl:  "{\\boldsymbol{l}}",
         vm:  "{\\boldsymbol{m}}",
@@ -262,6 +273,7 @@
         mA: "{\\mathsf{A}}",
         mH: "{\\mathsf{H}}",
         mX: "{\\mathsf{X}}",
+        mY: "{\\mathsf{Y}}",
         mW: "{\\mathsf{W}}",
         mP: "{\\mathsf{P}}",
         mQ: "{\\mathsf{Q}}",
@@ -284,10 +296,12 @@
         hp:    "{\\widehat{p}}",
         hJ:    "{\\widehat{J}}",
         hf:    "{\\widehat{f}}",
+        hF:    "{\\widehat{F}}",
         hP:     "{\\widehat{P}}",
         hX:     "{\\widehat{X}}",
         hY:     "{\\widehat{Y}}",
         hvY:    "{\\widehat{\\boldsymbol{Y}}}",
+        hvx:    "{\\widehat{\\boldsymbol{x}}}",
         hZ:     "{\\widehat{Z}}",
         hveps:   "{\\widehat{\\varepsilon}}",
         hvveps: "{\\widehat{\\boldsymbol{\\varepsilon}}}",
@@ -322,6 +336,7 @@
         MLE: "{\\mathrm{MLE}}",
         LRT: "{\\mathrm{LRT}}",
 
+        // Exercise markers and exercise-specific relations
         exstar: "{\\mathop{\\mathchoice{\\color{gold}{\\Large\\star}}{\\color{gold}{\\Large\\star}}{\\color{gold}{\\large\\star}}{\\color{gold}{\\star}}}}",
         exeq: "{\\mathrel{\\,\\overset{\\exstar}{=}\\,}}",
         exsim: "{\\mathrel{\\,\\overset{\\exstar}{\\sim}\\,}}",
@@ -330,4 +345,3 @@
     }
   };
 </script>
-
