@@ -277,6 +277,7 @@
         mW: "{\\mathsf{W}}",
         mP: "{\\mathsf{P}}",
         mQ: "{\\mathsf{Q}}",
+        mV: "{\\mathsf{V}}",
         mR: "{\\mathsf{R}}",
         mI: "{\\mathsf{I}}",
         mzero: "{\\mathsf{0}}",
@@ -329,6 +330,7 @@
         mpi: "{\\mathrm{\\pi}}",
         mK: "{\\mathsf{K}}",
         tmK: "{\\widetilde{\\mathsf{K}}}",
+        mLambda: "{\\mathsf{\\Lambda}}",
         mSigma: "{\\mathsf{\\Sigma}}",
 
         dif: "{\\mathrm{d}}",
