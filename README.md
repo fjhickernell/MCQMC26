@@ -22,6 +22,9 @@ authoritative link is available.
   Commit manuscript changes inside that directory and push its `main` branch to
   `origin` to propagate them to Overleaf. Then commit the updated submodule
   pointer in this repository.
+  The active manuscript is `rqmc_kurt_ci_paper.tex`. Dated copies such as
+  `rqmc_kurt_ci_paper_2026-10-18.tex` are archival snapshots; make new edits in
+  the undated source and preserve the dated files unchanged.
 
 Clone this repository together with its manuscript and library submodules using
 
