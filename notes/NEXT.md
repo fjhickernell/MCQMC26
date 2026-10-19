@@ -37,5 +37,5 @@ notation, algorithm, and coverage argument before progressing through the paper.
 Build in the manuscript checkout with
 `latexmk -pdf -synctex=1 -interaction=nonstopmode -halt-on-error rqmc_kurt_ci_paper.tex`.
 The current 19-page draft compiles with citations and references resolved.
-One overfull cost equation and an underfull page remain. Mathematical review
+One overfull cost equation remains. Mathematical review
 and official conference-template compliance remain unfinished.
