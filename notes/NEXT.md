@@ -3,7 +3,7 @@
 ## Special-session paper
 
 The initial draft is `manuscripts/special-session/main.tex`, with sections in
-that directory and a 12-page compiled preview at `build/main.pdf`.
+that directory and a 13-page compiled preview at `build/main.pdf`.
 The limit is 16 pages. Fred requested the MCQMC 2024 macros for these papers;
 the draft now uses the same `svproc.cls`, `spmpsci.bst`, and Times font packages
 as the Aadit paper. Do not revert to generic article formatting.
@@ -26,8 +26,9 @@ sizes” already agrees. Preserve the finished talk's title unless its revision
 is intentional. If another Mac has additional unpublished manuscript work,
 reconcile it while retaining this confirmed title.
 
-The Overleaf manuscript and confirmed title are published on `main` at
-`0433585`. Anders's editor invitation was sent and was pending acceptance when
+The Overleaf manuscript is published on `main` at `bcbe027`, including the
+confirmed title, infinite-precision Newo formulation, and front-of-paper
+author agenda. Anders's editor invitation was sent and was pending acceptance when
 checked. This parent records the manuscript as a submodule, retaining the
 existing talk and Academic Library connections. Update the parent on other
 Macs before initializing the new manuscript submodule.
@@ -57,7 +58,18 @@ changes explicitly and publish the updated parent pointer at Checkpoint.
 ### Scientific review
 
 Review it with Anders, starting with the permutation-only Newo theorem in
-Section 4 and the questions at the end. Do not add a tree presentation.
+Section 4 and the author agenda above the abstract
+(`sections/author-questions.tex`). Keep the agenda at the front. Anders will
+investigate the newer Kronecker CBC (question 2). Question 3 asks which code
+produced the historical comparison figures and whether it can be rerun with
+the paper's discrepancy convention. Question 4 compares methods on their first
+$n$ points for varying $n$, including sizes between powers of two. Fred confirmed on October 29 that
+the theoretical $\pi$ family must have infinite precision. Anders's October 28
+SURE edit (`1daf4d6`) already uses infinite suffixes and absorbs the unused
+output tail into a common shift on each finite prefix. The draft now follows
+that formulation; question 1 concerns review of the common-tail reduction
+and specification of the finite-precision implementation. Do not revert the
+theory to a sample-size-dependent digit cutoff. Do not add a tree presentation.
 Unresolved work is marked with dark-green `\codex{[...]}` comments, matching
 the Cones papers; retain these until the corresponding issues are resolved.
 
