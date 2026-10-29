@@ -26,9 +26,10 @@ sizes” already agrees. Preserve the finished talk's title unless its revision
 is intentional. If another Mac has additional unpublished manuscript work,
 reconcile it while retaining this confirmed title.
 
-The Overleaf manuscript is published on `main` at `7d060c4`, including the
+The Overleaf manuscript is published on `main` at `c65fa59`, including the
 confirmed title, infinite-precision Newo formulation, coordinate-reflection
-invariance, and front-of-paper author agenda with the generator-search action. Anders's editor invitation was sent and was pending acceptance when
+invariance, the generator-search action, and sync/Codex-note instructions.
+Anders's editor invitation was sent and was pending acceptance when
 checked. This parent records the manuscript as a submodule, retaining the
 existing talk and Academic Library connections. Update the parent on other
 Macs before initializing the new manuscript submodule.
@@ -43,17 +44,30 @@ remote, and inspect incoming changes before editing. Do not blindly reset a
 coauthor's newer commit to the parent's older pinned snapshot. Git publication
 and updates are explicit; this is not instantaneous cross-machine sync.
 
-Routine-sync boundary verified October 29: MCQMC26 is already in the shared
-active repository registry. `sync-active.sh` initializes all submodules to
-the parent commit's recorded pins, so the published manuscript connection
-will reach other Macs without a new repository entry. Automatic promotion to
-the latest Overleaf manuscript commit is not configured: the shared updater
-currently promotes only `classlib`, `qmcpy`, and `assets/tests/archive`.
-If routine `arrive`/`depart` should adopt Anders's latest edits, add an explicit
-manuscript-submodule policy in SharedConfigs with clean-tree, fast-forward,
-and unpublished-work safeguards. Do not add MCQMC26 as a whole-repository
-GitHub/Overleaf mirror pair. Until that policy exists, reconcile Overleaf
-changes explicitly and publish the updated parent pointer at Checkpoint.
+Routine manuscript synchronization is now implemented in SharedConfigs
+`bin/sync-manuscript-submodules.py` and explicitly configured for this path in
+`settings/manuscript-submodules.json`. Both `arrive` and `depart` reach it
+through `sync-active.sh`. Arrival fast-forwards compatible clean Overleaf
+history and records only its verified published pointer in a local parent
+commit. Departure publishes clean linear manuscript `main` commits before
+pushing the parent pointer. No manuscript source is auto-committed. Dirty
+files, staged pointers, unexpected branches/URLs, unfinished operations,
+unpublished detached work, and divergent histories are preserved and
+reported; arrival also leaves unpublished manuscript commits for explicit
+publication or departure. The manuscript is excluded from the generic
+checkout of older parent pins. MCQMC26 remains a GitHub parent, not a
+whole-repository Overleaf mirror.
+
+The update is installed on M3 and published in SharedConfigs at `d836cc6`.
+Other Macs receive it through their normal infrastructure refresh; preserve
+local infrastructure edits if that refresh reports a deferred update.
+Offline sync tests cover migration from the older tracked-file folder as
+well as dirty/divergent work and publication failures.
+Anders can leave `[Codex: Please ...]` notes in tracked manuscript sources.
+Routine sync reports filenames and counts; during manuscript work and
+Checkpoint, inspect and address these as coauthor feedback under `AGENTS.md`.
+They are not executed by the sync scripts, and fetching a note is not
+completion of the request.
 
 ### Scientific review
 
