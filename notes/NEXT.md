@@ -1,5 +1,29 @@
 # Immediate manuscript work
 
+## Special-session paper
+
+The initial draft is `manuscripts/special-session/main.tex`, with sections in
+that directory and a 12-page compiled preview at `build/main.pdf`.
+The limit is 16 pages. Fred requested the MCQMC 2024 macros for these papers;
+the draft now uses the same `svproc.cls`, `spmpsci.bst`, and Times font packages
+as the Aadit paper. Do not revert to generic article formatting.
+Review it with Anders, starting with the permutation-only Newo theorem in
+Section 4 and the questions at the end. Do not add a tree presentation.
+Unresolved work is marked with dark-green `\codex{[...]}` comments, matching
+the Cones papers; retain these until the corresponding issues are resolved.
+
+The SURE GitHub and Overleaf histories were reconciled at `f37fe96`; both
+services are synchronized. SharedConfigs registers their verified pairing
+with `routine_sync: true`, so future `arrive`/`depart` runs bridge both.
+The precise newer Kronecker CBC remains to be supplied by Anders. The current
+draft derives a generic CBC from the criterion, without attributing it to
+that newer algorithm. Historical slide figures are explicitly unrevalidated.
+See the manuscript README and `SOURCE_PROVENANCE.md` before adding results.
+Current authors are Alexander Pride and Fred J. Hickernell, in that order,
+as Fred specified on October 28 (provisional). The plenary manuscript is not started.
+
+## Aadit coauthored paper
+
 Continue Fred's section-by-section review of the Aadit Jain coauthored paper;
 Section 1 has been revised. Next review Section 2 and its assumptions,
 notation, algorithm, and coverage argument before progressing through the paper.

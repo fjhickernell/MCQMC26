@@ -1,0 +1,45 @@
+\section{Discussion and remaining questions}\label{sec:discussion}
+The common design principle is to optimize the prefix curve through a
+weighted sum of expected squared discrepancies. For lattice sequences,
+dyadic difference multiplicities make this objective tractable. The Newo
+invariance result shows that changing the common scalar digit ordering
+within the stated class cannot improve this particular criterion for a
+fixed generator: every prefix value is already unchanged. Such scrambling
+can still change the appearance of a prefix and its integration error for
+a particular function. These are separate effects from WSESD optimization.
+
+For Kronecker sequences, the natural decomposition is by integer lags.
+It leads to a comparable product-kernel CBC objective, but neither the
+lattice search's acceleration nor its available theory transfers merely
+because both methods are called CBC. The newer Kronecker construction
+should be specified on its own terms, including its candidate family,
+search procedure, and finite-horizon or asymptotic guarantees.
+
+The conference abstract proposed arbitrary sample sizes and missing data
+as motivations. In this paper, the main results concern all prefixes up to
+$N$, whereas~\eqref{eq:removal} gives a limited deletion-stability statement.
+A construction specifically optimized over missing-point patterns would
+need an additional criterion. Likewise, this draft does not extend the
+construction horizon without rebuilding the generator or establish
+a stopping rule based on observed integrand values.
+
+\subsection*{Questions for the discussion with Anders}
+\codex{[Review agenda for the authors:]}
+\codex{\begin{enumerate}[leftmargin=*,itemsep=3pt]
+\item Confirm the finite-precision $\pi$ definition and proof in
+Section~\ref{sec:newo}, and whether a single infinite-precision family is
+needed for the intended implementation.
+\item Supply the distinct, newer Kronecker CBC: exact candidate parameters,
+objective or surrogate, update rule, cost, and available bounds. Distinguish
+it from the \texttt{ANDERS\_CBC} generator used in the talk.
+\item Identify a stable implementation and a reproducible figure-generation
+path for the lattice and Kronecker searches, including the random-shift
+convention in the discrepancy evaluator.
+\item Agree on a small numerical study that fits the 16-page limit:
+all-prefix comparisons, preferred-size tradeoffs, and a representative
+integration example if space permits.
+\item Confirm attribution of the new results and the eventual
+proceedings format before submission.
+\end{enumerate}
+These questions identify work remaining in the draft rather than claims
+that the numerical results or the newer algorithm have already been verified.}

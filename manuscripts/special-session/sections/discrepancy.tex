@@ -1,0 +1,88 @@
+\section{Shift-averaged discrepancy and a prefix criterion}\label{sec:framework}
+Let $K$ be a real symmetric reproducing kernel on $[0,1)^d$ with Hilbert
+space $\Hspace$. Assume that point evaluation and integration are bounded,
+and that the integrals below exist and can be interchanged with the finite
+sums. For deterministic nodes $P_n=(\vx_0,\ldots,\vx_{n-1})$, define
+\[
+ D_K^2(P_n)=\sup_{\|f\|_{\Hspace}\le1}|I(f)-Q_n(f)|^2.
+\]
+The reproducing property gives the familiar kernel expression
+\begin{align}\label{eq:rkhs-discrepancy}
+ D_K^2(P_n)
+ &=\int\!\!\int K(\vx,\boldsymbol y)\dif\vx\dif\boldsymbol y
+ -\frac2n\sum_{i=0}^{n-1}\int K(\vx_i,\boldsymbol y)\dif\boldsymbol y\notag\\
+ &\quad+\frac1{n^2}\sum_{i,j=0}^{n-1}K(\vx_i,\vx_j).
+\end{align}
+All unmarked integrals in this section are over the unit cube of the
+appropriate dimension.
+
+For $\vDelta\sim\mathrm{Unif}[0,1)^d$, independent of the nodes, put
+\[
+ e_n^2(P_n)=\E_{\vDelta}\left[D_K^2\bigl(
+ (\fracpart{\vx_i+\vDelta})_{i=0}^{n-1}\bigr)\right],
+ \quad
+ \kt(\boldsymbol t)=\int K(\fracpart{\boldsymbol y+\boldsymbol t},
+ \boldsymbol y)\dif\boldsymbol y,
+ \quad \overline K=\int\kt(\boldsymbol t)\dif\boldsymbol t.
+\]
+Uniform translation modulo one yields
+\begin{equation}\label{eq:shift-esd}
+ e_n^2(P_n)=-\overline K+
+ \frac1{n^2}\sum_{i,j=0}^{n-1}
+ \kt(\fracpart{\vx_i-\vx_j}).
+\end{equation}
+Indeed, each shifted node is uniform, so both the constant integral term
+and each averaged single-node integral in~\eqref{eq:rkhs-discrepancy}
+equal $\overline K$. The averaged pair term is the translation-averaged
+kernel at the unshifted difference. In particular, a random shift belongs
+in the integration rule, but must not be inserted again into the differences
+on the right side of~\eqref{eq:shift-esd}.
+
+This is an expectation of a \emph{squared worst-case error}. It is not a
+confidence interval, nor does a small value establish a finite-sample
+probabilistic error guarantee for an arbitrary integrand outside the space.
+For $f\in\Hspace$, the deterministic worst-case inequality does imply
+$\E_{\vDelta}|I(f)-Q_n(f)|^2\le e_n^2(P_n)\|f\|_{\Hspace}^2$.
+
+\subsection{Product kernels and two kinds of weights}
+We specialize to a periodic product kernel
+\begin{equation}\label{eq:kernel}
+ \kt_d(\boldsymbol t)=\prod_{j=1}^d
+ \bigl[1+\gamma_j B_2(\fracpart{t_j})\bigr],
+ \qquad B_2(t)=t^2-t+\tfrac16,
+ \qquad \gamma_j>0.
+\end{equation}
+Here $\overline K=1$, since $B_2$ has zero mean. The Fourier coefficients
+of $B_2(\fracpart{t})$ are positive for nonzero integer frequencies, so
+this defines a positive-definite periodic kernel. Its normalization is the
+one used in the talk's computations. Rescaling $B_2$, for example by
+$2\pi^2$, also rescales the effective coordinate weights and cannot be done
+silently when comparing figures or generators.
+
+For sample-size weights $w_1,\ldots,w_N\ge0$, define
+\begin{equation}\label{eq:wesd}
+ \W_N(P)=\sum_{n=1}^N w_n e_n^2(P_n),
+ \qquad\text{with }w_n=n\text{ in the constructions below}.
+\end{equation}
+The same underlying sequence supplies every prefix $P_n$. Choosing the
+weights is part of specifying the objective; small WSESD is an aggregate
+property and does not mean that every individual prefix beats every
+comparator. For $w_n>0$ it gives the elementary bound
+$e_n^2(P_n)\le\W_N(P)/w_n$, which by itself may be quite conservative.
+
+One interpretation makes the role of these weights explicit. If a random
+stopping size $T$ has probabilities $\Pr(T=n)=p_n$, then
+$\E[e_T^2]=\sum_n p_n e_n^2$. Alternatively,
+$\E[T^2e_T^2]=\sum_n p_n n^2 e_n^2$ emphasizes squared error on the
+scale $TQ_T$. With $p_n=(nH_N)^{-1}$ and
+$H_N=\sum_{n=1}^N n^{-1}$, the latter is $\W_N/H_N$ for $w_n=n$.
+This is an interpretation of the objective, not an assertion that the
+applications in the talk follow this stopping distribution.
+
+\par\smallskip
+\noindent\codex{[Framework verification: Identify the intended periodic
+function space and a supporting reference for this kernel normalization.
+Explain the choices of sample-size weights and coordinate weights used in the
+final study; the stopping-distribution interpretation above is a derived
+interpretation, not evidence about an application.]}
+\par\smallskip

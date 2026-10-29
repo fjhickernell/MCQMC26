@@ -1,0 +1,49 @@
+% MCQMC 2024 template files reused from the Aadit paper at Fred's request.
+% Final MCQMC 2026 template compliance remains to be checked.
+\documentclass{svproc}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{newtxtext}
+\usepackage[varvw]{newtxmath}
+\usepackage{url}
+\def\UrlFont{\rmfamily}
+\usepackage{graphicx,booktabs,enumitem,xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\newcommand{\vx}{\boldsymbol{x}}
+\newcommand{\vz}{\boldsymbol{\zeta}}
+\newcommand{\vh}{\boldsymbol{h}}
+\newcommand{\vDelta}{\boldsymbol{\Delta}}
+\newcommand{\vzero}{\boldsymbol{0}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\dif}{\,\mathrm{d}}
+\newcommand{\fracpart}[1]{\{#1\}}
+\newcommand{\kt}{\widetilde K}
+\newcommand{\W}{\mathcal W}
+\newcommand{\Hspace}{\mathcal H}
+\newcommand{\fredcodex}[1]{{\color{red!70!black}#1}}
+\newcommand{\codex}[1]{\begingroup\color{green!60!black}#1\endgroup}
+\newcommand{\codexdone}[1]{\begingroup\color{gray}#1\endgroup}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\title{Component-by-Component Constructions of Kronecker and Lattice Sequences Which Are Good for Arbitrary Sample Sizes}
+\titlerunning{CBC sequences for arbitrary sample sizes}
+\author{Alexander Pride \and Fred J. Hickernell}
+\authorrunning{Alexander Pride and Fred J. Hickernell}
+\institute{}
+\date{October 28, 2026}
+\begin{document}
+\mainmatter
+\maketitle
+\begin{center}\small Discussion draft for Fred and Anders. MCQMC 2024 macros; limit: 16 pages.\end{center}
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/discrepancy}
+\input{sections/lattice}
+\input{sections/newo}
+\input{sections/kronecker}
+\input{sections/experiments}
+\input{sections/discussion}
+\bibliographystyle{spmpsci}
+\bibliography{references}
+\end{document}

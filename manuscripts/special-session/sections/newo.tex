@@ -1,0 +1,139 @@
+\section{Newo scrambling and invariance of the lattice criterion}
+\label{sec:newo}
+
+The order of a sequence matters when arbitrary prefixes are used. It is
+therefore natural to ask whether changing the scalar van der Corput ordering
+changes the lattice construction criterion. The following class of digit
+permutations gives a precise negative answer. We use Pride's name
+\emph{Newo}, Owen spelled backwards, for the reversal of the digit-dependency
+direction in nested scrambling~\cite{pride-notes}.
+
+\subsection{Suffix-dependent digit permutations}
+
+Fix $M$ binary digits. At each position $k$, where $0\le k<M$, every
+possible suffix fixes a permutation of $\{0,1\}$, denoted by
+\[
+ \pi_k(\,\cdot\,;a_{k+1},\ldots,a_{M-1}).
+\]
+For $a=\sum_{k=0}^{M-1}a_k2^{-k-1}$ define
+\begin{equation}\label{eq:newo-definition}
+ \psi(a)=\sum_{k=0}^{M-1}
+ \pi_k(a_k;a_{k+1},\ldots,a_{M-1})2^{-k-1}.
+\end{equation}
+At $k=M-1$ the suffix is empty. The same collection of permutations is
+applied to every input point. Unlike the usual nesting direction, the
+permutation of a more significant fractional digit depends on less
+significant input digits. One can choose these permutations independently
+and uniformly at random, but the invariance result does not require their
+randomness.
+
+The map $\psi$ is a bijection of the dyadic grid
+$\{0,2^{-M},\ldots,(2^M-1)2^{-M}\}$.
+Indeed, given the output, recover the final input digit by inverting its
+permutation, then recover preceding digits successively using the suffix
+already recovered. Define $t_i=\psi(\phi_2(i))$ for $0\le i<2^M$.
+The randomized points considered here are
+\begin{equation}\label{eq:newo-points}
+ \vx_i'=\fracpart{t_i\vh+\vDelta}.
+\end{equation}
+Thus the scrambling is scalar and is performed before multiplication by the
+fixed integer generating vector. The uniform shift $\vDelta$ is independent
+of any random choice of $\psi$.
+
+\subsection{Every prefix has the same expected squared discrepancy}
+
+Here and below the expectation defining $e_n^2$ is over the uniform shift.
+For random Newo permutations, the following statement holds conditionally
+on every choice of those permutations.
+
+\begin{theorem}[Newo invariance, adapted from Pride's notes]
+\label{thm:newo-invariance}
+For any fixed integer vector $\vh$, any $1\le n\le2^M$, and any collection
+of permutations in~\eqref{eq:newo-definition}, the sequence prefix
+\eqref{eq:newo-points} and the unscrambled lattice-sequence prefix have the
+same shift-averaged squared periodic-kernel discrepancy. Consequently their
+weighted criteria agree for every choice of sample-size weights, including
+$\W_N$ for every $N\le2^M$.
+\end{theorem}
+
+\begin{proof}
+The proof in~\cite{pride-notes} compares differences of the scalar inputs.
+For $k\ge0$, let
+\[
+ S_k=\{(2r+1)2^{-k-1}:0\le r<2^k\}.
+\]
+Fix $i\ge1$ with binary digits $i_k$, and partition the indices $j<i$ by
+the largest bit position $k$ where $i_k\ne j_k$. Such a group is present
+exactly when $i_k=1$. Within that group $j_k=0$, all bits above $k$ agree
+with those of $i$, and the $k$ lower bits of $j$ are free. Hence the group
+has $2^k$ members.
+
+Suffix dependence ensures that the scrambled outputs have identical digits
+at positions greater than $k$ and opposite digits at position $k$.
+Their difference modulo one therefore lies in $S_k$. Since $\psi$ is
+injective, the $2^k$ differences for this group are distinct, so they exhaust
+$S_k$. The sets $S_k$ are disjoint. We have proved
+\begin{equation}\label{eq:newo-row}
+ \{\fracpart{t_i-t_j}:0\le j<i\}
+   =\bigcup_{k:i_k=1}S_k.
+\end{equation}
+The identity permutations give the same right-hand side for the
+unscrambled inputs. Thus the earlier-index differences agree as multisets
+for every $i$. Their negatives give the reverse ordered differences, and
+the diagonal differences are all zero. The complete ordered difference
+multisets of every prefix consequently agree.
+
+Multiplication by the integer vector $\vh$ and evaluation of the periodic
+kernel preserve equality of the sums over these multisets. Applying
+\eqref{eq:shift-esd} proves equality of the shift-averaged squared
+discrepancies. Summing with the chosen sample-size weights proves the final
+claim.
+\end{proof}
+
+The conclusion is an exact identity, not merely equality after averaging
+over scrambles. In particular, the objective function supplied to every CBC
+step is unchanged. With identical candidate sets and tie-breaking rules,
+the construction therefore selects the same generating vector. This
+invariance concerns the stated discrepancy criterion; particular integration
+errors need not agree, and arbitrary permutations or independently scrambled
+coordinates are not covered by the theorem.
+
+\subsection{Gray-code ordering and odd multipliers}
+
+An important example uses
+\[
+ \pi_k(a_k;a_{k+1},\ldots)=a_k\mathbin{\oplus}a_{k+1},
+ \qquad a_M=0,
+\]
+where $\oplus$ is exclusive-or. If
+$g(i)=i\mathbin{\oplus}\lfloor i/2\rfloor$ is the binary reflected Gray
+code, then $\psi(\phi_2(i))=\phi_2(g(i))$. The theorem shows why a generating
+vector selected using van der Corput ordering has precisely the same
+weighted prefix criterion under Gray-code ordering. Consecutive values of
+$g(i)$ differ in one bit; arbitrary Newo choices need not have this extra
+property.
+
+Multiplication modulo one by an odd integer $h$ also has the form
+\eqref{eq:newo-definition}. The $k$th fractional digit of $\fracpart{ha}$ is
+\begin{equation}\label{eq:odd-multiplier-newo}
+ a_k\mathbin{\oplus}
+ \left(\left\lfloor
+ h\sum_{\ell=k+1}^{M-1}a_\ell2^{k-\ell}
+ \right\rfloor\bmod2\right).
+\end{equation}
+Indeed, take $\lfloor 2^{k+1}ha\rfloor$ modulo two. Digits above $k$
+contribute even integers; the current digit contributes $ha_k$, whose
+parity equals $a_k$; the remaining term is the carry from less significant
+digits. For each suffix this is either the identity or the swap of the
+current digit. Thus ordinary odd multiplication is included within the
+Newo class. This does not imply that independent Newo maps in all coordinates
+form a rank-one lattice sequence or inherit the same criterion.
+
+\par\smallskip
+\noindent\codex{[Author verification: Confirm the finite-precision definition and attribution with Anders.
+The odd-multiplier calculation makes explicit the carry argument sketched in
+the source notes. The theorem is stated at a fixed maximum precision;
+a consistent infinite-precision randomization requires a separate definition.
+Newo scrambling does not, in general, preserve the digital-net properties
+preserved by ordinary nested scrambling.]}
+\par\smallskip

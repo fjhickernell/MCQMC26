@@ -28,6 +28,17 @@ same scientific sources.
   file as authoritative. Keep manuscript content sufficiently separated from
   temporary formatting support that the official macros can be adopted with
   minimal rewriting when they arrive.
+- For the new plenary and special-session drafts, Fred requested the MCQMC
+  2024 macros on October 28, 2026. Reuse `svproc.cls` and `spmpsci.bst` from
+  the Aadit manuscript and its Times text/math setup. This is the prescribed
+  working format; do not substitute generic article formatting. The page
+  limit is 16 pages. Verify any additional 2026 submission requirements
+  separately rather than claiming that reuse alone establishes compliance.
+- In the new proceedings drafts, mark unresolved scientific and editorial
+  work with dark-green `\codex{[...]}` comments, using `green!60!black`, as
+  in the Generalized Tractability on Cones papers. Keep review comments
+  distinct from proposed manuscript prose. This does not change the Aadit
+  paper's existing red `\fredcodex` editing convention.
 - Keep reusable computations in `notebooks/`, reusable images and bibliography
   material in `assets/`, and shared presentation or publication support in the
   appropriate project configuration or script.

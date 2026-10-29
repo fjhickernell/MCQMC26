@@ -1,0 +1,78 @@
+\section{Introduction}\label{sec:introduction}
+An integration algorithm may be interrupted when its budget is exhausted,
+when another simulation finishes, or when an error diagnostic indicates
+sufficient accuracy. There is no reason for that stopping point to coincide
+with a power of two. This motivates a construction problem for entire
+sequences: choose one generator whose successive prefixes have small
+integration errors over a range of sample sizes, rather than optimize only
+a distinguished terminal point set.
+
+For an integrand $f:[0,1)^d\to\R$, write
+\[
+ I(f)=\int_{[0,1)^d} f(\vx)\dif\vx,
+ \qquad Q_n(f)=\frac1n\sum_{i=0}^{n-1}f(\vx_i).
+\]
+We index points from zero, consistently with the special-session slides.
+A lattice sequence obtained from a radical inverse has particularly useful
+structure when $n$ is a power of the base. Established embedded lattice
+constructions exploit this structure to make a single generator useful at
+multiple preferred sizes~\cite{CKN06,DKP22}. Our focus is the quality of
+\emph{all} prefixes up to a finite construction horizon $N$.
+
+Kronecker sequences provide a complementary family. Their points have the
+form $\vx_i=\fracpart{i\vz+\vDelta}$, where fractional parts are taken
+componentwise. They are naturally defined at every sample size. Their
+quality nevertheless depends on the choice of $\vz$, and a generator that
+works well in one projection need not work well in many dimensions.
+Classical algebraic constructions and recent geometric investigations provide
+useful comparators~\cite{Richtmyer51,DGLPS25}. Here we use a common
+kernel-discrepancy criterion to formulate a CBC search for both families.
+
+The criterion is the \emph{weighted sum of expected squared discrepancies}
+(WSESD). Its expectation is over a uniform random shift; its sum is over
+prefix lengths. The coordinate weights of the kernel encode the relative
+importance of variables, while the sample-size weights encode which prefix
+lengths the construction should favor. These are different modeling choices.
+The special-session talk used sample-size weight $n$ and coordinate weights
+$\gamma_j=j^{-2}$.
+
+A further development concerns the order in which a lattice sequence is
+traversed. Pride's recent notes~\cite{pride-notes} introduce the Newo
+scrambling, whose digit permutations depend on less significant input digits.
+For a fixed lattice generator, this changes individual prefixes while
+preserving their scalar difference multisets. We show directly in the
+permutation notation that the expected squared discrepancy at every prefix
+is unchanged. This explains why the same CBC generator can be used for
+ordinary van der Corput ordering, Gray-code ordering, or a Newo ordering.
+The preservation is stronger than equality of their WSESD values alone.
+
+\subsection{Arbitrary prefixes and missing points}
+A prefix objective addresses an unplanned stopping point. Arbitrary missing
+observations are a different problem and should not be conflated with it.
+There is nevertheless a simple stability bound that explains part of the
+motivation of the talk. Let $D(P)$ be the worst-case integration error over
+the unit ball of a fixed normed function space, with equal weights on a
+finite point collection $P$. If $P=A\cup B$ is a disjoint partition with
+$|P|=n$ and $|B|=r<n$, then the error functionals satisfy
+\[
+ (n-r)(I-Q_A)=n(I-Q_P)-r(I-Q_B).
+\]
+Consequently, if $D(B)\le C_0$ uniformly over the removed collection,
+\begin{equation}\label{eq:removal}
+ D(A)\le\frac{nD(P)+rC_0}{n-r}.
+\end{equation}
+For bounded $r$ and $D(P)=O(n^{-p})$, this gives
+$D(A)=O(n^{-\min(p,1)})$. It neither proves that a WSESD construction
+is optimal after deletion nor justifies intentionally dropping the first
+point of a low-discrepancy sequence. Weighted compound rules can address a
+different, higher-order arbitrary-size problem~\cite{HKKN12}; this paper
+retains equal integration weights.
+
+
+\par\smallskip
+\noindent\codex{[Scope and theory: Decide which quantitative guarantees the
+paper will establish for the CBC constructions. Minimizing the aggregate
+criterion does not prove a discrepancy rate at every sample size. Align the
+introduction's contribution claims with the final theorem statements and
+keep arbitrary prefixes distinct from arbitrary missing observations.]}
+\par\smallskip

@@ -17,6 +17,17 @@ authoritative link is available.
 
 ## Manuscripts
 
+- `manuscripts/special-session` contains the initial draft of
+  **Component-by-Component Constructions of Kronecker and Lattice Sequences
+  Which Are Good for Arbitrary Sample Sizes**, developed from the
+  special-session slides and conference abstract, with the newer SURE 2025
+  Newo scrambling material. The maximum is 16 pages; the current discussion
+  draft uses the MCQMC 2024 macros from the Aadit paper, as Fred requested.
+  Build with `latexmk -pdf main.tex`
+  in that directory; see its README for source provenance and remaining work.
+  The plenary proceedings paper will be a separate manuscript and has not
+  been started here.
+
 - `manuscripts/aadit-jain-paper` is a Git submodule connected to the separate
   Overleaf repository for the paper coauthored with Aadit Jain and others.
   Commit manuscript changes inside that directory and push its `main` branch to

@@ -1,0 +1,59 @@
+\section{Component-by-component construction for Kronecker sequences}
+\label{sec:kronecker}
+For a Kronecker sequence, $\vx_i=\fracpart{i\vz}$, the difference of the
+$i$th and $j$th nodes depends only on $i-j$. Since the shift-averaged kernel
+is even, \eqref{eq:shift-esd} becomes
+\begin{equation}\label{eq:kron-esd}
+ e_n^2(\vz)=-\overline K+
+ \frac{n\kt(\vzero)+2\sum_{k=1}^{n-1}(n-k)\kt(\fracpart{k\vz})}{n^2}.
+\end{equation}
+Thus all prefix discrepancies can be evaluated from the kernel values at the
+first $N-1$ nonzero multiples of $\vz$, using cumulative sums rather than
+forming $N$ separate pairwise sums.
+
+For the weights $w_n=n$ in \eqref{eq:wesd}, interchanging the two finite sums
+gives the following explicit construction criterion:
+\begin{align}
+ \W_N(\vz)&=-\overline K\frac{N(N+1)}2+N\kt(\vzero)
+       +\sum_{k=1}^{N-1}a_{N,k}\kt(\fracpart{k\vz}),\label{eq:kron-objective}\\
+ a_{N,k}&=2\sum_{n=k+1}^N\frac{n-k}{n}
+       =2\bigl[N-k-k(H_N-H_k)\bigr],\qquad
+ H_m=\sum_{n=1}^m\frac1n.\label{eq:kron-coefficients}
+\end{align}
+The coefficient of $\kt(\vzero)$ is $N$, because its contribution to each
+$n e_n^2$ is $\kt(\vzero)$. All $a_{N,k}$ are positive.
+
+For the product kernel \eqref{eq:kernel}, suppose that $\zeta_1,\ldots,
+\zeta_{s-1}$ have already been selected and cache
+\[
+ P_{s-1}(k)=\prod_{j=1}^{s-1}
+       \bigl[1+\gamma_jB_2(\fracpart{k\zeta_j})\bigr],
+ \qquad 1\le k<N.
+\]
+The terms in \eqref{eq:kron-objective} independent of a proposed next
+coordinate $y$ can be omitted from its minimization. A finite-candidate CBC
+step therefore selects
+\begin{equation}\label{eq:kron-cbc}
+ \zeta_s\in\argmin_{y\in\mathcal C_s}
+ \sum_{k=1}^{N-1}a_{N,k}P_{s-1}(k)B_2(\fracpart{ky}),
+\end{equation}
+for $\gamma_s>0$, then multiplies $P_{s-1}(k)$ by
+$1+\gamma_sB_2(\fracpart{k\zeta_s})$. Here $\mathcal C_s\subset[0,1)$
+is a specified finite candidate set. With at most $L$ candidates per
+coordinate, direct evaluation takes $O(dNL)$ operations and $O(N)$ working
+storage. This is a finite search-cost statement, not a discrepancy-rate theorem.
+
+The choice of $\mathcal C_s$ is substantive. Rational coordinates can be useful for a finite construction horizon.
+If all coordinates are rational, the resulting sequence is periodic. For an infinite Kronecker sequence, uniform distribution requires
+$1,\zeta_1,\ldots,\zeta_d$ to be linearly independent over the rationals.
+Low values of the finite-horizon criterion alone do not establish that
+property. Algebraic constructions supply useful comparison sequences
+\cite{Richtmyer51,DGLPS25}.
+
+\par\smallskip
+\noindent\codex{[Author verification: The displayed CBC step follows directly from our stated objective.
+Anders has a different recent Kronecker CBC construction that must be specified
+here: confirm its candidate set, selection rule, relationship to this criterion,
+complexity, and any proved guarantees. Do not identify the historical
+\texttt{ANDERS\_CBC} vector with the new construction without checking.]}
+\par\smallskip
