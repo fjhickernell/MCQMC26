@@ -48,6 +48,12 @@ same scientific sources.
 - `classlib` and `qmcpy` are Git submodules. Do not edit or advance their
   pinned commits incidentally. When an intentional change is required, validate,
   commit, and publish the submodule first, then update the parent pointer.
+- `manuscripts/special-session` is a separate Overleaf-backed Git submodule
+  (project `6ae39728ff70b39ca2fd98b1`, branch `main`). MCQMC26 remains its parent
+  project, with the existing talk and Academic Library connections. Fetch and
+  reconcile coauthor edits before editing; publish the manuscript to Overleaf
+  before advancing the parent pointer. Do not treat the entire MCQMC26 GitHub
+  repository as an Overleaf mirror or register it as a whole-repository pair.
 
 ## Slide-to-manuscript alignment
 

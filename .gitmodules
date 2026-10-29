@@ -9,3 +9,6 @@
 [submodule "manuscripts/aadit-jain-paper"]
 	path = manuscripts/aadit-jain-paper
 	url = https://git@git.overleaf.com/681ea7258735d0ac2f62f89f
+[submodule "manuscripts/special-session"]
+	path = manuscripts/special-session
+	url = https://git@git.overleaf.com/6ae39728ff70b39ca2fd98b1

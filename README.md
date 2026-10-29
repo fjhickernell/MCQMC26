@@ -17,14 +17,19 @@ authoritative link is available.
 
 ## Manuscripts
 
-- `manuscripts/special-session` contains the initial draft of
+- `manuscripts/special-session` is a Git submodule connected to
+  [the Special Session Overleaf project](https://www.overleaf.com/project/6ae39728ff70b39ca2fd98b1), containing the initial draft of
   **Component-by-Component Constructions of Kronecker and Lattice Sequences
-  Which Are Good for Arbitrary Sample Sizes**, developed from the
+  for Arbitrary Sample Sizes**, developed from the
   special-session slides and conference abstract, with the newer SURE 2025
   Newo scrambling material. The maximum is 16 pages; the current discussion
   draft uses the MCQMC 2024 macros from the Aadit paper, as Fred requested.
   Build with `latexmk -pdf main.tex`
   in that directory; see its README for source provenance and remaining work.
+  Fetch Anders's Overleaf edits before local work; publish manuscript commits
+  to its Overleaf `origin` before updating this repository's submodule pointer.
+  MCQMC26 remains the parent project, retaining its slide, computation, and
+  Academic Library connections; it is not itself an Overleaf mirror.
   The plenary proceedings paper will be a separate manuscript and has not
   been started here.
 

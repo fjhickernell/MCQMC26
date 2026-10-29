@@ -7,6 +7,55 @@ that directory and a 12-page compiled preview at `build/main.pdf`.
 The limit is 16 pages. Fred requested the MCQMC 2024 macros for these papers;
 the draft now uses the same `svproc.cls`, `spmpsci.bst`, and Times font packages
 as the Aadit paper. Do not revert to generic article formatting.
+The manuscript is now an Overleaf-backed submodule at the same path:
+<https://www.overleaf.com/project/6ae39728ff70b39ca2fd98b1> (`main` branch).
+Keep MCQMC26 as its parent and retain the existing talk/Academic Library links.
+Fetch and reconcile Anders's edits before writing; push manuscript commits
+to Overleaf before publishing the parent pointer. The standalone paper has
+snapshots of the two shared notebook figures under `figures/`; refresh these
+only with intentional artifact updates. Do not reupload a ZIP over coauthor edits.
+
+### Cross-machine handoff and confirmed title
+
+Fred confirmed the shortened title on October 29, 2026:
+**Component-by-Component Constructions of Kronecker and Lattice Sequences for
+Arbitrary Sample Sizes**. This replaces “Sequences Which Are Good for Arbitrary
+Sample Sizes.” Keep the manuscript title, Overleaf project name, and both
+READMEs consistent. The running title “CBC sequences for arbitrary sample
+sizes” already agrees. Preserve the finished talk's title unless its revision
+is intentional. If another Mac has additional unpublished manuscript work,
+reconcile it while retaining this confirmed title.
+
+The Overleaf manuscript and confirmed title are published on `main` at
+`0433585`. Anders's editor invitation was sent and was pending acceptance when
+checked. This parent records the manuscript as a submodule, retaining the
+existing talk and Academic Library connections. Update the parent on other
+Macs before initializing the new manuscript submodule.
+
+Before updating another Mac from the eventual parent commit, inspect its
+existing `manuscripts/special-session` folder for uncommitted or unpublished
+work: older checkouts have ordinary tracked files there, while the new parent
+commit replaces them with a submodule at the same path. Preserve and reconcile
+those edits rather than deleting the old directory to make an update succeed.
+After a clean parent update, initialize this submodule, fetch its Overleaf
+remote, and inspect incoming changes before editing. Do not blindly reset a
+coauthor's newer commit to the parent's older pinned snapshot. Git publication
+and updates are explicit; this is not instantaneous cross-machine sync.
+
+Routine-sync boundary verified October 29: MCQMC26 is already in the shared
+active repository registry. `sync-active.sh` initializes all submodules to
+the parent commit's recorded pins, so the published manuscript connection
+will reach other Macs without a new repository entry. Automatic promotion to
+the latest Overleaf manuscript commit is not configured: the shared updater
+currently promotes only `classlib`, `qmcpy`, and `assets/tests/archive`.
+If routine `arrive`/`depart` should adopt Anders's latest edits, add an explicit
+manuscript-submodule policy in SharedConfigs with clean-tree, fast-forward,
+and unpublished-work safeguards. Do not add MCQMC26 as a whole-repository
+GitHub/Overleaf mirror pair. Until that policy exists, reconcile Overleaf
+changes explicitly and publish the updated parent pointer at Checkpoint.
+
+### Scientific review
+
 Review it with Anders, starting with the permutation-only Newo theorem in
 Section 4 and the questions at the end. Do not add a tree presentation.
 Unresolved work is marked with dark-green `\codex{[...]}` comments, matching
