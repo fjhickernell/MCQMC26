@@ -26,9 +26,9 @@ sizes” already agrees. Preserve the finished talk's title unless its revision
 is intentional. If another Mac has additional unpublished manuscript work,
 reconcile it while retaining this confirmed title.
 
-The Overleaf manuscript is published on `main` at `bcbe027`, including the
-confirmed title, infinite-precision Newo formulation, and front-of-paper
-author agenda. Anders's editor invitation was sent and was pending acceptance when
+The Overleaf manuscript is published on `main` at `7d060c4`, including the
+confirmed title, infinite-precision Newo formulation, coordinate-reflection
+invariance, and front-of-paper author agenda with the generator-search action. Anders's editor invitation was sent and was pending acceptance when
 checked. This parent records the manuscript as a submodule, retaining the
 existing talk and Academic Library connections. Update the parent on other
 Macs before initializing the new manuscript submodule.
@@ -70,6 +70,17 @@ output tail into a common shift on each finite prefix. The draft now follows
 that formulation; question 1 concerns review of the common-tail reduction
 and specification of the finite-precision implementation. Do not revert the
 theory to a sample-size-dependent digit cutoff. Do not add a tree presentation.
+The framework also records Fred's coordinate-reflection observation:
+reflecting all points in any fixed coordinate leaves every prefix's
+shift-averaged periodic-kernel discrepancy and the weighted loss unchanged.
+The proof uses the symmetry of $B_2$; exact rational-node checks include all
+coordinate subsets and the zero/one endpoint. This also gives componentwise
+sign symmetry for the lattice and Kronecker generating vectors.
+Author action 6 records the search reduction: with finite-horizon lattice
+modulus $L=2^M\ge N$, retain odd representatives $1\le h_j\le L/2$;
+this is $N/2$ only when $N=L$. For Kronecker generators, review the
+candidate family's use of representatives $\zeta_j\in[0,1/2]$ under
+$\zeta_j\sim1-\zeta_j$. Implementation verification remains open.
 Unresolved work is marked with dark-green `\codex{[...]}` comments, matching
 the Cones papers; retain these until the corresponding issues are resolved.
 
