@@ -12,3 +12,7 @@
 [submodule "manuscripts/special-session"]
 	path = manuscripts/special-session
 	url = https://git@git.overleaf.com/6ae39728ff70b39ca2fd98b1
+[submodule "manuscripts/plenary"]
+	path = manuscripts/plenary
+	url = https://git@git.overleaf.com/6ae4101e2b7c96d63cf03bd6
+	branch = main

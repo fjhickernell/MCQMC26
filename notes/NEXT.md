@@ -1,5 +1,29 @@
 # Immediate manuscript work
 
+## Plenary paper
+
+The new `manuscripts/plenary` Overleaf submodule contains **Where Quasi-Monte
+Carlo Theory and Practice Meet**, by Fred J. Hickernell, developed from the
+current plenary slides and submitted abstract. The project is
+<https://www.overleaf.com/project/6ae4101e2b7c96d63cf03bd6> (`main` branch).
+The initial draft is published to Overleaf at `eb04589`.
+Fred specified **25 pages** for this paper on October 29, 2026; the special-session
+limit remains 16. Use the MCQMC 2024 macros and dark-green `\codex{[...]}`
+comments. The initial draft compiles to 19 pages including references and
+the front author agenda. Figures are byte-identical snapshots of shared
+notebook artifacts, with hashes and caveats in the manuscript provenance.
+
+Next, review the front agenda with Fred and decide the balance between a
+perspective and a computational study. Reproduce a selected subset of
+experiments, independently validate the importance proposal comparison,
+check regularity assumptions after transformation, and complete primary
+error-assessment/software citations. Existing plots do not validate coverage.
+The actual UQ target is a posterior second moment of an integrated penalty;
+do not copy stale notebook probability wording. Keep detailed CBC/Newo proofs
+in the special-session paper. Both drafts cite the other as in preparation.
+Fetch and inspect Overleaf changes before editing; publish manuscript commits
+before advancing the parent pointer. The slides themselves remain unchanged.
+
 ## Special-session paper
 
 The initial draft is `manuscripts/special-session/main.tex`, with sections in
@@ -26,9 +50,10 @@ sizes” already agrees. Preserve the finished talk's title unless its revision
 is intentional. If another Mac has additional unpublished manuscript work,
 reconcile it while retaining this confirmed title.
 
-The Overleaf manuscript is published on `main` at `c65fa59`, including the
+The Overleaf manuscript is published on `main` at `3de32ec`, including the
 confirmed title, infinite-precision Newo formulation, coordinate-reflection
-invariance, the generator-search action, and sync/Codex-note instructions.
+invariance, the generator-search action, sync/Codex-note instructions, and
+the companion plenary draft reference.
 Anders's editor invitation was sent and was pending acceptance when
 checked. This parent records the manuscript as a submodule, retaining the
 existing talk and Academic Library connections. Update the parent on other
@@ -106,7 +131,8 @@ draft derives a generic CBC from the criterion, without attributing it to
 that newer algorithm. Historical slide figures are explicitly unrevalidated.
 See the manuscript README and `SOURCE_PROVENANCE.md` before adding results.
 Current authors are Alexander Pride and Fred J. Hickernell, in that order,
-as Fred specified on October 28 (provisional). The plenary manuscript is not started.
+as Fred specified on October 28 (provisional). The plenary draft now provides
+the broader context and is cited in the special-session introduction.
 
 ## Aadit coauthored paper
 

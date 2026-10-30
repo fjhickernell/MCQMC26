@@ -31,8 +31,9 @@ same scientific sources.
 - For the new plenary and special-session drafts, Fred requested the MCQMC
   2024 macros on October 28, 2026. Reuse `svproc.cls` and `spmpsci.bst` from
   the Aadit manuscript and its Times text/math setup. This is the prescribed
-  working format; do not substitute generic article formatting. The page
-  limit is 16 pages. Verify any additional 2026 submission requirements
+  working format; do not substitute generic article formatting. The special-session
+  limit is 16 pages; Fred specified a 25-page plenary limit on October 29, 2026.
+  Verify any additional 2026 submission requirements
   separately rather than claiming that reuse alone establishes compliance.
 - In the new proceedings drafts, mark unresolved scientific and editorial
   work with dark-green `\codex{[...]}` comments, using `green!60!black`, as
@@ -54,6 +55,12 @@ same scientific sources.
   reconcile coauthor edits before editing; publish the manuscript to Overleaf
   before advancing the parent pointer. Do not treat the entire MCQMC26 GitHub
   repository as an Overleaf mirror or register it as a whole-repository pair.
+- `manuscripts/plenary` is a separate Overleaf-backed Git submodule
+  (project `6ae4101e2b7c96d63cf03bd6`, branch `main`). Apply the same
+  fetch/reconcile and manuscript-before-parent publication order. It uses the
+  plenary slides and abstract, the 25-page limit, and green Codex comments.
+  The special-session paper may cite this draft for the broader context;
+  detailed CBC and Newo work remains in the special-session manuscript.
 
 ## Slide-to-manuscript alignment
 

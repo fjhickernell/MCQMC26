@@ -17,6 +17,18 @@ authoritative link is available.
 
 ## Manuscripts
 
+- `manuscripts/plenary` is a Git submodule connected to
+  [the Plenary Overleaf project](https://www.overleaf.com/project/6ae4101e2b7c96d63cf03bd6),
+  containing the draft **Where Quasi-Monte Carlo Theory and Practice Meet**
+  by Fred J. Hickernell. It expands the plenary slides and abstract using
+  the MCQMC 2024 macros and green Codex review comments. The supplied limit
+  is 25 pages; the current draft is 19 pages including references and notes.
+  Build with `latexmk -pdf main.tex` in that directory. Its README and source
+  provenance identify the existing slide artifacts and remaining work.
+  The special-session paper references this draft for the broader context.
+  Fetch Overleaf changes before editing and publish the manuscript before
+  its parent pointer, following the same submodule workflow below.
+
 - `manuscripts/special-session` is a Git submodule connected to
   [the Special Session Overleaf project](https://www.overleaf.com/project/6ae39728ff70b39ca2fd98b1), containing the initial draft of
   **Component-by-Component Constructions of Kronecker and Lattice Sequences
@@ -30,8 +42,6 @@ authoritative link is available.
   to its Overleaf `origin` before updating this repository's submodule pointer.
   MCQMC26 remains the parent project, retaining its slide, computation, and
   Academic Library connections; it is not itself an Overleaf mirror.
-  The plenary proceedings paper will be a separate manuscript and has not
-  been started here.
 
 - `manuscripts/aadit-jain-paper` is a Git submodule connected to the separate
   Overleaf repository for the paper coauthored with Aadit Jain and others.
