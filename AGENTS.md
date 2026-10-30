@@ -59,6 +59,8 @@ same scientific sources.
   (project `6ae4101e2b7c96d63cf03bd6`, branch `main`). Apply the same
   fetch/reconcile and manuscript-before-parent publication order. It uses the
   plenary slides and abstract, the 25-page limit, and green Codex comments.
+  Use descriptive main sources: `mcqmc2026_plenary.tex` for the plenary and
+  `mcqmc2026_special_session.tex` for the special-session paper.
   The special-session paper may cite this draft for the broader context;
   detailed CBC and Newo work remains in the special-session manuscript.
 

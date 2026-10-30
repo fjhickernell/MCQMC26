@@ -6,7 +6,8 @@ The new `manuscripts/plenary` Overleaf submodule contains **Where Quasi-Monte
 Carlo Theory and Practice Meet**, by Fred J. Hickernell, developed from the
 current plenary slides and submitted abstract. The project is
 <https://www.overleaf.com/project/6ae4101e2b7c96d63cf03bd6> (`main` branch).
-The initial draft is published to Overleaf at `eb04589`.
+The main source is `mcqmc2026_plenary.tex`; the preview is
+`build/mcqmc2026_plenary.pdf`. The original draft was published at `eb04589`.
 Fred specified **25 pages** for this paper on October 29, 2026; the special-session
 limit remains 16. Use the MCQMC 2024 macros and dark-green `\codex{[...]}`
 comments. The initial draft compiles to 19 pages including references and
@@ -26,8 +27,8 @@ before advancing the parent pointer. The slides themselves remain unchanged.
 
 ## Special-session paper
 
-The initial draft is `manuscripts/special-session/main.tex`, with sections in
-that directory and a 13-page compiled preview at `build/main.pdf`.
+The initial draft is `manuscripts/special-session/mcqmc2026_special_session.tex`, with sections in
+that directory and a 13-page compiled preview at `build/mcqmc2026_special_session.pdf`.
 The limit is 16 pages. Fred requested the MCQMC 2024 macros for these papers;
 the draft now uses the same `svproc.cls`, `spmpsci.bst`, and Times font packages
 as the Aadit paper. Do not revert to generic article formatting.
@@ -50,7 +51,7 @@ sizes” already agrees. Preserve the finished talk's title unless its revision
 is intentional. If another Mac has additional unpublished manuscript work,
 reconcile it while retaining this confirmed title.
 
-The Overleaf manuscript is published on `main` at `3de32ec`, including the
+The Overleaf manuscript is published on `main`, including the
 confirmed title, infinite-precision Newo formulation, coordinate-reflection
 invariance, the generator-search action, sync/Codex-note instructions, and
 the companion plenary draft reference.

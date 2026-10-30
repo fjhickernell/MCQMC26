@@ -23,7 +23,7 @@ authoritative link is available.
   by Fred J. Hickernell. It expands the plenary slides and abstract using
   the MCQMC 2024 macros and green Codex review comments. The supplied limit
   is 25 pages; the current draft is 19 pages including references and notes.
-  Build with `latexmk -pdf main.tex` in that directory. Its README and source
+  Build with `latexmk -pdf mcqmc2026_plenary.tex` in that directory. Its README and source
   provenance identify the existing slide artifacts and remaining work.
   The special-session paper references this draft for the broader context.
   Fetch Overleaf changes before editing and publish the manuscript before
@@ -36,7 +36,7 @@ authoritative link is available.
   special-session slides and conference abstract, with the newer SURE 2025
   Newo scrambling material. The maximum is 16 pages; the current discussion
   draft uses the MCQMC 2024 macros from the Aadit paper, as Fred requested.
-  Build with `latexmk -pdf main.tex`
+  Build with `latexmk -pdf mcqmc2026_special_session.tex`
   in that directory; see its README for source provenance and remaining work.
   Fetch Anders's Overleaf edits before local work; publish manuscript commits
   to its Overleaf `origin` before updating this repository's submodule pointer.
