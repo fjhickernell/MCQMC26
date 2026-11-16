@@ -116,9 +116,17 @@ shift-averaged periodic-kernel discrepancy and the weighted loss unchanged.
 The proof uses the symmetry of $B_2$; exact rational-node checks include all
 coordinate subsets and the zero/one endpoint. This also gives componentwise
 sign symmetry for the lattice and Kronecker generating vectors.
-Author action 6 records the search reduction: with finite-horizon lattice
-modulus $L=2^M\ge N$, retain odd representatives $1\le h_j\le L/2$;
-this is $N/2$ only when $N=L$. For Kronecker generators, review the
+The November 16 coauthor CBC candidate request is addressed in the lattice
+section, author agenda and manuscript README. With finite-horizon lattice
+modulus $L=2^M\ge N$ and $M\ge2$, the search uses
+$\{1,3,\ldots,2^{M-1}-1\}$, one representative from each reflection pair;
+for $M=1$ it uses $\{1\}$. The half-modulus bound is $N/2$ only when $N=L$.
+The original request and response are retained as a resolved author note.
+All formula checks pass, including 34 exact small-horizon comparisons of
+representative completeness and full/reduced minimum scores. The complete
+13-page PDF compiles with citations and cross-references resolved; all pages
+and the changed pages were visually checked. The correction is published to
+Overleaf main at b87c01d. For Kronecker generators, review the
 candidate family's use of representatives $\zeta_j\in[0,1/2]$ under
 $\zeta_j\sim1-\zeta_j$. Implementation verification remains open.
 Unresolved work is marked with dark-green `\codex{[...]}` comments, matching
