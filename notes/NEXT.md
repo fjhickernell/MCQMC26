@@ -145,9 +145,9 @@ the broader context and is cited in the special-session introduction.
 
 ## Aadit coauthored paper
 
-Fred's section-by-section review has reached the end of Section 4.2. Continue
-with Section 5, Coverage Experiments, starting with the provenance of the
-selected replicate sizes.
+Fred's section-by-section review now extends through the abstract and keywords.
+Resolve the coauthor confirmations below, then complete the final manuscript
+and length review.
 
 ## Sources and editing conventions
 
@@ -157,32 +157,37 @@ selected replicate sizes.
   as Fred's editing checkout. Reconcile incoming changes from GitHub and
   Overleaf there before editing or publishing. Publish to both services before
   advancing the MCQMC26 submodule pointer.
-- The dated sources `rqmc_kurt_ci_paper_2026-10-18.tex` and
-  `rqmc_kurt_ci_paper_2026-11-20.tex` are archival snapshots.
+- Use the dated `.tex` snapshots for archival reference and make new edits
+  in the active source. This checkpoint's timestamped copy follows
+  `rqmc_kurt_ci_paper_YYYY-MM-DD_HHMMSS_CST.tex`.
+- The author order is Aadit Jain, Fred J. Hickernell, Art B. Owen, and
+  Aleksei G. Sorokin. The table of contents is temporarily commented out.
 - Mark new substantive revisions and open author notes with red
   `\fredcodex{...}`. The draft uses the actual expected count in the cost
   theorem and gives a separate argument for the exact `r = 1` variance model.
 
 ## Remaining review points
 
-- Verify the selected `n` for each Section 5 case and that the 1,000 coverage
-  runs used fresh independent trials. Aadit reported that the `d = 1, n = 32`
-  ridge jump was excluded from coverage, as recorded in Section 3.2. The
-  earlier `ridge_budget.pdf` highlights `n = 32` for that case. Reconcile the
-  figure with the final coverage inputs. Describe 100% as observed coverage
-  and the shrinkage factors as empirical error-quantile ratios.
+- Ask Aadit to confirm the final candidate grid, selected `n` for each
+  Section 5 case, and whether the 1,000 coverage trials used fresh
+  randomizations. The manuscript records the reported exclusion of the
+  `d = 1, n = 32` ridge jump from coverage. The earlier `ridge_budget.pdf`
+  highlights `n = 32`; reconcile it with the final coverage inputs.
 - Confirm which `alpha_2` generated the Section 4.2 plug-in table. The separate
   exact binomial benchmark for the discontinuous example uses `alpha_2 = 0.025`
   and agrees with the plotted minimizing sizes. Also confirm the nonuniform
   Berry–Esseen coefficient used in the final cost and coverage runs. The
   theorem retains the HJLO value and cites Shevtsova's corrected result.
-- Apply Section 2.3's fourth-moment qualification in the Discussion.
-- Decide whether to add an unbounded numerical example. Complete the abstract,
-  keywords, discussion, and length review.
+- Discuss the proposed unbounded `f(x) = -log(x)` coverage experiment with
+  Aadit. The Discussion note gives a replicate kurtosis bound of 9 for
+  independent equal-stratum sampling. The experiment remains a proposal.
+- Verify the Section 2.3 implementation-speed comparison if it is retained.
 
 ## Validation
 
 Build in the manuscript checkout with
 `latexmk -pdf -synctex=1 -interaction=nonstopmode -halt-on-error rqmc_kurt_ci_paper.tex`.
-Check citations, cross-references, and pagination after each manuscript pass.
+This draft builds to 19 pages including references with the table of contents
+omitted. Check citations, cross-references, and pagination after each manuscript
+pass.
 Official conference-template compliance remains unfinished.
