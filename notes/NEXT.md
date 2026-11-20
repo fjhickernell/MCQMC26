@@ -145,9 +145,8 @@ the broader context and is cited in the special-session introduction.
 
 ## Aadit coauthored paper
 
-Continue Fred's section-by-section review of the Aadit Jain coauthored paper;
-Section 1 has been revised. Next review Section 2 and its assumptions,
-notation, algorithm, and coverage argument before progressing through the paper.
+Fred's section-by-section review has reached the end of Section 3. Continue
+with Section 4 and the expected cost of the two-stage procedure.
 
 ## Sources and editing conventions
 
@@ -159,27 +158,29 @@ notation, algorithm, and coverage argument before progressing through the paper.
   advancing the MCQMC26 submodule pointer.
 - The dated sources `rqmc_kurt_ci_paper_2026-10-18.tex` and
   `rqmc_kurt_ci_paper_2026-11-20.tex` are archival snapshots.
-- Fred's prose and equation revisions now use normal manuscript formatting.
-  Red `\fredcodex{...}` marks retained author notes. Aleksei's proposed
-  randomization notation in the introduction remains marked for review.
+- Mark new substantive revisions and open author notes with red
+  `\fredcodex{...}`. The working draft incorporates Aleksei's
+  `f_n` notation and defines the pilot success event before choosing
+  the second-stage sample size.
 
 ## Remaining review points
 
-- Recheck the Berry–Esseen cost proof, especially monotonicity and minimizer
-  existence, and verify the references Aleksei added for the constants.
-- Distinguish distributional CLTs from the moment convergence needed to conclude
-  kurtosis convergence. Check the ridge-direction normalization and the
-  stratification interval indexing.
-- The coverage guarantee assumes a valid bound on replicate kurtosis for a
-  fixed rule and sample size. The numerical value 10 is not a uniform bound;
-  the manuscript now records a one-dimensional jump example exceeding it.
-- Decide whether to add an unbounded numerical example and which comparisons
-  merit the space. Complete the abstract, keywords, discussion, and length review.
+- Work with the actual expected count in the Section 4 cost model. Recheck
+  the Berry–Esseen monotonicity and minimizer argument and decide how to present
+  the deterministic approximation and the `r = 1` case.
+- Confirm with Aadit which nonuniform Berry–Esseen coefficient he used for
+  the final cost and coverage experiments. The theorem cites Shevtsova's
+  corrected result and uses the coefficient from HJLO.
+- Review the reported coverage settings and dimensions in Section 5.
+  Section 3.2 records that the `d = 1, n = 32` ridge jump was excluded from the
+  coverage runs. Apply Section 2.3's fourth-moment qualification in the Discussion.
+- Decide whether to add an unbounded numerical example. Complete the abstract,
+  keywords, discussion, and length review.
 
 ## Validation
 
 Build in the manuscript checkout with
 `latexmk -pdf -synctex=1 -interaction=nonstopmode -halt-on-error rqmc_kurt_ci_paper.tex`.
-The current 20-page draft compiles with citations and cross-references resolved.
-Two equations exceed the text width. Mathematical review and official
+The current 19-page draft compiles with citations and cross-references resolved.
+One cost equation exceeds the text width. Mathematical review and official
 conference-template compliance remain unfinished.
