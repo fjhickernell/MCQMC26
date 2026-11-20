@@ -45,9 +45,9 @@ authoritative link is available.
 
 - `manuscripts/aadit-jain-paper` is a Git submodule connected to the separate
   Overleaf repository for the paper coauthored with Aadit Jain and others.
-  Commit manuscript changes inside that directory and push its `main` branch to
-  `origin` to propagate them to Overleaf. Then commit the updated submodule
-  pointer in this repository.
+  Edit the manuscript in the separate `Confidence Intervals Dependence on Kurtosis`
+  checkout. Publish its `main` branch to GitHub and Overleaf before advancing
+  the submodule pointer here.
   The active manuscript is `rqmc_kurt_ci_paper.tex`. Dated copies such as
   `rqmc_kurt_ci_paper_2026-10-18.tex` are archival snapshots; make new edits in
   the undated source and preserve the dated files unchanged.

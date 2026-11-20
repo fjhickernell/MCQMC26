@@ -153,21 +153,20 @@ notation, algorithm, and coverage argument before progressing through the paper.
 
 - The Overleaf submodule is `manuscripts/aadit-jain-paper`; its active source
   is `rqmc_kurt_ci_paper.tex`.
-- Fred is currently editing the same source in the separate checkout
-  `~/SoftwareRepositories/Confidence Intervals Dependence on Kurtosis`.
-  Reconcile the two checkouts before editing or publishing; do not overwrite
-  local or remote changes. Push manuscript commits to Overleaf before updating
-  this repository's submodule pointer.
-- `rqmc_kurt_ci_paper_2026-10-18.tex` is the unchanged archival snapshot.
-- New revisions and retained author notes use the red `\fredcodex{...}` macro.
-  Existing coauthor edit wrappers were removed while preserving their text;
-  their macro definitions remain available. Resolved conversations were removed,
-  and unresolved author notes are explicitly labeled in red.
+- Use `~/SoftwareRepositories/Confidence Intervals Dependence on Kurtosis`
+  as Fred's editing checkout. Reconcile incoming changes from GitHub and
+  Overleaf there before editing or publishing. Publish to both services before
+  advancing the MCQMC26 submodule pointer.
+- The dated sources `rqmc_kurt_ci_paper_2026-10-18.tex` and
+  `rqmc_kurt_ci_paper_2026-11-20.tex` are archival snapshots.
+- Fred's prose and equation revisions now use normal manuscript formatting.
+  Red `\fredcodex{...}` marks retained author notes. Aleksei's proposed
+  randomization notation in the introduction remains marked for review.
 
 ## Remaining review points
 
 - Recheck the Berry–Esseen cost proof, especially monotonicity and minimizer
-  existence, and supply references for the Berry–Esseen constants.
+  existence, and verify the references Aleksei added for the constants.
 - Distinguish distributional CLTs from the moment convergence needed to conclude
   kurtosis convergence. Check the ridge-direction normalization and the
   stratification interval indexing.
@@ -181,6 +180,6 @@ notation, algorithm, and coverage argument before progressing through the paper.
 
 Build in the manuscript checkout with
 `latexmk -pdf -synctex=1 -interaction=nonstopmode -halt-on-error rqmc_kurt_ci_paper.tex`.
-The current 19-page draft compiles with citations and references resolved.
-One overfull cost equation remains. Mathematical review
-and official conference-template compliance remain unfinished.
+The current 20-page draft compiles with citations and cross-references resolved.
+Two equations exceed the text width. Mathematical review and official
+conference-template compliance remain unfinished.
