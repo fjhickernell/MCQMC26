@@ -145,8 +145,9 @@ the broader context and is cited in the special-session introduction.
 
 ## Aadit coauthored paper
 
-Fred's section-by-section review has reached the end of Section 3. Continue
-with Section 4 and the expected cost of the two-stage procedure.
+Fred's section-by-section review has reached the end of Section 4.2. Continue
+with Section 5, Coverage Experiments, starting with the provenance of the
+selected replicate sizes.
 
 ## Sources and editing conventions
 
@@ -159,21 +160,23 @@ with Section 4 and the expected cost of the two-stage procedure.
 - The dated sources `rqmc_kurt_ci_paper_2026-10-18.tex` and
   `rqmc_kurt_ci_paper_2026-11-20.tex` are archival snapshots.
 - Mark new substantive revisions and open author notes with red
-  `\fredcodex{...}`. The working draft incorporates Aleksei's
-  `f_n` notation and defines the pilot success event before choosing
-  the second-stage sample size.
+  `\fredcodex{...}`. The draft uses the actual expected count in the cost
+  theorem and gives a separate argument for the exact `r = 1` variance model.
 
 ## Remaining review points
 
-- Work with the actual expected count in the Section 4 cost model. Recheck
-  the Berry–Esseen monotonicity and minimizer argument and decide how to present
-  the deterministic approximation and the `r = 1` case.
-- Confirm with Aadit which nonuniform Berry–Esseen coefficient he used for
-  the final cost and coverage experiments. The theorem cites Shevtsova's
-  corrected result and uses the coefficient from HJLO.
-- Review the reported coverage settings and dimensions in Section 5.
-  Section 3.2 records that the `d = 1, n = 32` ridge jump was excluded from the
-  coverage runs. Apply Section 2.3's fourth-moment qualification in the Discussion.
+- Verify the selected `n` for each Section 5 case and that the 1,000 coverage
+  runs used fresh independent trials. Aadit reported that the `d = 1, n = 32`
+  ridge jump was excluded from coverage, as recorded in Section 3.2. The
+  earlier `ridge_budget.pdf` highlights `n = 32` for that case. Reconcile the
+  figure with the final coverage inputs. Describe 100% as observed coverage
+  and the shrinkage factors as empirical error-quantile ratios.
+- Confirm which `alpha_2` generated the Section 4.2 plug-in table. The separate
+  exact binomial benchmark for the discontinuous example uses `alpha_2 = 0.025`
+  and agrees with the plotted minimizing sizes. Also confirm the nonuniform
+  Berry–Esseen coefficient used in the final cost and coverage runs. The
+  theorem retains the HJLO value and cites Shevtsova's corrected result.
+- Apply Section 2.3's fourth-moment qualification in the Discussion.
 - Decide whether to add an unbounded numerical example. Complete the abstract,
   keywords, discussion, and length review.
 
@@ -181,6 +184,5 @@ with Section 4 and the expected cost of the two-stage procedure.
 
 Build in the manuscript checkout with
 `latexmk -pdf -synctex=1 -interaction=nonstopmode -halt-on-error rqmc_kurt_ci_paper.tex`.
-The current 19-page draft compiles with citations and cross-references resolved.
-One cost equation exceeds the text width. Mathematical review and official
-conference-template compliance remain unfinished.
+Check citations, cross-references, and pagination after each manuscript pass.
+Official conference-template compliance remains unfinished.
