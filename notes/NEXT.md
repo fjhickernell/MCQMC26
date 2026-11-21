@@ -158,13 +158,15 @@ and length review.
   Overleaf there before editing or publishing. Publish to both services before
   advancing the MCQMC26 submodule pointer.
 - Use the dated `.tex` snapshots for archival reference and make new edits
-  in the active source. This checkpoint's timestamped copy follows
+  in the active source. Date-and-time snapshots follow
   `rqmc_kurt_ci_paper_YYYY-MM-DD_HHMMSS_CST.tex`.
 - The author order is Aadit Jain, Fred J. Hickernell, Art B. Owen, and
   Aleksei G. Sorokin. The table of contents is temporarily commented out.
-- Mark new substantive revisions and open author notes with red
-  `\fredcodex{...}`. The draft uses the actual expected count in the cost
-  theorem and gives a separate argument for the exact `r = 1` variance model.
+- Mark new substantive revisions with red `\fredcodex{...}`. Use
+  `\authornote{...}` for the pale-yellow author callouts.
+- The draft uses the actual expected count in the cost theorem, gives a
+  separate argument for the exact `r = 1` variance model, and compares
+  expected cost for `r > 1` with the Bennett oracle's fixed budget.
 
 ## Remaining review points
 
